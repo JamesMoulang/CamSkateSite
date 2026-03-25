@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cam Skate - Cambridge's Skateboarding Community</title>
+    <meta name="description" content="Cam Skate is the voice of skaters in Cambridge. We run The Warehouse, Cambridge's first indoor skatepark, campaign for better facilities, and organize events and coaching.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.cam-skate.co.uk/">
+    <meta property="og:title" content="Cam Skate - Cambridge's Skateboarding Community">
+    <meta property="og:description" content="Cam Skate is the voice of skaters in Cambridge. We run The Warehouse, Cambridge's first indoor skatepark, campaign for better facilities, and organize events and coaching.">
+    <meta property="og:image" content="https://www.cam-skate.co.uk/img/party.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.cam-skate.co.uk/">
+    <meta property="twitter:title" content="Cam Skate - Cambridge's Skateboarding Community">
+    <meta property="twitter:description" content="Cam Skate is the voice of skaters in Cambridge. We run The Warehouse, Cambridge's first indoor skatepark, campaign for better facilities, and organize events and coaching.">
+    <meta property="twitter:image" content="https://www.cam-skate.co.uk/img/party.jpg">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="img/logo.png" alt="Cam Skate Site Logo" class="logo">
+        <nav>
+            <ul>
+                <li><a href="/sessions/">Sessions</a></li>
+                <li><a href="/coaching/">Coaching</a></li>
+                <li><a href="/hire/">Hire</a></li>
+                <li><a href="/events/">Events</a></li>
+                <li><a href="/visit/">Visit</a></li>
+                <li><a href="/get_involved/">Get Involved</a></li>
+                <li><a href="/about/">About</a></li>
+                <li><a href="/donate/">Donate</a></li>
+            </ul>
+        </nav>
+        <div class="hamburger-menu">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </header>
+    <div class="nav-overlay">
+        <a href="#" class="close-btn">&times;</a>
+        <div class="nav-overlay-content">
+            <a href="/">Home</a>
+            <a href="/sessions/">Sessions</a>
+            <a href="/coaching/">Coaching</a>
+            <a href="/hire/">Hire</a>
+            <a href="/events/">Events</a>
+            <a href="/visit/">Visit</a>
+            <a href="/get_involved/">Get Involved</a>
+            <a href="/about/">About</a>
+            <a href="/donate/">Donate</a>
+        </div>
+    </div>
+    <main>
+        <section class="hero">
+            <div class="hero-logo-container">
+                <div class="hero-images">
+                    <img src="img/warehouse_logo.png" alt="The Warehouse Logo" class="hero-logo">
+                    <img src="img/warehouse_text.png" alt="The Warehouse Text" class="hero-text">
+                </div>
+                <p class="hero-subtitle">Cambridge's indoor skatepark, run for and by the community!</p>
+                <div class="quick-links">
+                    <a href="/sessions#beginner_sessions" class="quick-link-btn">Beginner sessions</a>
+                    <a href="/coaching/" class="quick-link-btn">Coaching</a>
+                    <a href="/sessions/" class="quick-link-btn">Timetable</a>
+                    <a href="https://membership.cam-skate.co.uk/skaters/new" class="quick-link-btn">Waiver</a>
+                </div>
+                <p style="max-width: 75%;" id="next_opening">Loading opening times...</p>
+                <div id="live_visitor_count" style="display: none;"></div>
+            </div>
+        </section>
+
+        <a href="/events/#roller-disco" class="cta-banner">
+            Roller Disco - March 2026 - More info →
+        </a>
+
+        <section class="info-section" style="background-color: #e0e0e0;">
+            <div class="info-section-content">
+                <h2>What's on this week</h2>
+                <div id="main-carousel-container" class="carousel-container">
+                    <button class="carousel-btn prev" id="carousel-btn-prev">&lt;</button>
+                    <div class="carousel" id="schedule_carousel">
+                        <div class="carousel-item" style="background-color: rgba(0,0,0,0.7);"></div>
+                        <div class="carousel-item" style="background-color: rgba(0,0,0,0.7);"></div>
+                        <div class="carousel-item" style="background-color: rgba(0,0,0,0.7);"></div>
+                        <div class="carousel-item" style="background-color: rgba(0,0,0,0.7);"></div>
+                        <div class="carousel-item" style="background-color: rgba(0,0,0,0.7);"></div>
+                    </div>
+                    <button class="carousel-btn next" id="carousel-btn-next">&gt;</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="info-section">
+            <div class="info-section-content">
+                <h2>Find the right session for you</h2>
+                <div class="session-grid">
+                    <div class="grid-item" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('img/beginners.jpg');">
+                        <div class="grid-item-title">Beginners</div>
+                        <p class="grid-item-subtitle">New to skating? Dedicated beginner sessions are a supportive environment that help build confidence and skills.</p>
+                        <a href="/sessions#beginner_sessions">More info</a>
+                    </div>
+                    <div class="grid-item" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('img/coaching.jpg');">
+                        <div class="grid-item-title">Coaching</div>
+                        <p class="grid-item-subtitle">We offer skateboard coaching to children and adults. Whether you're learning to skate for the first time, or looking to refine your techniques, there's something for everyone!</p>
+                        <a href="/coaching">View coaching</a>
+                    </div>
+                    <div class="grid-item" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('img/kids_and_coaching.jpg');">
+                        <div class="grid-item-title">Kids & Families</div>
+                        <p class="grid-item-subtitle">Our Saturday Junior Jam is a fun, friendly session where kids (and their parents) can learn, practise and play together in a safe, relaxed space.</p>
+                        <a href="/sessions#junior_jam">More info</a>
+                    </div>
+                    <div class="grid-item" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('img/girl_skate_night.jpg');">
+                        <div class="grid-item-title">Women & LGBTQ+</div>
+                        <p class="grid-item-subtitle">We have free sessions run for and by women and LGBTQ+ skaters, each offering a super welcoming vibe to build skills, confidence, and community.</p>
+                        <a href="/sessions#girl_skate_night">More info</a>
+                    </div>
+                    <div class="grid-item" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('img/pipe_and_slippers.jpg');">
+                        <div class="grid-item-title">30+</div>
+                        <p class="grid-item-subtitle">The monthly 'Pipe and Slippers' night is our dedicated session for skaters aged 30 years and older. There's a beginner session at the start for those looking to build more confidence!</p>
+                        <a href="/sessions#pipe_and_slippers">More info</a>
+                    </div>
+                    <div class="grid-item" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('img/q&b 3.jpeg');">
+                        <div class="grid-item-title">Quads / Blades</div>
+                        <p class="grid-item-subtitle">Our monthly Quads and Blades night is a dedicated session for the roller skate/blade communities, with coaches ready to help give advice and build confidence.</p>
+                        <a href="/sessions#quads_and_blades">More info</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <a href="/sessions/" class="cta-banner">
+            View Full Weekly Schedule →
+        </a>
+
+        <section class="info-section">
+            <div class="info-section-content">
+                <h2>New Here? Start Here</h2>
+                <div class="new-here-grid-3x2">
+                    <div class="grid-box-rounded color1">
+                        <h3>First-visit guide</h3>
+                        <p>Learn how to check in, gear up, and navigate the park on your first day. <a href="/visit">Click here</a> for more info.</p>
+                    </div>
+                    <div class="grid-box-rounded color2">
+                        <h3>Prices</h3>
+                        <p>See session, monthly, and membership costs at a glance. <a href="/sessions#pricing">Click to view full pricing details</a></p>
+                    </div>
+                    <div class="grid-box-rounded color3">
+                        <h3>Photo tour</h3>
+                        <p>Preview key features and spaces around the park. Browse the <a href="visit#gallery">complete gallery</a> for a closer look.</p>
+                    </div>
+                    <div class="grid-box-rounded color4">
+                        <h3>Coaching</h3>
+                        <p>We have a range of clubs and private lessons. <a href="/coaching">Click here</a> for more information and booking.</p>
+                    </div>
+                    <div class="grid-box-rounded color1">
+                        <h3>Rules & Policies</h3>
+                        <p>Read our <a href="/docs/skateboard_cambridge_cic_code_of_conduct.pdf">code of conduct</a> and <a href="/docs/warehouse_safeguarding_2.pdf">safeguarding policy</a>.</p>
+                    </div>
+                    <div class="grid-box-rounded color2">
+                        <h3>Private Hire</h3>
+                        <p>Book the park for parties and private events. <a href="/hire/">Click here</a> to enquire.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="info-section">
+            <div class="info-section-content">
+                <h2>Community Stories</h2>
+                <div class="two-column-layout">
+                    <div class="left-column">
+                        <p style="text-align: left;">The skateboarding community of Cambridge designed, built and manage this facility! Every time the Warehouse opens, it's because of a volunteer giving their time to make the session possible. We're always on the lookout for new volunteers - let us know if you're interested in getting involved.</p>
+                        <p style="text-align: left;"><a href="/get_involved/#volunteer">Learn more about volunteering at The Warehouse</a></p>
+                        <p style="color: orange; text-align: left;">🚧 More community stories coming soon! 🚧</p>
+                    </div>
+                    <div class="right-column">
+                        <img src="img/dream team.jpg" alt="The Warehouse Skatepark">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="info-section">
+            <div class="info-section-content">
+                <h2>Impact</h2>
+                <div style="text-align: left;">
+                    <div class="impact-stat">
+                        <div class="impact-stat-number">7 days a week</div>
+                        <div class="impact-stat-description">Since October 2024 we have offered a safe and welcoming space, all year round, 7 days a week, for people of all ages to come and skate, rollerskate/blade, or ride scooters, at an accessible price.</div>
+                        <div class="impact-stat-description">We put on dedicated sessions for women, girls and non binary people, and for the LGBTQ+ community, as well as sessions for over 30s, under 10s, and beginners.</div>
+                    </div>
+
+                    <div class="impact-stat">
+                        <div class="impact-stat-number">2 schools</div>
+                        <div class="impact-stat-description">SEMH schools that visit The Warehouse regularly for PE lessons.</div>
+                    </div>
+
+                    <!-- <div class="impact-stat">
+                        <div class="impact-stat-number">2800 hours</div>
+                        <div class="impact-stat-description">of skateboard coaching delivered</div>
+                    </div> -->
+
+                    <div class="impact-stat">
+                        <div class="impact-stat-number">658 hours</div>
+                        <div class="impact-stat-description">of free skateboard coaching delivered! 2800 in total!</div>
+                        <div class="impact-stat-description">Through our coaching programme we are getting more people into skateboarding, and we offer free lessons and equipment to young people who can't normally afford to experience this.</div>
+                    </div>
+
+                    <div class="impact-stat">
+                        <div class="impact-stat-number">50 volunteers</div>
+                        <div class="impact-stat-description">who give their time regularly to operate the park and supervise skate sessions.</div>
+                        <div class="impact-stat-description">We're creating a community of volunteers who have genuine ownership over this project, shaping it to their needs and the needs of the wider community.</div>
+                    </div>
+
+                    <p><a href="/about/">Learn more</a> about Cam Skate and the story of The Warehouse so far.</p>
+                </div>
+            </div>
+        </section>
+        <section class="info-section">
+            <div class="info-section-content">
+                <h2>Support Us</h2>
+                <div class="two-column-layout">
+                    <div style="text-align: left;" class="left-column">
+                        <p>Cam Skate is a Community Interest Company which means every bit of money we raise goes back into paying to keep The Warehouse - and our other skateboarding initiatives around Cambridge - rolling!</p>
+                        <p>If you want to donate to Cam Skate <a href="https://pay.sumup.com/b2c/QZZZ4HVB">you can do so here.</a> Thank you for your support!</p>
+                        <p>Another great way to support the park is by purchasing a <a href="https://membership.cam-skate.co.uk/supporter">Supporter membership</a> which offers unlimited entry to regular sessions until July 2026.</p>
+                        <p>If you're a business interested in corporate sponsorship or partnership, <a href="mailto:hello@cam-skate.co.uk">get in touch</a> with us via email.</p>
+                    </div>
+                    <div class="right-column">
+                        <img src="img/paul interview.jpg" alt="The Warehouse Skatepark">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="info-section">
+            <div class="info-section-content">
+                <h2>Our partners</h2>
+                <p>Proudly supported by our partners who help make our skatepark community possible.</p>
+                <p><a href="/get_involved/#partner">Click here</a> to learn more about our existing partnerships and how to partner with us.</p>
+            </div>
+            <div class="logo-marquee-container">
+                <div class="logo-marquee">
+                    <a href="https://oscarspizzas.co.uk/" target="_blank"><img src="img/sponsor_oscars.png" alt="Oscar's Lockdown Pizza"></a>
+                    <a href="https://www.railpen.com/" target="_blank"><img src="img/sponsor_railpen.jpg" alt="Railpen"></a>
+                    <a href="https://www.cambridge.gov.uk/" target="_blank"><img src="img/sponsor_council.jpg" alt="Cambridge City Council"></a>
+                    <a href="https://www.skateboardgb.org/" target="_blank"><img src="img/sponsor_sbgb.png" alt="Skateboard GB"></a>
+                    <a href="https://www.livingsport.co.uk/" target="_blank"><img src="img/sponsor_living_sport.png" alt="Living Sport Cambridge"></a>
+                    <a href="https://pete-higginson.squarespace.com/" target="_blank"><img src="img/sponsor_carpintree.png" alt="Carpintree"></a>
+                    <a href="https://www.chaterallan.co.uk/" target="_blank"><img src="img/sponsor_ca.avif" alt="Chater Allan Chartered Accountants"></a>
+                    <a href="https://www.ses-ltd.co.uk/" target="_blank"><img src="img/sponsor_ses.png" alt="SES Engineering Services"></a>
+                    <a href="https://theskateparchitect.com/" target="_blank"><img src="img/sponsor_tsp.jpg" alt="The Skate Parchitect"></a>
+                    <a href="https://www.smallandgreen.com/" target="_blank"><img src="img/sponsor_sag.svg" alt="Small and Green"></a>
+                    <a href="http://kindersleyworkshop.co.uk/" target="_blank"><img src="img/sponsor_workshop.png" alt="Cardozo Kindersley Workshop"></a>
+                    <a href="https://www.414skateparks.com/" target="_blank"><img src="img/sponsor_414.webp" alt="Four One Four Skateparks"></a>
+                    <a href="https://withpurposenetwork.com/" target="_blank"><img src="img/sponsor_wpn.png" alt="With Purpose Network Member" style="max-height: 75px; width: auto;"></a>
+                    <a href="https://web.makespace.org/" target="_blank"><img src="img/partner_makespace.webp" alt="Makespace Cambridge"></a>
+                </div>
+                <div class="logo-marquee">
+                    <a href="https://oscarspizzas.co.uk/" target="_blank"><img src="img/sponsor_oscars.png" alt="Oscar's Lockdown Pizza"></a>
+                    <a href="https://www.railpen.com/" target="_blank"><img src="img/sponsor_railpen.jpg" alt="Railpen"></a>
+                    <a href="https://www.cambridge.gov.uk/" target="_blank"><img src="img/sponsor_council.jpg" alt="Cambridge City Council"></a>
+                    <a href="https://www.skateboardgb.org/" target="_blank"><img src="img/sponsor_sbgb.png" alt="Skateboard GB"></a>
+                    <a href="https://www.livingsport.co.uk/" target="_blank"><img src="img/sponsor_living_sport.png" alt="Living Sport Cambridge"></a>
+                    <a href="https://pete-higginson.squarespace.com/" target="_blank"><img src="img/sponsor_carpintree.png" alt="Carpintree"></a>
+                    <a href="https://www.chaterallan.co.uk/" target="_blank"><img src="img/sponsor_ca.avif" alt="Chater Allan Chartered Accountants"></a>
+                    <a href="https://www.ses-ltd.co.uk/" target="_blank"><img src="img/sponsor_ses.png" alt="SES Engineering Services"></a>
+                    <a href="https://theskateparchitect.com/" target="_blank"><img src="img/sponsor_tsp.jpg" alt="The Skate Parchitect"></a>
+                    <a href="https://www.smallandgreen.com/" target="_blank"><img src="img/sponsor_sag.svg" alt="Small and Green"></a>
+                    <a href="http://kindersleyworkshop.co.uk/" target="_blank"><img src="img/sponsor_workshop.png" alt="Cardozo Kindersley Workshop"></a>
+                    <a href="https://www.414skateparks.com/" target="_blank"><img src="img/sponsor_414.webp" alt="Four One Four Skateparks"></a>
+                    <a href="https://withpurposenetwork.com/" target="_blank"><img src="img/sponsor_wpn.png" alt="With Purpose Network Member" style="max-height: 75px; width: auto;"></a>
+                    <a href="https://web.makespace.org/" target="_blank"><img src="img/partner_makespace.webp" alt="Makespace Cambridge"></a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <img src="img/logo.png" alt="Cam Skate Site Logo" class="footer-logo">
+            <nav class="footer-nav">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/sessions/">Sessions</a></li>
+                    <li><a href="/coaching/">Coaching</a></li>
+                    <li><a href="/hire/">Hire</a></li>
+                    <li><a href="/events/">Events</a></li>
+                    <li><a href="/visit/">Visit</a></li>
+                    <li><a href="/get_involved/">Get Involved</a></li>
+                    <li><a href="/about/">About</a></li>
+                    <li><a href="/donate/">Donate</a></li>
+                </ul>
+            </nav>
+            <div class="social-links">
+                <a href="https://www.instagram.com/the_warehouse_skatepark/"><img src="img/icon_instagram.svg" alt="Instagram" class="social-icon"></a>
+                <a href="https://www.facebook.com/profile.php?id=61573116536393"><img src="img/icon_facebook.svg" alt="Facebook" class="social-icon"></a>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+    <script src="opening.js"></script>
+    <script src="visitor_count.js"></script>
+    <script>
+        window.carousel_load_week = true;
+        window.carousel_group_instances = true; // Group all instances of each event type
+    </script>
+    <script src="carousel_loader.js"></script>
+    <script>
+        enableCarouselButtons('main-carousel-container');
+    </script>
+</body>
+</html>

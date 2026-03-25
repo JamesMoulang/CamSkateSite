@@ -1,0 +1,510 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="James Moulang">
+    <title>Cam Skate</title>
+
+    <meta property="og:image" content="./img/cam_skate_bg.jpg" />
+    <meta property="og:description" content="Help us fund Cambridge's first indoor skatepark!" />
+    <meta property="og:url"content="http://cam-skate.co.uk" />
+    <meta property="og:title" content="Cam Skate" />
+
+    <!-- Font Awesome icons -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+          background-image: bg.jpg;
+        }
+      }
+    </style>
+    <!-- Custom styles for this template -->
+    <!-- <link href="../cover.css" rel="stylesheet"> -->
+    <link href="./action/projects.css" rel="stylesheet">
+    <style>
+      body {
+        background-color: #333;
+        color: #fff;
+      }
+      html {
+        background-color: #333;
+      }
+      .nav-masthead .nav-link {
+        color: rgba(255, 255, 255, 1);
+        background-color: transparent;
+        border-bottom: .25rem solid transparent;
+      }
+
+      .highlight {
+        color: #f77f00;
+        font-weight: bold;
+      }
+
+      .donation {
+        padding-top: 8px;
+        padding-bottom: 0px;
+        padding-left: 16px;
+        padding-right: 16px;
+        border-style: solid;
+        border-width: 1px;
+        border-radius: 8px;
+        margin-bottom: 16px;
+/*        border-color: #007bff;*/
+      }
+
+      .nav-masthead .nav-link:hover,
+      .nav-masthead .nav-link:focus {
+        border-bottom-color: rgba(255, 255, 255, .25);
+      }
+      .nav-masthead .active {
+        color: #fff;
+        border-bottom-color: #fff;
+      }
+
+      .nav-masthead .nav-link.join:hover,
+      .nav-masthead .nav-link.join:focus {
+        border-bottom-color: rgba(247, 127, 0, .25);
+      }
+
+      .nav-masthead .active-join {
+        color: #f77f00;
+        border-bottom-color: #f77f00;
+      }
+
+      .nav-link.join {
+        color: #f77f00;
+      }
+
+      .video-container {
+          position: relative;
+          padding-bottom: 56.25%; /* 16:9 */
+          height: 0;
+          margin: 0 auto;
+      }
+      .video-container iframe {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+      }
+
+      .call_to_action {
+        color: #fff;
+        text-decoration: underline;
+      }
+
+      .call_toaction:hover {
+        color: #fff;
+        text-decoration: none;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+        color: #f77f00;
+      }
+
+      .dc-feature-col {
+        text-align: center;
+        padding: 4px;
+      }
+
+      .dc-feature {
+        background-color: #f77f00;
+        padding: 8px;
+        padding-top: 24px;
+        border-radius: 4px;
+      }
+
+      .dc-feature h1 {
+        font-size: 24px;
+        font-weight: bold;
+      }
+
+      .dc-feature p {
+        font-size: 16px;
+        /*font-weight: bold;*/
+      }
+
+      .article2 li a {
+        /*color: #f77f00;*/
+      }
+
+      .centered_header {
+
+      }
+
+      .lead-small {
+        font-size: 16px;
+      }
+
+      .early_session {
+        background-color: #6aa84f;
+        overflow: visible;
+      }
+
+      .late_session {
+        background-color: #4086f6;
+      }
+
+      .morning_session {
+        background-color: #9ec6e8;
+      }
+
+      .girl_session {
+        background-color: #cb0200;
+      }
+
+      .kids_session {
+        background-color: #9b02f9;
+      }
+
+      tr {
+        border-bottom-style: solid;
+      }
+
+      .day {
+        border-right-style: solid;
+        border-left-style: solid;
+        padding: 4px;
+        padding-right: 16px;
+        padding-left: 16px;
+        text-align: right;
+      }
+
+      .hour {
+        border-right-style: solid;
+        border-left-style: solid;
+        padding-bottom: 0px;
+        padding-top: 16px;
+        padding-right: 8px;
+        padding-left: 8px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body class="text-center">
+    <div style="width: 100%; padding: 4%; text-align: center;">
+      <div id="timetable_div" style="width: 100%; margin: 0 auto;"></div>
+    </div>
+  </body>
+  <script>
+    // Get elements, create canvas.
+
+    const calendar_id = '648a32abb0a80624c5f98e8e4bfd057578a6aed5110ba2addc6f9496fa9cabb4@group.calendar.google.com';
+    const api_key = 'AIzaSyAbxzGY7irnlqDnG9NwmLuzwVb2Q3tkr3I';
+
+    const maxResults = 20;  // Change this to get more or fewer events
+    const orderBy = 'startTime';
+    
+    var today = new Date();
+    today.setDate(today.getDate() - 1);
+    const timeMin = today.toISOString(); // Get only upcoming events
+
+    const url = `https://www.googleapis.com/calendar/v3/calendars/${calendar_id}/events?key=${api_key}&maxResults=${maxResults}&orderBy=${orderBy}&singleEvents=true&timeMin=${encodeURIComponent(timeMin)}`;
+
+    // const url = `https://www.googleapis.com/calendar/v3/calendars/${calendar_id}/events?key=${api_key}&maxResults=${maxResults}&orderBy=${orderBy}&timeMin=${encodeURIComponent(timeMin)}`;
+
+    fetch(url)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.json();
+    })
+    .then(data => {
+      console.log('Events:', data.items);
+
+      // const opening_hours = {
+      //   'Mon Jan 06': [ early_evening ],
+      // };
+
+      const colors = {
+        purple: '#9D00FF',
+        blue: '#5383ec',
+        green: '#018E42',
+        red: '#BF1A2F',
+        gold: '#E18A07',
+      };
+
+      const session_colors = {
+        'open session': colors.green,
+        '☕ open session': colors.green,
+        'after school club': colors.blue,
+        'after work club': colors.blue,
+        '☕ under 10s': colors.purple,
+        'under 10s': colors.purple,
+        'closed': colors.red,
+        'girl skate night': colors.purple,
+        'quads & blades': colors.purple,
+        'queer skate night': colors.purple,
+        '30+ (beginners)': colors.purple,
+        '30+ (all abilities)': colors.purple,
+        'under 21s': colors.purple,
+        'full moon (open session)': colors.gold,
+        'roller disco (family)': colors.gold,
+        'roller disco (adults)': colors.gold,
+      };
+
+      const opening_hours = {};
+
+      const daysOfWeek = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+      const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+      const dates = [];
+
+      const today = new Date();
+
+      data.items.map((item) => {
+        const time_offset = 0;
+
+        const start_date = new Date(item.start.dateTime);
+        const start_hours = (start_date.getUTCHours() + time_offset) + (start_date.getUTCMinutes() / 60);
+
+        const end_date = new Date(item.end.dateTime);
+        const end_hours = (end_date.getUTCHours() + time_offset) + (end_date.getUTCMinutes() / 60);
+
+        const day = daysOfWeek[start_date.getDay()];
+        const month = months[start_date.getMonth()];
+        const dayOfMonth = start_date.getDate().toString().padStart(2, '0');;
+
+        const date_key = `${day} ${month} ${dayOfMonth}`;
+
+        // console.log('date key', date_key);
+
+        if (!opening_hours.hasOwnProperty(date_key)) {
+          opening_hours[date_key] = [];
+        }
+
+        console.log(item.summary, item);
+
+        if (item.summary && item.visibility != 'private') {
+          opening_hours[date_key].push({
+            start: start_hours,
+            end: end_hours,
+            title: item.summary,
+          });
+        }
+      });
+
+      console.log(opening_hours);
+
+      // Draw events
+
+      const padding = 32;
+
+      const timetable_div = document.getElementById('timetable_div');
+      const timetable_canvas = document.createElement('canvas');
+
+      timetable_canvas.id = 'timetable_canvas';
+
+      timetable_div.appendChild(timetable_canvas);
+      const ctx = timetable_canvas.getContext('2d');
+
+      const draw = () => {
+        const canvas_width = timetable_div.clientWidth;
+
+        timetable_canvas.style.width = canvas_width + "px";
+        timetable_canvas.style.height = canvas_width * 0.5 + "px";
+
+        var scale = window.devicePixelRatio;
+
+        timetable_canvas.width = canvas_width * scale;
+        timetable_canvas.height = canvas_width * 0.5 * scale;
+
+        const draw_box = (_x, _y, _width, _height, options) => {
+          const x = 16 + (timetable_canvas.width - 32) * _x;
+          const y = 16 + (timetable_canvas.height - 32) * _y;
+          const width = (timetable_canvas.width - 32) * _width;
+          const height = (timetable_canvas.height - 32) * _height;
+
+          ctx.fillStyle = options.fillColor ? options.fillColor : 'white';
+          if (options.hasOwnProperty('fillAlpha') && options.fillAlpha > 0) {
+            ctx.globalAlpha = options.fillAlpha;
+            ctx.fillRect(x, y, width, height);
+          }
+
+          ctx.strokeStyle = options.strokeColor ? options.strokeColor : 'red';
+          ctx.lineWidth = (options.strokeWidth ? options.strokeWidth : 1) * timetable_canvas.width * 0.0015;
+
+          if (options.hasOwnProperty('strokeAlpha') && options.strokeAlpha > 0) {
+            ctx.globalAlpha = options.strokeAlpha;
+            ctx.strokeRect(x, y, width, height);
+          }
+        };
+
+        const draw_text = (_x, _y, _size, text, color='white', alpha=1, align='left', baseline='middle') => {
+          const x = 16 + (timetable_canvas.width - 32) * _x;
+          const y = 16 + (timetable_canvas.height - 32) * _y;
+          const size = (timetable_canvas.width - 32) * _size;
+
+          ctx.fillStyle = color;
+          ctx.globalAlpha = alpha;
+          ctx.textAlign = align;
+          ctx.textBaseline = baseline;
+          ctx.font = Math.round(size) + 'px Arial';
+          ctx.fillText(text, x, y);
+        }
+
+        const day_width = 0.175;
+
+        draw_box(day_width, 0, 1 - day_width, 1, {
+          strokeAlpha: 1,
+          fillAlpha: 0,
+          strokeColor: '#999999',
+          fillColor: '#ffffff',
+        });
+
+        // Background
+
+        const hours_width = 1 - day_width;
+        const hour_width = hours_width / 13;
+
+        for (var i = 0; i < 13; i++) {
+          draw_box(
+            day_width + i * hour_width,
+            1/8,
+            hour_width,
+            7/8,
+            {
+              strokeAlpha: 1,
+              strokeColor: '#404040',
+              fillAlpha: 0
+            }
+          );
+        }
+
+        for (var i = 0; i < 7; i++) {
+          draw_box(day_width, (i)/8, hours_width, 1/8, {
+            strokeAlpha: 1,
+            fillAlpha: 0,
+            strokeColor: '#505050',
+          });
+        }
+
+        // Draw days
+        for (var i = 0; i < 7; i++) {
+          draw_box(0, (i+1)/8, day_width, 1/8, {
+            strokeAlpha: 1,
+            fillAlpha: 0,
+            strokeColor: '#999999',
+          });
+
+          var currentDate = new Date();
+          currentDate.setDate(currentDate.getDate() + i);
+
+          // console.log(currentDate);
+
+          draw_text(
+            day_width - 0.01,
+            (i+1.5)/8,
+            0.023,
+            currentDate.toString().substr(0, 10),
+            '#ffffff',
+            1,
+            'right'
+          );
+        }
+
+        // Draw hours
+
+        for (var i = 0; i < 13; i++) {
+          draw_box(day_width + i * hour_width, 0, hour_width, 1/8, {
+            strokeAlpha: 1,
+            strokeColor: '#999999',
+            fillAlpha: 0,
+          });
+
+          draw_text(
+            day_width + (i+0.5) * hour_width,
+            1/16 - 0.026,
+            0.019,
+            (i+9).toString(),
+            '#ffffff',
+            1,
+            'center'
+          );
+
+          draw_text(
+            day_width + (i+0.5) * hour_width,
+            1/16 + 0.026,
+            0.019,
+            (i+10).toString(),
+            '#ffffff',
+            1,
+            'center'
+          );
+        }
+
+        // Draw opening slots.
+        for (var i = 0; i < 7; i++) {
+          var currentDate = new Date();
+          currentDate.setDate(currentDate.getDate() + i);
+
+          const date_key = currentDate.toString().substr(0, 10);
+          const oh = opening_hours[date_key];
+
+          console.log(date_key, oh);
+
+          if (oh) {
+            for (var j = 0; j < oh.length; j++) {
+              const start = oh[j].start;
+              const end = oh[j].end;
+
+              let tint = colors.blue;
+              if (session_colors[oh[j].title.toLowerCase()]) {
+                tint = session_colors[oh[j].title.toLowerCase()];
+              }
+
+              draw_box(
+                day_width + (start - 9) * hour_width,
+                (i+1)/8,
+                (hour_width) * (end - start),
+                1/8,
+                {
+                  strokeAlpha: 1,
+                  strokeColor: '#ffffff',
+                  // strokeWidth: 2,
+                  fillAlpha: 1,
+                  fillColor: tint,
+                }
+              );
+
+              draw_text(
+                day_width + (start - 9) * hour_width + hour_width * (end - start) * 0.5,
+                (i+1+0.5)/8,
+                0.016 * (oh[j].hasOwnProperty('font_size') ? oh[j].font_size : 1),
+                oh[j].title,
+                '#ffffff',
+                1,
+                'center'
+              );
+            }
+
+          }
+        }
+      };
+
+      window.onresize = draw;
+      draw();
+    })
+    .catch(error => {
+      console.error('Error fetching calendar events:', error);
+    });
+  </script>
+</html>

@@ -1,0 +1,24 @@
+# FTP sync script (contains credentials)
+sync-to-ftp.sh
+
+# macOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Node (if ever used)
+node_modules/
+
+# Logs
+*.log
+
+# Archives
+*.zip
