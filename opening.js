@@ -55,21 +55,19 @@ const dates = [];
 const today = new Date();
 
 data.items.map((item) => {
-  const time_offset = 0;
-
+  // Use local time from the dateTime string directly (Google Calendar returns local time)
   const start_date = new Date(item.start.dateTime);
-  const start_hours = (start_date.getUTCHours() + time_offset) + (start_date.getUTCMinutes() / 60);
-
   const end_date = new Date(item.end.dateTime);
-  const end_hours = (end_date.getUTCHours() + time_offset) + (end_date.getUTCMinutes() / 60);
+
+  // Use local hours (not UTC) so BST/GMT is handled correctly
+  const start_hours = start_date.getHours() + (start_date.getMinutes() / 60);
+  const end_hours = end_date.getHours() + (end_date.getMinutes() / 60);
 
   const day = daysOfWeek[start_date.getDay()];
   const month = months[start_date.getMonth()];
-  const dayOfMonth = start_date.getDate().toString().padStart(2, '0');;
+  const dayOfMonth = start_date.getDate().toString().padStart(2, '0');
 
   const date_key = `${day} ${month} ${dayOfMonth}`;
-
-  // console.log('date key', date_key);
 
   if (!opening_hours.hasOwnProperty(date_key)) {
     opening_hours[date_key] = [];
@@ -81,8 +79,8 @@ data.items.map((item) => {
     opening_hours[date_key].push({
       start: start_hours,
       end: end_hours,
-      start_time: `${start_date.getUTCHours() + time_offset}:${start_date.getUTCMinutes().toString().padStart(2,'0')}`,
-      end_time: `${end_date.getUTCHours() + time_offset}:${end_date.getUTCMinutes().toString().padStart(2,'0')}`,
+      start_time: `${start_date.getHours()}:${start_date.getMinutes().toString().padStart(2,'0')}`,
+      end_time: `${end_date.getHours()}:${end_date.getMinutes().toString().padStart(2,'0')}`,
       title: item.summary,
     });
   }
@@ -102,6 +100,11 @@ let valid_events = [
   '☕ open session',
   'beginners session',
   'beginners evening',
+  'beginner session',
+  'beginner evening',
+  'saturday beginners evening',
+  'saturday beginner evening',
+  'beginners',
   // 'after school club',
   // 'after work club',
   // 'after school scooter club',
