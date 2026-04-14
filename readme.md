@@ -1,6 +1,6 @@
 # Cam Skate Website
 
-The website for [The Warehouse Skatepark](https://cam-skate.co.uk) in Cambridge, UK — an indoor skatepark run by Cam Skate, a Community Interest Company.
+The website for [The Warehouse Indoor Skatepark](https://cam-skate.co.uk) in Cambridge, UK — run by Skateboard Cambridge CIC (trading as Cam Skate), a Community Interest Company.
 
 Volunteers are welcome to contribute. See [CONTRIBUTING.md](CONTRIBUTING.md).
 
@@ -40,7 +40,7 @@ The site is hosted on Netlify and rebuilds automatically on every push to `main`
 /get_involved/     volunteering / community
 /donate/           donations
 /hire/             venue hire
-/vouchers/         gift vouchers
+/vouchers/         free entry vouchers for local orgs
 /img/              all site images
 /docs/             public PDFs (safeguarding, policies, code of conduct)
 ```
