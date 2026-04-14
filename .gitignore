@@ -1,6 +1,3 @@
-# FTP sync script (contains credentials)
-sync-to-ftp.sh
-
 # macOS
 .DS_Store
 .DS_Store?

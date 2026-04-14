@@ -68,18 +68,7 @@ Two distinct carousel implementations:
 
 ## Deployment
 
-To sync changes to the live site, run:
-```bash
-cd /Users/jamesmoulang/.openclaw/workspace/CamSkateSite && bash sync-to-ftp.sh
-```
-
-This uses lftp to mirror the local directory to the FTP server at ftp.cam-skate.co.uk.
-
-**CRITICAL: Always use the sync script — never run lftp mirror manually without chmod handling.**
-
-The installed lftp (4.9.3) does NOT support `--chmod-dirs` or `--chmod-files` flags. The sync script handles permissions via explicit `chmod` commands after mirroring. Skipping this breaks file permissions on the live site (403 errors on subpages/images).
-
-If you must run lftp manually, always follow with explicit chmod commands for all files and directories.
+The site is deployed via Netlify, which builds automatically on every push to the GitHub repo's `main` branch. To deploy changes, commit and push — no manual sync step is needed.
 
 ## Development Notes
 

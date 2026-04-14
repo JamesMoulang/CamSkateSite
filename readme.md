@@ -1,5 +1,62 @@
 # Cam Skate Website
 
-This is a test file to verify FTP sync is working correctly.
+The website for [The Warehouse Skatepark](https://cam-skate.co.uk) in Cambridge, UK — an indoor skatepark run by Cam Skate, a Community Interest Company.
 
-Website: https://www.cam-skate.co.uk
+Volunteers are welcome to contribute. See [CONTRIBUTING.md](CONTRIBUTING.md).
+
+## Stack
+
+Plain HTML, CSS, and JavaScript. No build step, no framework, no backend. Session times are pulled live from a public Google Calendar on page load.
+
+## Running locally
+
+Clone the repo, then serve the directory with any static file server. A couple of easy options:
+
+```bash
+# Python 3 (built into macOS and most Linux distros)
+python3 -m http.server 8000
+
+# Or Node
+npx serve .
+```
+
+Then open <http://localhost:8000>.
+
+Note: the Google Calendar API key is restricted to `cam-skate.co.uk`, so the calendar widgets (opening hours, weekly schedule, session carousel) will not load data when running on `localhost`. The rest of the site works normally. If you need the calendar to load locally, ask a maintainer to add `localhost` to the allowed referrers.
+
+## Deployment
+
+The site is hosted on Netlify and rebuilds automatically on every push to `main`. To deploy a change: open a pull request, get it reviewed, merge to `main`, and Netlify takes care of the rest.
+
+## Project structure
+
+```
+/                  homepage (index.html) and shared CSS/JS
+/sessions/         session schedule page
+/coaching/         coaching landing page + subpages for skate/scooter/roller
+/visit/            visiting info
+/events/           events page
+/about/            about + sub-sections (story, impact, campaigns)
+/get_involved/     volunteering / community
+/donate/           donations
+/hire/             venue hire
+/vouchers/         gift vouchers
+/img/              all site images
+/docs/             public PDFs (safeguarding, policies, code of conduct)
+```
+
+Core scripts:
+
+- `script.js` — navigation, mobile menu, carousel controls
+- `opening.js` — "open today" message on the homepage
+- `carousel_loader.js` — upcoming-sessions carousel
+- `week_loader.js` — weekly schedule grid
+- `photo_tour.js` — photo gallery
+
+## Contact
+
+General enquiries: <hello@cam-skate.co.uk>
+
+## Licence
+
+This repository is source-available, not open source. The code is visible so that community volunteers can contribute to the Cam Skate website, but all rights are reserved by Skateboard Cambridge CIC. See the [LICENSE](LICENSE) file for details.
