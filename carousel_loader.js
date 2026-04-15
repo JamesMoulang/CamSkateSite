@@ -312,7 +312,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const data = await response.json();
       events = data.items || [];
 
-      if (!response.ok && location.hostname === "localhost") {
+      if (!response.ok && location.hostname !== "cam-skate.co.uk") {
         events = SAMPLE_EVENTS;
       }
     } catch (error) {
