@@ -9,6 +9,17 @@ document.addEventListener("DOMContentLoaded", () => {
     UNIQUE_EVENTS_ONLY = false;
   }
 
+  const makeSampleEvent = (summary, startHour, endHour) => ({
+    visibility: "public",
+    summary,
+    start: {
+      dateTime: new Date(new Date().setHours(startHour, 0, 0)).toISOString(),
+    },
+    end: {
+      dateTime: new Date(new Date().setHours(endHour, 0, 0)).toISOString(),
+    },
+  });
+
   // Set to true to group all instances of each event type and show all their dates
   let GROUP_ALL_INSTANCES = false;
   if (window.carousel_group_instances) {
@@ -102,6 +113,10 @@ document.addEventListener("DOMContentLoaded", () => {
     "☕ under 10s": ["all wheels welcome"],
     "under 10s": ["all wheels welcome"],
   };
+
+  const SAMPLE_EVENTS = Object.keys(IMAGE_MAPPING).map((key, index) =>
+    makeSampleEvent(key, 9 + index, 10 + index),
+  );
 
   function getDisciplinesForEvent(title) {
     const lower_title = title.toLowerCase();
@@ -291,58 +306,68 @@ document.addEventListener("DOMContentLoaded", () => {
     // between now and that date, hitting the maxResults limit.
     let url = `https://www.googleapis.com/calendar/v3/calendars/${CALENDAR_ID}/events?key=${API_KEY}&timeMin=${timeMinToday}${window.carousel_load_today || window.carousel_load_week ? `&timeMax=${timeMaxToday}` : ""}&maxResults=100&singleEvents=true&orderBy=startTime`;
 
+    let events = [];
     try {
       const response = await fetch(url);
       const data = await response.json();
-      const events = data.items || [];
+      events = data.items || [];
 
-      let eventsToDisplay;
-
-      if (GROUP_ALL_INSTANCES) {
-        // Group all events by title and collect all their times
-        const groupedEvents = {};
-        for (const event of events) {
-          const title = event.summary;
-          if (!groupedEvents[title]) {
-            groupedEvents[title] = [];
-          }
-          groupedEvents[title].push(event);
-        }
-        eventsToDisplay = groupedEvents;
-      } else if (UNIQUE_EVENTS_ONLY) {
-        const nextUpcomingEvents = {};
-        for (const event of events) {
-          const title = event.summary;
-          if (!nextUpcomingEvents[title]) {
-            nextUpcomingEvents[title] = event;
-          }
-        }
-        eventsToDisplay = Object.values(nextUpcomingEvents);
-      } else {
-        eventsToDisplay = events;
+      if (!response.ok && location.hostname === "localhost") {
+        events = SAMPLE_EVENTS;
       }
+    } catch (error) {
+      console.error("Error fetching calendar events:", error);
+      carousel.innerHTML =
+        '<p style="color: red;">Error loading upcoming events.</p>';
+    }
 
-      let carouselHTML = "";
+    let eventsToDisplay;
 
-      if (GROUP_ALL_INSTANCES) {
-        // Generate carousel items with all dates for each event type
-        for (const title in eventsToDisplay) {
-          const eventGroup = eventsToDisplay[title];
-          const image = getImageForEvent(title);
-          const links = generateLinkHTML(title);
-          const disciplines = generateDisciplineHTML(title);
+    if (GROUP_ALL_INSTANCES) {
+      // Group all events by title and collect all their times
+      const groupedEvents = {};
+      for (const event of events) {
+        const title = event.summary;
+        if (!groupedEvents[title]) {
+          groupedEvents[title] = [];
+        }
+        groupedEvents[title].push(event);
+      }
+      eventsToDisplay = groupedEvents;
+    } else if (UNIQUE_EVENTS_ONLY) {
+      const nextUpcomingEvents = {};
+      for (const event of events) {
+        const title = event.summary;
+        if (!nextUpcomingEvents[title]) {
+          nextUpcomingEvents[title] = event;
+        }
+      }
+      eventsToDisplay = Object.values(nextUpcomingEvents);
+    } else {
+      eventsToDisplay = events;
+    }
 
-          // Generate all time strings for this event type
-          let timesHTML = "";
-          for (const event of eventGroup) {
-            const time = formatEventTime(
-              event.start.dateTime,
-              event.end.dateTime,
-            );
-            timesHTML += `<div>${time}</div>`;
-          }
+    let carouselHTML = "";
 
-          carouselHTML += `
+    if (GROUP_ALL_INSTANCES) {
+      // Generate carousel items with all dates for each event type
+      for (const title in eventsToDisplay) {
+        const eventGroup = eventsToDisplay[title];
+        const image = getImageForEvent(title);
+        const links = generateLinkHTML(title);
+        const disciplines = generateDisciplineHTML(title);
+
+        // Generate all time strings for this event type
+        let timesHTML = "";
+        for (const event of eventGroup) {
+          const time = formatEventTime(
+            event.start.dateTime,
+            event.end.dateTime,
+          );
+          timesHTML += `<div>${time}</div>`;
+        }
+
+        carouselHTML += `
                         <div class="carousel-item" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('${assetRoot + image}');">
                             <div class="carousel-item-text-container">
                                 ${disciplines}
@@ -352,20 +377,17 @@ document.addEventListener("DOMContentLoaded", () => {
                             </div>
                         </div>
                     `;
-        }
-      } else {
-        // Original behavior - one carousel item per event
-        for (const event of eventsToDisplay) {
-          const title = event.summary;
-          const image = getImageForEvent(title);
-          const time = formatEventTime(
-            event.start.dateTime,
-            event.end.dateTime,
-          );
-          const links = generateLinkHTML(title);
-          const disciplines = generateDisciplineHTML(title);
+      }
+    } else {
+      // Original behavior - one carousel item per event
+      for (const event of eventsToDisplay) {
+        const title = event.summary;
+        const image = getImageForEvent(title);
+        const time = formatEventTime(event.start.dateTime, event.end.dateTime);
+        const links = generateLinkHTML(title);
+        const disciplines = generateDisciplineHTML(title);
 
-          carouselHTML += `
+        carouselHTML += `
                         <div class="carousel-item" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('${assetRoot + image}');">
                             <div class="carousel-item-text-container">
                                 ${disciplines}
@@ -375,15 +397,10 @@ document.addEventListener("DOMContentLoaded", () => {
                             </div>
                         </div>
                     `;
-        }
       }
-
-      carousel.innerHTML = carouselHTML;
-    } catch (error) {
-      console.error("Error fetching calendar events:", error);
-      carousel.innerHTML =
-        '<p style="color: red;">Error loading upcoming events.</p>';
     }
+
+    carousel.innerHTML = carouselHTML;
   }
 
   fetchAndPopulateCarousel();
