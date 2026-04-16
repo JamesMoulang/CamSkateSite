@@ -1,0 +1,25 @@
+{
+  "name": "camskatesite",
+  "version": "1.0.0",
+  "description": "The website for [The Warehouse Indoor Skatepark](https://cam-skate.co.uk) in Cambridge, UK — run by Skateboard Cambridge CIC (trading as Cam Skate), a Community Interest Company.",
+  "main": "script.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JamesMoulang/CamSkateSite.git"
+  },
+  "author": "JamesMoulang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JamesMoulang/CamSkateSite/issues"
+  },
+  "homepage": "https://github.com/JamesMoulang/CamSkateSite#readme",
+  "dependencies": {
+    "prettier": "3.8.3"
+  }
+}

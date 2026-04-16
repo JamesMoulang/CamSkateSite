@@ -1,744 +1,1593 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Impact Report - Cam Skate</title>
-    <meta name="description" content="The Warehouse Skatepark impact report. See how Cambridge's first indoor skatepark is benefiting the community.">
+    <meta
+      name="description"
+      content="The Warehouse Skatepark impact report. See how Cambridge's first indoor skatepark is benefiting the community."
+    />
 
     <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.cam-skate.co.uk/about/impact/">
-    <meta property="og:title" content="Impact Report - Cam Skate">
-    <meta property="og:description" content="The Warehouse Skatepark impact report. See how Cambridge's first indoor skatepark is benefiting the community.">
-    <meta property="og:image" content="https://www.cam-skate.co.uk/img/whole_park.jpeg">
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://www.cam-skate.co.uk/about/impact/"
+    />
+    <meta property="og:title" content="Impact Report - Cam Skate" />
+    <meta
+      property="og:description"
+      content="The Warehouse Skatepark impact report. See how Cambridge's first indoor skatepark is benefiting the community."
+    />
+    <meta
+      property="og:image"
+      content="https://www.cam-skate.co.uk/img/whole_park.jpeg"
+    />
 
     <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://www.cam-skate.co.uk/about/impact/">
-    <meta property="twitter:title" content="Impact Report - Cam Skate">
-    <meta property="twitter:description" content="The Warehouse Skatepark impact report. See how Cambridge's first indoor skatepark is benefiting the community.">
-    <meta property="twitter:image" content="https://www.cam-skate.co.uk/img/whole_park.jpeg">
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta
+      property="twitter:url"
+      content="https://www.cam-skate.co.uk/about/impact/"
+    />
+    <meta property="twitter:title" content="Impact Report - Cam Skate" />
+    <meta
+      property="twitter:description"
+      content="The Warehouse Skatepark impact report. See how Cambridge's first indoor skatepark is benefiting the community."
+    />
+    <meta
+      property="twitter:image"
+      content="https://www.cam-skate.co.uk/img/whole_park.jpeg"
+    />
 
-    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="../../style.css" />
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-chart-treemap@2.3.0"></script>
-</head>
-<body>
+  </head>
+  <body>
     <header class="navbar-black-text">
-        <a href="/"><img src="../../img/logo_black.png" alt="Cam Skate Site Logo" class="logo"></a>
-        <nav>
-            <ul>
-                <li><a href="/sessions/">Sessions</a></li>
-                <li><a href="/coaching/">Coaching</a></li>
-                <li><a href="/hire/">Hire</a></li>
-                <li><a href="/events/">Events</a></li>
-                <li><a href="/visit/">Visit</a></li>
-                <li><a href="/get_involved/">Get Involved</a></li>
-                <li class="current-page"><a href="/about/">About</a></li>
-                <li><a href="/donate/">Donate</a></li>
-            </ul>
-        </nav>
-        <div class="hamburger-menu hamburger-menu-black">
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-        </div>
+      <a href="/"
+        ><img
+          src="../../img/logo_black.png"
+          alt="Cam Skate Site Logo"
+          class="logo"
+      /></a>
+      <nav>
+        <ul>
+          <li><a href="/sessions/">Sessions</a></li>
+          <li><a href="/coaching/">Coaching</a></li>
+          <li><a href="/hire/">Hire</a></li>
+          <li><a href="/events/">Events</a></li>
+          <li><a href="/visit/">Visit</a></li>
+          <li><a href="/get_involved/">Get Involved</a></li>
+          <li class="current-page"><a href="/about/">About</a></li>
+          <li><a href="/donate/">Donate</a></li>
+        </ul>
+      </nav>
+      <div class="hamburger-menu hamburger-menu-black">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
     </header>
     <div class="nav-overlay">
-        <a href="#" class="close-btn">&times;</a>
-        <div class="nav-overlay-content">
-            <a href="/">Home</a>
-            <a href="/sessions/">Sessions</a>
-            <a href="/coaching/">Coaching</a>
-            <a href="/hire/">Hire</a>
-            <a href="/events/">Events</a>
-            <a href="/visit/">Visit</a>
-            <a href="/get_involved/">Get Involved</a>
-            <a href="/about/">About</a>
-            <a href="/donate/">Donate</a>
-        </div>
+      <a href="#" class="close-btn">&times;</a>
+      <div class="nav-overlay-content">
+        <a href="/">Home</a>
+        <a href="/sessions/">Sessions</a>
+        <a href="/coaching/">Coaching</a>
+        <a href="/hire/">Hire</a>
+        <a href="/events/">Events</a>
+        <a href="/visit/">Visit</a>
+        <a href="/get_involved/">Get Involved</a>
+        <a href="/about/">About</a>
+        <a href="/donate/">Donate</a>
+      </div>
     </div>
     <main>
-        <section class="info-section title">
-            <div class="info-section-content">
-                <h2>The Warehouse Skatepark Impact Report</h2>
-                <p><a href="/about/">&larr; Back to About</a></p>
+      <section class="info-section title">
+        <div class="info-section-content">
+          <h2>The Warehouse Skatepark Impact Report</h2>
+          <p><a href="/about/">&larr; Back to About</a></p>
+        </div>
+      </section>
+
+      <section class="info-section">
+        <div class="info-section-content">
+          <div
+            style="
+              background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+              color: white;
+              padding: 30px;
+              border-radius: 15px;
+              margin-top: 40px;
+              box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            "
+          >
+            <p
+              style="
+                font-size: 1.5rem;
+                font-weight: bold;
+                line-height: 1.4;
+                margin: 0;
+                text-align: left;
+              "
+            >
+              We manage an indoor skatepark that's open 7 days a week, run for
+              and by the community.
+            </p>
+          </div>
+
+          <div class="two-column-layout" style="margin-top: 40px">
+            <div style="text-align: left" class="left-column">
+              <p style="margin-top: 0">
+                Since October 2024 we have offered a safe and welcoming space,
+                all year round, 7 days a week, for people of all ages to come
+                and skate, rollerskate/blade, or ride scooters, at an accessible
+                price.
+              </p>
+
+              <div style="text-align: center; margin: 40px 0">
+                <div
+                  style="
+                    font-size: 4rem;
+                    font-weight: bold;
+                    background: linear-gradient(
+                      135deg,
+                      #007bff 0%,
+                      #0056b3 100%
+                    );
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    background-clip: text;
+                    line-height: 1;
+                    margin-bottom: 10px;
+                  "
+                >
+                  <span id="totalVisits">10,000</span> visits
+                </div>
+                <div id="ref1" style="font-size: 1.2rem; color: #666">
+                  Since October 2024
+                  <a href="#note1" style="text-decoration: none"
+                    ><sup>1</sup></a
+                  >
+                </div>
+              </div>
             </div>
-        </section>
-
-        <section class="info-section">
-            <div class="info-section-content">
-                <div style="background: linear-gradient(135deg, #007bff 0%, #0056b3 100%); color: white; padding: 30px; border-radius: 15px; margin-top: 40px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-                    <p style="font-size: 1.5rem; font-weight: bold; line-height: 1.4; margin: 0; text-align: left;">We manage an indoor skatepark that's open 7 days a week, run for and by the community.</p>
-                </div>
-
-                <div class="two-column-layout" style="margin-top: 40px;">
-                    <div style="text-align: left;" class="left-column">
-                        <p style="margin-top: 0;">Since October 2024 we have offered a safe and welcoming space, all year round, 7 days a week, for people of all ages to come and skate, rollerskate/blade, or ride scooters, at an accessible price.</p>
-
-                        <div style="text-align: center; margin: 40px 0;">
-                            <div style="font-size: 4rem; font-weight: bold; background: linear-gradient(135deg, #007bff 0%, #0056b3 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1; margin-bottom: 10px;"><span id="totalVisits">10,000</span> visits</div>
-                            <div id="ref1" style="font-size: 1.2rem; color: #666;">Since October 2024 <a href="#note1" style="text-decoration: none;"><sup>1</sup></a></div>
-                        </div>
-                    </div>
-                    <div class="right-column">
-                        <img src="../../img/whole_park.jpeg" alt="The Warehouse indoor skatepark" style="width: 100%; border-radius: 10px;">
-                    </div>
-                </div>
+            <div class="right-column">
+              <img
+                src="../../img/whole_park.jpeg"
+                alt="The Warehouse indoor skatepark"
+                style="width: 100%; border-radius: 10px"
+              />
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
 
-        <section class="info-section">
-            <div class="info-section-content">
-                <div style="background: linear-gradient(135deg, #007bff 0%, #0056b3 100%); color: white; padding: 30px; border-radius: 15px; margin-top: 40px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-                    <p style="font-size: 1.5rem; font-weight: bold; line-height: 1.4; margin: 0; text-align: left;">50+ volunteers give their time regularly to support our mission.</p>
-                </div>
+      <section class="info-section">
+        <div class="info-section-content">
+          <div
+            style="
+              background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+              color: white;
+              padding: 30px;
+              border-radius: 15px;
+              margin-top: 40px;
+              box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            "
+          >
+            <p
+              style="
+                font-size: 1.5rem;
+                font-weight: bold;
+                line-height: 1.4;
+                margin: 0;
+                text-align: left;
+              "
+            >
+              50+ volunteers give their time regularly to support our mission.
+            </p>
+          </div>
 
-                <p style="text-align: left; margin-top: 40px;">We've created a community of volunteers who have genuine ownership over this project, shaping it to their needs and the needs of the wider community.</p>
-                <p style="text-align: left;">Every time we have an Open Session, it's because someone has given their time to make it happen!</p>
+          <p style="text-align: left; margin-top: 40px">
+            We've created a community of volunteers who have genuine ownership
+            over this project, shaping it to their needs and the needs of the
+            wider community.
+          </p>
+          <p style="text-align: left">
+            Every time we have an Open Session, it's because someone has given
+            their time to make it happen!
+          </p>
 
-                <h3 style="text-align: center; margin-top: 40px; margin-bottom: 10px; font-size: 1.8rem;">Meet some of our volunteers:</h3>
-                <div class="polaroid-gallery">
-                    <div class="polaroid">
-                        <div class="polaroid-img-wrapper"><img src="../../img/polaroids/thumb/alex.jpg" data-src="../../img/polaroids/alex.jpg" alt="Alex" class="loading"></div>
-                        <div class="polaroid-name">Alex</div>
-                    </div>
-                    <div class="polaroid">
-                        <div class="polaroid-img-wrapper"><img src="../../img/polaroids/thumb/ali.jpg" data-src="../../img/polaroids/ali.jpg" alt="Ali" class="loading"></div>
-                        <div class="polaroid-name">Ali</div>
-                    </div>
-                    <div class="polaroid">
-                        <div class="polaroid-img-wrapper"><img src="../../img/polaroids/thumb/barnie.jpg" data-src="../../img/polaroids/barnie.jpg" alt="Barnie" class="loading"></div>
-                        <div class="polaroid-name">Barnie</div>
-                    </div>
-                    <div class="polaroid">
-                        <div class="polaroid-img-wrapper"><img src="../../img/polaroids/thumb/caroline.jpg" data-src="../../img/polaroids/caroline.jpg" alt="Caroline" class="loading"></div>
-                        <div class="polaroid-name">Caroline</div>
-                    </div>
-                    <div class="polaroid">
-                        <div class="polaroid-img-wrapper"><img src="../../img/polaroids/thumb/charlie.jpg" data-src="../../img/polaroids/charlie.jpg" alt="Charlie" class="loading"></div>
-                        <div class="polaroid-name">Charlie</div>
-                    </div>
-                    <div class="polaroid">
-                        <div class="polaroid-img-wrapper"><img src="../../img/polaroids/thumb/dave.jpg" data-src="../../img/polaroids/dave.jpg" alt="Dave" class="loading"></div>
-                        <div class="polaroid-name">Dave</div>
-                    </div>
-                    <div class="polaroid">
-                        <div class="polaroid-img-wrapper"><img src="../../img/polaroids/thumb/elecia_a_kp.jpg" data-src="../../img/polaroids/elecia_a_kp.jpg" alt="Elecia & KP" class="loading"></div>
-                        <div class="polaroid-name">Elecia & KP</div>
-                    </div>
-                    <div class="polaroid">
-                        <div class="polaroid-img-wrapper"><img src="../../img/polaroids/thumb/fletch.jpg" data-src="../../img/polaroids/fletch.jpg" alt="Fletch" class="loading"></div>
-                        <div class="polaroid-name">Fletch</div>
-                    </div>
-                    <div class="polaroid">
-                        <div class="polaroid-img-wrapper"><img src="../../img/polaroids/thumb/graeme.jpg" data-src="../../img/polaroids/graeme.jpg" alt="Graeme" class="loading"></div>
-                        <div class="polaroid-name">Graeme</div>
-                    </div>
-                    <div class="polaroid">
-                        <div class="polaroid-img-wrapper"><img src="../../img/polaroids/thumb/james.jpg" data-src="../../img/polaroids/james.jpg" alt="James" class="loading"></div>
-                        <div class="polaroid-name">James</div>
-                    </div>
-                    <div class="polaroid">
-                        <div class="polaroid-img-wrapper"><img src="../../img/polaroids/thumb/joe.jpg" data-src="../../img/polaroids/joe.jpg" alt="Joe" class="loading"></div>
-                        <div class="polaroid-name">Joe</div>
-                    </div>
-                    <div class="polaroid">
-                        <div class="polaroid-img-wrapper"><img src="../../img/polaroids/thumb/joe_h.jpg" data-src="../../img/polaroids/joe_h.jpg" alt="Joe H" class="loading"></div>
-                        <div class="polaroid-name">Joe H</div>
-                    </div>
-                    <div class="polaroid">
-                        <div class="polaroid-img-wrapper"><img src="../../img/polaroids/thumb/jordan.jpg" data-src="../../img/polaroids/jordan.jpg" alt="Jordan" class="loading"></div>
-                        <div class="polaroid-name">Jordan</div>
-                    </div>
-                    <div class="polaroid">
-                        <div class="polaroid-img-wrapper"><img src="../../img/polaroids/thumb/juan.jpg" data-src="../../img/polaroids/juan.jpg" alt="Juan" class="loading"></div>
-                        <div class="polaroid-name">Juan</div>
-                    </div>
-                    <div class="polaroid">
-                        <div class="polaroid-img-wrapper"><img src="../../img/polaroids/thumb/marie.jpg" data-src="../../img/polaroids/marie.jpg" alt="Marie" class="loading"></div>
-                        <div class="polaroid-name">Marie</div>
-                    </div>
-                    <div class="polaroid">
-                        <div class="polaroid-img-wrapper"><img src="../../img/polaroids/thumb/max.jpg" data-src="../../img/polaroids/max.jpg" alt="Max" class="loading"></div>
-                        <div class="polaroid-name">Max</div>
-                    </div>
-                    <div class="polaroid">
-                        <div class="polaroid-img-wrapper"><img src="../../img/polaroids/thumb/noz.jpg" data-src="../../img/polaroids/noz.jpg" alt="Noz" class="loading"></div>
-                        <div class="polaroid-name">Noz</div>
-                    </div>
-                    <div class="polaroid">
-                        <div class="polaroid-img-wrapper"><img src="../../img/polaroids/thumb/paul.jpg" data-src="../../img/polaroids/paul.jpg" alt="Paul" class="loading"></div>
-                        <div class="polaroid-name">Paul</div>
-                    </div>
-                    <div class="polaroid">
-                        <div class="polaroid-img-wrapper"><img src="../../img/polaroids/thumb/pete.jpg" data-src="../../img/polaroids/pete.jpg" alt="Pete" class="loading"></div>
-                        <div class="polaroid-name">Pete</div>
-                    </div>
-                    <div class="polaroid">
-                        <div class="polaroid-img-wrapper"><img src="../../img/polaroids/thumb/rob.jpg" data-src="../../img/polaroids/rob.jpg" alt="Rob" class="loading"></div>
-                        <div class="polaroid-name">Rob</div>
-                    </div>
-                    <div class="polaroid">
-                        <div class="polaroid-img-wrapper"><img src="../../img/polaroids/thumb/sam.jpg" data-src="../../img/polaroids/sam.jpg" alt="Sam" class="loading"></div>
-                        <div class="polaroid-name">Sam</div>
-                    </div>
-                    <div class="polaroid">
-                        <div class="polaroid-img-wrapper"><img src="../../img/polaroids/thumb/seb.jpg" data-src="../../img/polaroids/seb.jpg" alt="Seb" class="loading"></div>
-                        <div class="polaroid-name">Seb</div>
-                    </div>
-                    <div class="polaroid">
-                        <div class="polaroid-img-wrapper"><img src="../../img/polaroids/thumb/sofia.jpg" data-src="../../img/polaroids/sofia.jpg" alt="Sofia" class="loading"></div>
-                        <div class="polaroid-name">Sofia</div>
-                    </div>
-                    <div class="polaroid">
-                        <div class="polaroid-img-wrapper"><img src="../../img/polaroids/thumb/stephen.jpg" data-src="../../img/polaroids/stephen.jpg" alt="Stephen" class="loading"></div>
-                        <div class="polaroid-name">Stephen</div>
-                    </div>
-                    <div class="polaroid">
-                        <div class="polaroid-img-wrapper"><img src="../../img/polaroids/thumb/val_a_marie.jpg" data-src="../../img/polaroids/val_a_marie.jpg" alt="Val & Marie" class="loading"></div>
-                        <div class="polaroid-name">Val & Marie</div>
-                    </div>
-                    <div class="polaroid">
-                        <div class="polaroid-img-wrapper"><img src="../../img/polaroids/thumb/ziff.jpg" data-src="../../img/polaroids/ziff.jpg" alt="Ziff" class="loading"></div>
-                        <div class="polaroid-name">Ziff</div>
-                    </div>
-                    <div class="polaroid polaroid-landscape">
-                        <div class="polaroid-img-wrapper"><img src="../../img/polaroids/thumb/girl_skate_crew.jpg" data-src="../../img/polaroids/girl_skate_crew.jpg" alt="Girl Skate Crew" class="loading"></div>
-                        <div class="polaroid-name">Girl Skate Crew</div>
-                    </div>
-                </div>
-
-                <p style="text-align: center; margin-top: 30px;"><a href="/get_involved/#volunteer">Find out how to get involved as a volunteer</a></p>
+          <h3
+            style="
+              text-align: center;
+              margin-top: 40px;
+              margin-bottom: 10px;
+              font-size: 1.8rem;
+            "
+          >
+            Meet some of our volunteers:
+          </h3>
+          <div class="polaroid-gallery">
+            <div class="polaroid">
+              <div class="polaroid-img-wrapper">
+                <img
+                  src="../../img/polaroids/thumb/alex.jpg"
+                  data-src="../../img/polaroids/alex.jpg"
+                  alt="Alex"
+                  class="loading"
+                />
+              </div>
+              <div class="polaroid-name">Alex</div>
             </div>
-        </section>
-
-        <section class="info-section">
-            <div class="info-section-content">
-                <div style="background: linear-gradient(135deg, #007bff 0%, #0056b3 100%); color: white; padding: 30px; border-radius: 15px; margin-top: 40px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-                    <p style="font-size: 1.5rem; font-weight: bold; line-height: 1.4; margin: 0; text-align: left;">We are growing the skateboarding community with free coaching for those who need it.</p>
-                </div>
-
-                <div class="two-column-layout" style="margin-top: 40px;">
-                    <div style="text-align: left;" class="left-column">
-                        <p style="margin-top: 0;">Through our coaching programme we are getting more people into skateboarding, and we offer free lessons and equipment to young people who can't normally afford to experience this.</p>
-
-                        <div style="text-align: center; margin: 40px 0;">
-                            <div style="font-size: 4rem; font-weight: bold; background: linear-gradient(135deg, #007bff 0%, #0056b3 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1; margin-bottom: 10px;">658+ hours</div>
-                            <div id="ref2" style="font-size: 1.2rem; color: #666;">of free skateboard coaching delivered <a href="#note2" style="text-decoration: none;"><sup>2</sup></a></div>
-                        </div>
-
-                        <div style="text-align: center; margin: 40px 0;">
-                            <div style="font-size: 4rem; font-weight: bold; background: linear-gradient(135deg, #007bff 0%, #0056b3 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1; margin-bottom: 10px;">2800+ hours</div>
-                            <div style="font-size: 1.2rem; color: #666;">total skateboard coaching delivered so far!</div>
-                        </div>
-
-                        <p>Our free skateboarding coaching places are funded in part from the proceeds of our paid coaching and entry fees, as well as a generous grant from Cambridge City Council, and funding from the <a href="https://www.cambridgeshire.gov.uk/council/communities/support-with-the-cost-of-living/holiday-activities-and-food-programme">Holiday Activities and Food programme.</a></p>
-                    </div>
-                    <div class="right-column">
-                        <img src="../../img/coaching_2.jpg" alt="Skateboard coaching at The Warehouse" style="width: 100%; border-radius: 10px;">
-                    </div>
-                </div>
-
-                <blockquote style="border-left: 4px solid #007bff; padding-left: 20px; margin: 40px 0; font-style: italic; color: #555; text-align: left;">
-                    "Thank you for all the guidance and acceptance with Jacob in his skateboarding journey. As his mum, watching him find his happiness means everything to me and I really appreciate all of you. Prior to skateboarding Jacob didn't really have a focus but now everything is about when/where we can go next. From the bottom of my heart Thank you all!"
-                    <div style="margin-top: 10px; font-style: normal; color: #666; background: none;">— Rochelle</div>
-                </blockquote>
-
-                <blockquote style="border-left: 4px solid #007bff; padding-left: 20px; margin: 40px 0; font-style: italic; color: #555; text-align: left;">
-                    "Dear Pete and Ali - thank you so much for being the best skateboard teachers ever. I have had so much fun with you and in the club. I have learnt lots of cool things and you always helped me and I am the luckiest person in the whole world because of you and because of my amazing new red starwars skateboard. I'm really going to miss the club and all of you in Germany. Lots of love from Felix."
-                    <div style="margin-top: 10px; font-style: normal; color: #666; background: none;">— Felix, After School Club attendee</div>
-                </blockquote>
-
-                <blockquote style="border-left: 4px solid #007bff; padding-left: 20px; margin: 40px 0; font-style: italic; color: #555; text-align: left;">
-                    "Dear Pete, Ali and James - it is hard to put it into words, but thank you so so much from the bottom of my heart for everything you have done for us. It's not only Felix - knowing that he was with you, having fun and absolutely enjoying the sessions, has been such a support for me too. Watching his confidence grow on and off the board has been a joy and that's all thanks to you - your incredible teaching and the positive, encouraging atmosphere you have created. It's rare to find something so special."
-                    <div style="margin-top: 10px; font-style: normal; color: #666; background: none;">— Felix's parents</div>
-                </blockquote>
-
-                <p style="background: linear-gradient(135deg, #28a745 0%, #1e7e34 100%); color: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); margin-top: 40px; margin-left: 40px; margin-right: 40px; text-align: left;">If you'd like to partner with Cam Skate to deliver more free skateboard coaching in Cambridge, please get in touch with us at <a href="mailto:hello@cam-skate.co.uk" style="color: white; text-decoration: underline;">hello@cam-skate.co.uk</a></p>
+            <div class="polaroid">
+              <div class="polaroid-img-wrapper">
+                <img
+                  src="../../img/polaroids/thumb/ali.jpg"
+                  data-src="../../img/polaroids/ali.jpg"
+                  alt="Ali"
+                  class="loading"
+                />
+              </div>
+              <div class="polaroid-name">Ali</div>
             </div>
-        </section>
-
-        <section class="info-section">
-            <div class="info-section-content">
-                <div style="background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%); color: white; padding: 30px; border-radius: 15px; margin-top: 40px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-                    <p style="font-size: 1.5rem; font-weight: bold; line-height: 1.4; margin: 0; text-align: left;">The Warehouse brings together skaters of all ages and genders.</p>
-                </div>
-
-                <div class="two-column-layout" style="margin-top: 40px;">
-                    <div class="left-column" style="text-align: left; flex: 1;">
-                        <p>The Warehouse has dedicated sessions for over 30s and under 10s, and our Open Sessions bring together skaters of all ages!</p>
-                        <p style="margin-top: 0;">The diverse mix of ages at The Warehouse creates a unique community where knowledge and enthusiasm are shared across generations.</p>
-                        <p>The Warehouse is inclusive to all genders. With our monthly free Girl Skate Night and roller skate coaching, we're providing a safe and welcoming space to the growing community of female skaters in the UK.</p>
-                    </div>
-                    <div class="right-column" style="flex: 1;">
-                        <div id="treemapPlaceholder" style="width: 100%; aspect-ratio: 1.5; background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%); background-size: 200% 100%; animation: shimmer 1.5s infinite; border-radius: 10px; display: flex; align-items: center; justify-content: center; color: #999;">
-                            <span>Loading chart...</span>
-                        </div>
-                        <canvas id="ageTreemapChart" style="display: none;"></canvas>
-                    </div>
-                </div>
+            <div class="polaroid">
+              <div class="polaroid-img-wrapper">
+                <img
+                  src="../../img/polaroids/thumb/barnie.jpg"
+                  data-src="../../img/polaroids/barnie.jpg"
+                  alt="Barnie"
+                  class="loading"
+                />
+              </div>
+              <div class="polaroid-name">Barnie</div>
             </div>
-        </section>
-
-        <section class="info-section">
-            <div class="info-section-content">
-                <p id="ref3" style="text-align: center; font-size: 1rem; color: #666; margin-bottom: 20px;">Gender distribution by age <a href="#note3" style="text-decoration: none;"><sup>3</sup></a></p>
-                <div class="gender-chart-container" style="max-width: 1200px; margin: 0 auto;">
-                    <div id="genderChartPlaceholder" style="width: 100%; aspect-ratio: 2.5; background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%); background-size: 200% 100%; animation: shimmer 1.5s infinite; border-radius: 10px; display: flex; align-items: center; justify-content: center; color: #999;">
-                        <span>Loading chart...</span>
-                    </div>
-                    <canvas id="ageBreakdownChart" style="display: none;"></canvas>
-                </div>
-
-                <blockquote style="border-left: 4px solid #9b59b6; padding-left: 20px; margin: 40px auto; font-style: italic; color: #555; max-width: 1200px; text-align: left;">
-                    "I am an absolute beginner skater. Visited for the first time on Girls Night and was amazed at the place!! Welcoming, clean, well maintained, even had skateboards and helmets to borrow! Emily who was volunteering on the night helped me master the basics and got me to go down a ramp!! I hope to see this place stay in Cambridge for a very long time to come!"
-                    <div style="margin-top: 10px; font-style: normal; color: #666; background: none;">— Sara</div>
-                </blockquote>
-
-                <div class="two-column-layout" style="margin-top: 40px;">
-                    <div class="left-column" style="text-align: left;">
-                        <p id="ref6" style="margin-top: 0;">The Warehouse draws skaters from across the region and beyond: <a href="#note6" style="text-decoration: none;"><sup>6</sup></a></p>
-                        <ul style="list-style: none; padding-left: 0; line-height: 1.8;">
-                            <li><strong>19.8%</strong> from Cambridge City</li>
-                            <li><strong>13.0%</strong> from Greater Cambridge</li>
-                            <li><strong>10.1%</strong> from wider Cambridgeshire</li>
-                            <li><strong>33.8%</strong> from beyond Cambridgeshire</li>
-                        </ul>
-
-                        <details style="margin-top: 20px;">
-                            <summary style="cursor: pointer; color: #007bff; font-weight: bold;">Show Cambridge City ward-by-ward breakdown</summary>
-                            <table style="width: 100%; margin-top: 20px; border-collapse: collapse; font-size: 0.9rem;">
-                                <thead>
-                                    <tr style="background-color: #f8f9fa; border-bottom: 2px solid #dee2e6;">
-                                        <th style="padding: 10px; text-align: left;">Ward</th>
-                                        <th style="padding: 10px; text-align: right;">Count</th>
-                                        <th style="padding: 10px; text-align: right;">% of Cambridge City</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr style="border-bottom: 1px solid #dee2e6;">
-                                        <td style="padding: 8px;">Romsey</td>
-                                        <td style="padding: 8px; text-align: right;">101</td>
-                                        <td style="padding: 8px; text-align: right;">15.0%</td>
-                                    </tr>
-                                    <tr style="border-bottom: 1px solid #dee2e6;">
-                                        <td style="padding: 8px;">West Chesterton</td>
-                                        <td style="padding: 8px; text-align: right;">90</td>
-                                        <td style="padding: 8px; text-align: right;">13.3%</td>
-                                    </tr>
-                                    <tr style="border-bottom: 1px solid #dee2e6;">
-                                        <td style="padding: 8px;">Abbey</td>
-                                        <td style="padding: 8px; text-align: right;">79</td>
-                                        <td style="padding: 8px; text-align: right;">11.7%</td>
-                                    </tr>
-                                    <tr style="border-bottom: 1px solid #dee2e6;">
-                                        <td style="padding: 8px;">Petersfield</td>
-                                        <td style="padding: 8px; text-align: right;">77</td>
-                                        <td style="padding: 8px; text-align: right;">11.4%</td>
-                                    </tr>
-                                    <tr style="border-bottom: 1px solid #dee2e6;">
-                                        <td style="padding: 8px;">East Chesterton</td>
-                                        <td style="padding: 8px; text-align: right;">54</td>
-                                        <td style="padding: 8px; text-align: right;">8.0%</td>
-                                    </tr>
-                                    <tr style="border-bottom: 1px solid #dee2e6;">
-                                        <td style="padding: 8px;">Coleridge</td>
-                                        <td style="padding: 8px; text-align: right;">50</td>
-                                        <td style="padding: 8px; text-align: right;">7.4%</td>
-                                    </tr>
-                                    <tr style="border-bottom: 1px solid #dee2e6;">
-                                        <td style="padding: 8px;">Trumpington</td>
-                                        <td style="padding: 8px; text-align: right;">45</td>
-                                        <td style="padding: 8px; text-align: right;">6.7%</td>
-                                    </tr>
-                                    <tr style="border-bottom: 1px solid #dee2e6;">
-                                        <td style="padding: 8px;">Arbury</td>
-                                        <td style="padding: 8px; text-align: right;">42</td>
-                                        <td style="padding: 8px; text-align: right;">6.2%</td>
-                                    </tr>
-                                    <tr style="border-bottom: 1px solid #dee2e6;">
-                                        <td style="padding: 8px;">Queen Edith's</td>
-                                        <td style="padding: 8px; text-align: right;">33</td>
-                                        <td style="padding: 8px; text-align: right;">4.9%</td>
-                                    </tr>
-                                    <tr style="border-bottom: 1px solid #dee2e6;">
-                                        <td style="padding: 8px;">Cherry Hinton</td>
-                                        <td style="padding: 8px; text-align: right;">29</td>
-                                        <td style="padding: 8px; text-align: right;">4.3%</td>
-                                    </tr>
-                                    <tr style="border-bottom: 1px solid #dee2e6;">
-                                        <td style="padding: 8px;">King's Hedges</td>
-                                        <td style="padding: 8px; text-align: right;">25</td>
-                                        <td style="padding: 8px; text-align: right;">3.7%</td>
-                                    </tr>
-                                    <tr style="border-bottom: 1px solid #dee2e6;">
-                                        <td style="padding: 8px;">Newnham</td>
-                                        <td style="padding: 8px; text-align: right;">23</td>
-                                        <td style="padding: 8px; text-align: right;">3.4%</td>
-                                    </tr>
-                                    <tr style="border-bottom: 1px solid #dee2e6;">
-                                        <td style="padding: 8px;">Market</td>
-                                        <td style="padding: 8px; text-align: right;">14</td>
-                                        <td style="padding: 8px; text-align: right;">2.1%</td>
-                                    </tr>
-                                    <tr>
-                                        <td style="padding: 8px;">Castle</td>
-                                        <td style="padding: 8px; text-align: right;">13</td>
-                                        <td style="padding: 8px; text-align: right;">1.9%</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </details>
-                    </div>
-                    <div class="right-column">
-                        <img src="../../img/heatmap.jpg" alt="Geographic distribution of Warehouse users" style="width: 100%; border-radius: 10px;">
-                        <p style="text-align: left; font-size: 0.9rem; color: #666; margin-top: 10px;">Heat map showing geographic distribution of Warehouse users based on postcode data</p>
-                    </div>
-                </div>
+            <div class="polaroid">
+              <div class="polaroid-img-wrapper">
+                <img
+                  src="../../img/polaroids/thumb/caroline.jpg"
+                  data-src="../../img/polaroids/caroline.jpg"
+                  alt="Caroline"
+                  class="loading"
+                />
+              </div>
+              <div class="polaroid-name">Caroline</div>
             </div>
-        </section>
-
-        <section class="info-section">
-            <div class="info-section-content">
-                <div style="background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%); color: white; padding: 30px; border-radius: 15px; margin-top: 40px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-                    <p style="font-size: 1.5rem; font-weight: bold; line-height: 1.4; margin: 0; text-align: left;">How does The Warehouse benefit its users?</p>
-                </div>
-
-                <p id="ref4" style="text-align: left; margin: 40px 0;">Skateparks generate massive physical and mental health benefits, often among those who otherwise might not be active. <a href="#note4" style="text-decoration: none;"><sup>4</sup></a></p>
-
-                <div class="stats-two-column" style="display: flex; gap: 40px; margin: 40px 0;">
-                    <div style="flex: 1; text-align: center;">
-                        <div style="font-size: 3rem; font-weight: bold; background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1; margin-bottom: 10px;">90.7% of skaters</div>
-                        <div id="ref5" style="font-size: 1.2rem; color: #666;">agree or strongly agree that The Warehouse improves their mental health. <a href="#note5" style="text-decoration: none;"><sup>5</sup></a></div>
-                    </div>
-
-                    <div style="flex: 1; text-align: center;">
-                        <div style="font-size: 3rem; font-weight: bold; background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1; margin-bottom: 10px;">70% of skaters</div>
-                        <div style="font-size: 1.2rem; color: #666;">agree or strongly agree that they have been more physically active since The Warehouse opened.</div>
-                    </div>
-                </div>
-
-                <p style="text-align: left; margin: 40px 0;">As a Community Interest Company, we are a not-for-profit entity and this allows us to keep the mental and physical benefits of the park at an accessible price of £5 per session.</p>
-
-                <div class="stats-two-column" style="display: flex; gap: 40px; margin: 40px 0;">
-                    <div style="flex: 1; text-align: center;">
-                        <div style="font-size: 3rem; font-weight: bold; background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1; margin-bottom: 10px;">68.7% of skaters</div>
-                        <div style="font-size: 1.2rem; color: #666;">think the price is just right</div>
-                    </div>
-
-                    <div style="flex: 1; text-align: center;">
-                        <div style="font-size: 3rem; font-weight: bold; background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1; margin-bottom: 10px;">22% of skaters</div>
-                        <div style="font-size: 1.2rem; color: #666;">would be willing to pay more to support the park</div>
-                    </div>
-                </div>
+            <div class="polaroid">
+              <div class="polaroid-img-wrapper">
+                <img
+                  src="../../img/polaroids/thumb/charlie.jpg"
+                  data-src="../../img/polaroids/charlie.jpg"
+                  alt="Charlie"
+                  class="loading"
+                />
+              </div>
+              <div class="polaroid-name">Charlie</div>
             </div>
-        </section>
-
-        <section class="info-section">
-            <div class="info-section-content">
-                <div style="background: linear-gradient(135deg, #28a745 0%, #1e7e34 100%); color: white; padding: 40px; border-radius: 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); margin-top: 40px; text-align: center;">
-                    <p style="font-size: 1.3rem; line-height: 1.6; margin: 0;">We're always on the lookout for more volunteers, or organisations to partner with to continue our mission. Please do <a href="/get_involved/" style="color: white; text-decoration: underline; font-weight: bold;">get involved</a> or <a href="/donate/" style="color: white; text-decoration: underline; font-weight: bold;">donate</a>.</p>
-                </div>
+            <div class="polaroid">
+              <div class="polaroid-img-wrapper">
+                <img
+                  src="../../img/polaroids/thumb/dave.jpg"
+                  data-src="../../img/polaroids/dave.jpg"
+                  alt="Dave"
+                  class="loading"
+                />
+              </div>
+              <div class="polaroid-name">Dave</div>
             </div>
-        </section>
-
-        <section class="info-section" style="background-color: #f8f9fa; border-top: 1px solid #e9ecef;">
-            <div class="info-section-content">
-                <h3 style="font-size: 1.2rem; font-weight: bold; margin-bottom: 15px;">Data notes</h3>
-                <div style="text-align: left; font-size: 0.9rem; color: #666;">
-                    <p id="note1" style="margin: 5px 0;"><a href="#ref1" style="text-decoration: none;"><sup>1</sup></a> Based on number of sign-ins from our reception system, plus 4107 visits from our initial entry spreadsheet prior to the reception system.</p>
-                    <p id="note2" style="margin: 5px 0;"><a href="#ref2" style="text-decoration: none;"><sup>2</sup></a> As of December 2025. These hours come from free places that we offer on our After School Club, Holiday Skate Camps and our Skateboarding Taster Days.</p>
-                    <p id="note3" style="margin: 5px 0;"><a href="#ref3" style="text-decoration: none;"><sup>3</sup></a> Demographic data is drawn from roughly 3200 unique users on our membership system, which has been running since August 2025. The gender data in the charts is based on analysis of first names from this membership system - in future this will be measured by asking participants directly. A direct survey of Warehouse users in January 2025 received 227 responses, 18.9% of which were female.</p>
-                    <p id="note4" style="margin: 5px 0;"><a href="#ref4" style="text-decoration: none;"><sup>4</sup></a> <a href="https://skateboardgb.org/wp-content/uploads/2024/09/skateboard_design_and_development_guidance_toolkit_april_2021_ne.pdf" target="_blank">Skateboard GB - Skateboard Design and Development Guidance Toolkit (April 2021)</a></p>
-                    <p id="note5" style="margin: 5px 0;"><a href="#ref5" style="text-decoration: none;"><sup>5</sup></a> Based on a direct survey of Warehouse users in January 2025 which received 227 responses.</p>
-                    <p id="note6" style="margin: 5px 0;"><a href="#ref6" style="text-decoration: none;"><sup>6</sup></a> Based on member postcodes from roughly 3200 unique users on our membership system, which has been running since August 2025. 23.4% of members did not provide postcode data.</p>
-                </div>
+            <div class="polaroid">
+              <div class="polaroid-img-wrapper">
+                <img
+                  src="../../img/polaroids/thumb/elecia_a_kp.jpg"
+                  data-src="../../img/polaroids/elecia_a_kp.jpg"
+                  alt="Elecia & KP"
+                  class="loading"
+                />
+              </div>
+              <div class="polaroid-name">Elecia & KP</div>
             </div>
-        </section>
+            <div class="polaroid">
+              <div class="polaroid-img-wrapper">
+                <img
+                  src="../../img/polaroids/thumb/fletch.jpg"
+                  data-src="../../img/polaroids/fletch.jpg"
+                  alt="Fletch"
+                  class="loading"
+                />
+              </div>
+              <div class="polaroid-name">Fletch</div>
+            </div>
+            <div class="polaroid">
+              <div class="polaroid-img-wrapper">
+                <img
+                  src="../../img/polaroids/thumb/graeme.jpg"
+                  data-src="../../img/polaroids/graeme.jpg"
+                  alt="Graeme"
+                  class="loading"
+                />
+              </div>
+              <div class="polaroid-name">Graeme</div>
+            </div>
+            <div class="polaroid">
+              <div class="polaroid-img-wrapper">
+                <img
+                  src="../../img/polaroids/thumb/james.jpg"
+                  data-src="../../img/polaroids/james.jpg"
+                  alt="James"
+                  class="loading"
+                />
+              </div>
+              <div class="polaroid-name">James</div>
+            </div>
+            <div class="polaroid">
+              <div class="polaroid-img-wrapper">
+                <img
+                  src="../../img/polaroids/thumb/joe.jpg"
+                  data-src="../../img/polaroids/joe.jpg"
+                  alt="Joe"
+                  class="loading"
+                />
+              </div>
+              <div class="polaroid-name">Joe</div>
+            </div>
+            <div class="polaroid">
+              <div class="polaroid-img-wrapper">
+                <img
+                  src="../../img/polaroids/thumb/joe_h.jpg"
+                  data-src="../../img/polaroids/joe_h.jpg"
+                  alt="Joe H"
+                  class="loading"
+                />
+              </div>
+              <div class="polaroid-name">Joe H</div>
+            </div>
+            <div class="polaroid">
+              <div class="polaroid-img-wrapper">
+                <img
+                  src="../../img/polaroids/thumb/jordan.jpg"
+                  data-src="../../img/polaroids/jordan.jpg"
+                  alt="Jordan"
+                  class="loading"
+                />
+              </div>
+              <div class="polaroid-name">Jordan</div>
+            </div>
+            <div class="polaroid">
+              <div class="polaroid-img-wrapper">
+                <img
+                  src="../../img/polaroids/thumb/juan.jpg"
+                  data-src="../../img/polaroids/juan.jpg"
+                  alt="Juan"
+                  class="loading"
+                />
+              </div>
+              <div class="polaroid-name">Juan</div>
+            </div>
+            <div class="polaroid">
+              <div class="polaroid-img-wrapper">
+                <img
+                  src="../../img/polaroids/thumb/marie.jpg"
+                  data-src="../../img/polaroids/marie.jpg"
+                  alt="Marie"
+                  class="loading"
+                />
+              </div>
+              <div class="polaroid-name">Marie</div>
+            </div>
+            <div class="polaroid">
+              <div class="polaroid-img-wrapper">
+                <img
+                  src="../../img/polaroids/thumb/max.jpg"
+                  data-src="../../img/polaroids/max.jpg"
+                  alt="Max"
+                  class="loading"
+                />
+              </div>
+              <div class="polaroid-name">Max</div>
+            </div>
+            <div class="polaroid">
+              <div class="polaroid-img-wrapper">
+                <img
+                  src="../../img/polaroids/thumb/noz.jpg"
+                  data-src="../../img/polaroids/noz.jpg"
+                  alt="Noz"
+                  class="loading"
+                />
+              </div>
+              <div class="polaroid-name">Noz</div>
+            </div>
+            <div class="polaroid">
+              <div class="polaroid-img-wrapper">
+                <img
+                  src="../../img/polaroids/thumb/paul.jpg"
+                  data-src="../../img/polaroids/paul.jpg"
+                  alt="Paul"
+                  class="loading"
+                />
+              </div>
+              <div class="polaroid-name">Paul</div>
+            </div>
+            <div class="polaroid">
+              <div class="polaroid-img-wrapper">
+                <img
+                  src="../../img/polaroids/thumb/pete.jpg"
+                  data-src="../../img/polaroids/pete.jpg"
+                  alt="Pete"
+                  class="loading"
+                />
+              </div>
+              <div class="polaroid-name">Pete</div>
+            </div>
+            <div class="polaroid">
+              <div class="polaroid-img-wrapper">
+                <img
+                  src="../../img/polaroids/thumb/rob.jpg"
+                  data-src="../../img/polaroids/rob.jpg"
+                  alt="Rob"
+                  class="loading"
+                />
+              </div>
+              <div class="polaroid-name">Rob</div>
+            </div>
+            <div class="polaroid">
+              <div class="polaroid-img-wrapper">
+                <img
+                  src="../../img/polaroids/thumb/sam.jpg"
+                  data-src="../../img/polaroids/sam.jpg"
+                  alt="Sam"
+                  class="loading"
+                />
+              </div>
+              <div class="polaroid-name">Sam</div>
+            </div>
+            <div class="polaroid">
+              <div class="polaroid-img-wrapper">
+                <img
+                  src="../../img/polaroids/thumb/seb.jpg"
+                  data-src="../../img/polaroids/seb.jpg"
+                  alt="Seb"
+                  class="loading"
+                />
+              </div>
+              <div class="polaroid-name">Seb</div>
+            </div>
+            <div class="polaroid">
+              <div class="polaroid-img-wrapper">
+                <img
+                  src="../../img/polaroids/thumb/sofia.jpg"
+                  data-src="../../img/polaroids/sofia.jpg"
+                  alt="Sofia"
+                  class="loading"
+                />
+              </div>
+              <div class="polaroid-name">Sofia</div>
+            </div>
+            <div class="polaroid">
+              <div class="polaroid-img-wrapper">
+                <img
+                  src="../../img/polaroids/thumb/stephen.jpg"
+                  data-src="../../img/polaroids/stephen.jpg"
+                  alt="Stephen"
+                  class="loading"
+                />
+              </div>
+              <div class="polaroid-name">Stephen</div>
+            </div>
+            <div class="polaroid">
+              <div class="polaroid-img-wrapper">
+                <img
+                  src="../../img/polaroids/thumb/val_a_marie.jpg"
+                  data-src="../../img/polaroids/val_a_marie.jpg"
+                  alt="Val & Marie"
+                  class="loading"
+                />
+              </div>
+              <div class="polaroid-name">Val & Marie</div>
+            </div>
+            <div class="polaroid">
+              <div class="polaroid-img-wrapper">
+                <img
+                  src="../../img/polaroids/thumb/ziff.jpg"
+                  data-src="../../img/polaroids/ziff.jpg"
+                  alt="Ziff"
+                  class="loading"
+                />
+              </div>
+              <div class="polaroid-name">Ziff</div>
+            </div>
+            <div class="polaroid polaroid-landscape">
+              <div class="polaroid-img-wrapper">
+                <img
+                  src="../../img/polaroids/thumb/girl_skate_crew.jpg"
+                  data-src="../../img/polaroids/girl_skate_crew.jpg"
+                  alt="Girl Skate Crew"
+                  class="loading"
+                />
+              </div>
+              <div class="polaroid-name">Girl Skate Crew</div>
+            </div>
+          </div>
+
+          <p style="text-align: center; margin-top: 30px">
+            <a href="/get_involved/#volunteer"
+              >Find out how to get involved as a volunteer</a
+            >
+          </p>
+        </div>
+      </section>
+
+      <section class="info-section">
+        <div class="info-section-content">
+          <div
+            style="
+              background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+              color: white;
+              padding: 30px;
+              border-radius: 15px;
+              margin-top: 40px;
+              box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            "
+          >
+            <p
+              style="
+                font-size: 1.5rem;
+                font-weight: bold;
+                line-height: 1.4;
+                margin: 0;
+                text-align: left;
+              "
+            >
+              We are growing the skateboarding community with free coaching for
+              those who need it.
+            </p>
+          </div>
+
+          <div class="two-column-layout" style="margin-top: 40px">
+            <div style="text-align: left" class="left-column">
+              <p style="margin-top: 0">
+                Through our coaching programme we are getting more people into
+                skateboarding, and we offer free lessons and equipment to young
+                people who can't normally afford to experience this.
+              </p>
+
+              <div style="text-align: center; margin: 40px 0">
+                <div
+                  style="
+                    font-size: 4rem;
+                    font-weight: bold;
+                    background: linear-gradient(
+                      135deg,
+                      #007bff 0%,
+                      #0056b3 100%
+                    );
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    background-clip: text;
+                    line-height: 1;
+                    margin-bottom: 10px;
+                  "
+                >
+                  658+ hours
+                </div>
+                <div id="ref2" style="font-size: 1.2rem; color: #666">
+                  of free skateboard coaching delivered
+                  <a href="#note2" style="text-decoration: none"
+                    ><sup>2</sup></a
+                  >
+                </div>
+              </div>
+
+              <div style="text-align: center; margin: 40px 0">
+                <div
+                  style="
+                    font-size: 4rem;
+                    font-weight: bold;
+                    background: linear-gradient(
+                      135deg,
+                      #007bff 0%,
+                      #0056b3 100%
+                    );
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    background-clip: text;
+                    line-height: 1;
+                    margin-bottom: 10px;
+                  "
+                >
+                  2800+ hours
+                </div>
+                <div style="font-size: 1.2rem; color: #666">
+                  total skateboard coaching delivered so far!
+                </div>
+              </div>
+
+              <p>
+                Our free skateboarding coaching places are funded in part from
+                the proceeds of our paid coaching and entry fees, as well as a
+                generous grant from Cambridge City Council, and funding from the
+                <a
+                  href="https://www.cambridgeshire.gov.uk/council/communities/support-with-the-cost-of-living/holiday-activities-and-food-programme"
+                  >Holiday Activities and Food programme.</a
+                >
+              </p>
+            </div>
+            <div class="right-column">
+              <img
+                src="../../img/coaching_2.jpg"
+                alt="Skateboard coaching at The Warehouse"
+                style="width: 100%; border-radius: 10px"
+              />
+            </div>
+          </div>
+
+          <blockquote
+            style="
+              border-left: 4px solid #007bff;
+              padding-left: 20px;
+              margin: 40px 0;
+              font-style: italic;
+              color: #555;
+              text-align: left;
+            "
+          >
+            "Thank you for all the guidance and acceptance with Jacob in his
+            skateboarding journey. As his mum, watching him find his happiness
+            means everything to me and I really appreciate all of you. Prior to
+            skateboarding Jacob didn't really have a focus but now everything is
+            about when/where we can go next. From the bottom of my heart Thank
+            you all!"
+            <div
+              style="
+                margin-top: 10px;
+                font-style: normal;
+                color: #666;
+                background: none;
+              "
+            >
+              — Rochelle
+            </div>
+          </blockquote>
+
+          <blockquote
+            style="
+              border-left: 4px solid #007bff;
+              padding-left: 20px;
+              margin: 40px 0;
+              font-style: italic;
+              color: #555;
+              text-align: left;
+            "
+          >
+            "Dear Pete and Ali - thank you so much for being the best skateboard
+            teachers ever. I have had so much fun with you and in the club. I
+            have learnt lots of cool things and you always helped me and I am
+            the luckiest person in the whole world because of you and because of
+            my amazing new red starwars skateboard. I'm really going to miss the
+            club and all of you in Germany. Lots of love from Felix."
+            <div
+              style="
+                margin-top: 10px;
+                font-style: normal;
+                color: #666;
+                background: none;
+              "
+            >
+              — Felix, After School Club attendee
+            </div>
+          </blockquote>
+
+          <blockquote
+            style="
+              border-left: 4px solid #007bff;
+              padding-left: 20px;
+              margin: 40px 0;
+              font-style: italic;
+              color: #555;
+              text-align: left;
+            "
+          >
+            "Dear Pete, Ali and James - it is hard to put it into words, but
+            thank you so so much from the bottom of my heart for everything you
+            have done for us. It's not only Felix - knowing that he was with
+            you, having fun and absolutely enjoying the sessions, has been such
+            a support for me too. Watching his confidence grow on and off the
+            board has been a joy and that's all thanks to you - your incredible
+            teaching and the positive, encouraging atmosphere you have created.
+            It's rare to find something so special."
+            <div
+              style="
+                margin-top: 10px;
+                font-style: normal;
+                color: #666;
+                background: none;
+              "
+            >
+              — Felix's parents
+            </div>
+          </blockquote>
+
+          <p
+            style="
+              background: linear-gradient(135deg, #28a745 0%, #1e7e34 100%);
+              color: white;
+              padding: 20px;
+              border-radius: 10px;
+              box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+              margin-top: 40px;
+              margin-left: 40px;
+              margin-right: 40px;
+              text-align: left;
+            "
+          >
+            If you'd like to partner with Cam Skate to deliver more free
+            skateboard coaching in Cambridge, please get in touch with us at
+            <a
+              href="mailto:hello@cam-skate.co.uk"
+              style="color: white; text-decoration: underline"
+              >hello@cam-skate.co.uk</a
+            >
+          </p>
+        </div>
+      </section>
+
+      <section class="info-section">
+        <div class="info-section-content">
+          <div
+            style="
+              background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%);
+              color: white;
+              padding: 30px;
+              border-radius: 15px;
+              margin-top: 40px;
+              box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            "
+          >
+            <p
+              style="
+                font-size: 1.5rem;
+                font-weight: bold;
+                line-height: 1.4;
+                margin: 0;
+                text-align: left;
+              "
+            >
+              The Warehouse brings together skaters of all ages and genders.
+            </p>
+          </div>
+
+          <div class="two-column-layout" style="margin-top: 40px">
+            <div class="left-column" style="text-align: left; flex: 1">
+              <p>
+                The Warehouse has dedicated sessions for over 30s and under 10s,
+                and our Open Sessions bring together skaters of all ages!
+              </p>
+              <p style="margin-top: 0">
+                The diverse mix of ages at The Warehouse creates a unique
+                community where knowledge and enthusiasm are shared across
+                generations.
+              </p>
+              <p>
+                The Warehouse is inclusive to all genders. With our monthly free
+                Girl Skate Night and roller skate coaching, we're providing a
+                safe and welcoming space to the growing community of female
+                skaters in the UK.
+              </p>
+            </div>
+            <div class="right-column" style="flex: 1">
+              <div
+                id="treemapPlaceholder"
+                style="
+                  width: 100%;
+                  aspect-ratio: 1.5;
+                  background: linear-gradient(
+                    90deg,
+                    #f0f0f0 25%,
+                    #e0e0e0 50%,
+                    #f0f0f0 75%
+                  );
+                  background-size: 200% 100%;
+                  animation: shimmer 1.5s infinite;
+                  border-radius: 10px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  color: #999;
+                "
+              >
+                <span>Loading chart...</span>
+              </div>
+              <canvas id="ageTreemapChart" style="display: none"></canvas>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="info-section">
+        <div class="info-section-content">
+          <p
+            id="ref3"
+            style="
+              text-align: center;
+              font-size: 1rem;
+              color: #666;
+              margin-bottom: 20px;
+            "
+          >
+            Gender distribution by age
+            <a href="#note3" style="text-decoration: none"><sup>3</sup></a>
+          </p>
+          <div
+            class="gender-chart-container"
+            style="max-width: 1200px; margin: 0 auto"
+          >
+            <div
+              id="genderChartPlaceholder"
+              style="
+                width: 100%;
+                aspect-ratio: 2.5;
+                background: linear-gradient(
+                  90deg,
+                  #f0f0f0 25%,
+                  #e0e0e0 50%,
+                  #f0f0f0 75%
+                );
+                background-size: 200% 100%;
+                animation: shimmer 1.5s infinite;
+                border-radius: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: #999;
+              "
+            >
+              <span>Loading chart...</span>
+            </div>
+            <canvas id="ageBreakdownChart" style="display: none"></canvas>
+          </div>
+
+          <blockquote
+            style="
+              border-left: 4px solid #9b59b6;
+              padding-left: 20px;
+              margin: 40px auto;
+              font-style: italic;
+              color: #555;
+              max-width: 1200px;
+              text-align: left;
+            "
+          >
+            "I am an absolute beginner skater. Visited for the first time on
+            Girls Night and was amazed at the place!! Welcoming, clean, well
+            maintained, even had skateboards and helmets to borrow! Emily who
+            was volunteering on the night helped me master the basics and got me
+            to go down a ramp!! I hope to see this place stay in Cambridge for a
+            very long time to come!"
+            <div
+              style="
+                margin-top: 10px;
+                font-style: normal;
+                color: #666;
+                background: none;
+              "
+            >
+              — Sara
+            </div>
+          </blockquote>
+
+          <div class="two-column-layout" style="margin-top: 40px">
+            <div class="left-column" style="text-align: left">
+              <p id="ref6" style="margin-top: 0">
+                The Warehouse draws skaters from across the region and beyond:
+                <a href="#note6" style="text-decoration: none"><sup>6</sup></a>
+              </p>
+              <ul style="list-style: none; padding-left: 0; line-height: 1.8">
+                <li><strong>19.8%</strong> from Cambridge City</li>
+                <li><strong>13.0%</strong> from Greater Cambridge</li>
+                <li><strong>10.1%</strong> from wider Cambridgeshire</li>
+                <li><strong>33.8%</strong> from beyond Cambridgeshire</li>
+              </ul>
+
+              <details style="margin-top: 20px">
+                <summary
+                  style="cursor: pointer; color: #007bff; font-weight: bold"
+                >
+                  Show Cambridge City ward-by-ward breakdown
+                </summary>
+                <table
+                  style="
+                    width: 100%;
+                    margin-top: 20px;
+                    border-collapse: collapse;
+                    font-size: 0.9rem;
+                  "
+                >
+                  <thead>
+                    <tr
+                      style="
+                        background-color: #f8f9fa;
+                        border-bottom: 2px solid #dee2e6;
+                      "
+                    >
+                      <th style="padding: 10px; text-align: left">Ward</th>
+                      <th style="padding: 10px; text-align: right">Count</th>
+                      <th style="padding: 10px; text-align: right">
+                        % of Cambridge City
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr style="border-bottom: 1px solid #dee2e6">
+                      <td style="padding: 8px">Romsey</td>
+                      <td style="padding: 8px; text-align: right">101</td>
+                      <td style="padding: 8px; text-align: right">15.0%</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #dee2e6">
+                      <td style="padding: 8px">West Chesterton</td>
+                      <td style="padding: 8px; text-align: right">90</td>
+                      <td style="padding: 8px; text-align: right">13.3%</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #dee2e6">
+                      <td style="padding: 8px">Abbey</td>
+                      <td style="padding: 8px; text-align: right">79</td>
+                      <td style="padding: 8px; text-align: right">11.7%</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #dee2e6">
+                      <td style="padding: 8px">Petersfield</td>
+                      <td style="padding: 8px; text-align: right">77</td>
+                      <td style="padding: 8px; text-align: right">11.4%</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #dee2e6">
+                      <td style="padding: 8px">East Chesterton</td>
+                      <td style="padding: 8px; text-align: right">54</td>
+                      <td style="padding: 8px; text-align: right">8.0%</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #dee2e6">
+                      <td style="padding: 8px">Coleridge</td>
+                      <td style="padding: 8px; text-align: right">50</td>
+                      <td style="padding: 8px; text-align: right">7.4%</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #dee2e6">
+                      <td style="padding: 8px">Trumpington</td>
+                      <td style="padding: 8px; text-align: right">45</td>
+                      <td style="padding: 8px; text-align: right">6.7%</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #dee2e6">
+                      <td style="padding: 8px">Arbury</td>
+                      <td style="padding: 8px; text-align: right">42</td>
+                      <td style="padding: 8px; text-align: right">6.2%</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #dee2e6">
+                      <td style="padding: 8px">Queen Edith's</td>
+                      <td style="padding: 8px; text-align: right">33</td>
+                      <td style="padding: 8px; text-align: right">4.9%</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #dee2e6">
+                      <td style="padding: 8px">Cherry Hinton</td>
+                      <td style="padding: 8px; text-align: right">29</td>
+                      <td style="padding: 8px; text-align: right">4.3%</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #dee2e6">
+                      <td style="padding: 8px">King's Hedges</td>
+                      <td style="padding: 8px; text-align: right">25</td>
+                      <td style="padding: 8px; text-align: right">3.7%</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #dee2e6">
+                      <td style="padding: 8px">Newnham</td>
+                      <td style="padding: 8px; text-align: right">23</td>
+                      <td style="padding: 8px; text-align: right">3.4%</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #dee2e6">
+                      <td style="padding: 8px">Market</td>
+                      <td style="padding: 8px; text-align: right">14</td>
+                      <td style="padding: 8px; text-align: right">2.1%</td>
+                    </tr>
+                    <tr>
+                      <td style="padding: 8px">Castle</td>
+                      <td style="padding: 8px; text-align: right">13</td>
+                      <td style="padding: 8px; text-align: right">1.9%</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </details>
+            </div>
+            <div class="right-column">
+              <img
+                src="../../img/heatmap.jpg"
+                alt="Geographic distribution of Warehouse users"
+                style="width: 100%; border-radius: 10px"
+              />
+              <p
+                style="
+                  text-align: left;
+                  font-size: 0.9rem;
+                  color: #666;
+                  margin-top: 10px;
+                "
+              >
+                Heat map showing geographic distribution of Warehouse users
+                based on postcode data
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="info-section">
+        <div class="info-section-content">
+          <div
+            style="
+              background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%);
+              color: white;
+              padding: 30px;
+              border-radius: 15px;
+              margin-top: 40px;
+              box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            "
+          >
+            <p
+              style="
+                font-size: 1.5rem;
+                font-weight: bold;
+                line-height: 1.4;
+                margin: 0;
+                text-align: left;
+              "
+            >
+              How does The Warehouse benefit its users?
+            </p>
+          </div>
+
+          <p id="ref4" style="text-align: left; margin: 40px 0">
+            Skateparks generate massive physical and mental health benefits,
+            often among those who otherwise might not be active.
+            <a href="#note4" style="text-decoration: none"><sup>4</sup></a>
+          </p>
+
+          <div
+            class="stats-two-column"
+            style="display: flex; gap: 40px; margin: 40px 0"
+          >
+            <div style="flex: 1; text-align: center">
+              <div
+                style="
+                  font-size: 3rem;
+                  font-weight: bold;
+                  background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%);
+                  -webkit-background-clip: text;
+                  -webkit-text-fill-color: transparent;
+                  background-clip: text;
+                  line-height: 1;
+                  margin-bottom: 10px;
+                "
+              >
+                90.7% of skaters
+              </div>
+              <div id="ref5" style="font-size: 1.2rem; color: #666">
+                agree or strongly agree that The Warehouse improves their mental
+                health.
+                <a href="#note5" style="text-decoration: none"><sup>5</sup></a>
+              </div>
+            </div>
+
+            <div style="flex: 1; text-align: center">
+              <div
+                style="
+                  font-size: 3rem;
+                  font-weight: bold;
+                  background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%);
+                  -webkit-background-clip: text;
+                  -webkit-text-fill-color: transparent;
+                  background-clip: text;
+                  line-height: 1;
+                  margin-bottom: 10px;
+                "
+              >
+                70% of skaters
+              </div>
+              <div style="font-size: 1.2rem; color: #666">
+                agree or strongly agree that they have been more physically
+                active since The Warehouse opened.
+              </div>
+            </div>
+          </div>
+
+          <p style="text-align: left; margin: 40px 0">
+            As a Community Interest Company, we are a not-for-profit entity and
+            this allows us to keep the mental and physical benefits of the park
+            at an accessible price of £5 per session.
+          </p>
+
+          <div
+            class="stats-two-column"
+            style="display: flex; gap: 40px; margin: 40px 0"
+          >
+            <div style="flex: 1; text-align: center">
+              <div
+                style="
+                  font-size: 3rem;
+                  font-weight: bold;
+                  background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%);
+                  -webkit-background-clip: text;
+                  -webkit-text-fill-color: transparent;
+                  background-clip: text;
+                  line-height: 1;
+                  margin-bottom: 10px;
+                "
+              >
+                68.7% of skaters
+              </div>
+              <div style="font-size: 1.2rem; color: #666">
+                think the price is just right
+              </div>
+            </div>
+
+            <div style="flex: 1; text-align: center">
+              <div
+                style="
+                  font-size: 3rem;
+                  font-weight: bold;
+                  background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%);
+                  -webkit-background-clip: text;
+                  -webkit-text-fill-color: transparent;
+                  background-clip: text;
+                  line-height: 1;
+                  margin-bottom: 10px;
+                "
+              >
+                22% of skaters
+              </div>
+              <div style="font-size: 1.2rem; color: #666">
+                would be willing to pay more to support the park
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="info-section">
+        <div class="info-section-content">
+          <div
+            style="
+              background: linear-gradient(135deg, #28a745 0%, #1e7e34 100%);
+              color: white;
+              padding: 40px;
+              border-radius: 15px;
+              box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+              margin-top: 40px;
+              text-align: center;
+            "
+          >
+            <p style="font-size: 1.3rem; line-height: 1.6; margin: 0">
+              We're always on the lookout for more volunteers, or organisations
+              to partner with to continue our mission. Please do
+              <a
+                href="/get_involved/"
+                style="
+                  color: white;
+                  text-decoration: underline;
+                  font-weight: bold;
+                "
+                >get involved</a
+              >
+              or
+              <a
+                href="/donate/"
+                style="
+                  color: white;
+                  text-decoration: underline;
+                  font-weight: bold;
+                "
+                >donate</a
+              >.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="info-section"
+        style="background-color: #f8f9fa; border-top: 1px solid #e9ecef"
+      >
+        <div class="info-section-content">
+          <h3 style="font-size: 1.2rem; font-weight: bold; margin-bottom: 15px">
+            Data notes
+          </h3>
+          <div style="text-align: left; font-size: 0.9rem; color: #666">
+            <p id="note1" style="margin: 5px 0">
+              <a href="#ref1" style="text-decoration: none"><sup>1</sup></a>
+              Based on number of sign-ins from our reception system, plus 4107
+              visits from our initial entry spreadsheet prior to the reception
+              system.
+            </p>
+            <p id="note2" style="margin: 5px 0">
+              <a href="#ref2" style="text-decoration: none"><sup>2</sup></a> As
+              of December 2025. These hours come from free places that we offer
+              on our After School Club, Holiday Skate Camps and our
+              Skateboarding Taster Days.
+            </p>
+            <p id="note3" style="margin: 5px 0">
+              <a href="#ref3" style="text-decoration: none"><sup>3</sup></a>
+              Demographic data is drawn from roughly 3200 unique users on our
+              membership system, which has been running since August 2025. The
+              gender data in the charts is based on analysis of first names from
+              this membership system - in future this will be measured by asking
+              participants directly. A direct survey of Warehouse users in
+              January 2025 received 227 responses, 18.9% of which were female.
+            </p>
+            <p id="note4" style="margin: 5px 0">
+              <a href="#ref4" style="text-decoration: none"><sup>4</sup></a>
+              <a
+                href="https://skateboardgb.org/wp-content/uploads/2024/09/skateboard_design_and_development_guidance_toolkit_april_2021_ne.pdf"
+                target="_blank"
+                >Skateboard GB - Skateboard Design and Development Guidance
+                Toolkit (April 2021)</a
+              >
+            </p>
+            <p id="note5" style="margin: 5px 0">
+              <a href="#ref5" style="text-decoration: none"><sup>5</sup></a>
+              Based on a direct survey of Warehouse users in January 2025 which
+              received 227 responses.
+            </p>
+            <p id="note6" style="margin: 5px 0">
+              <a href="#ref6" style="text-decoration: none"><sup>6</sup></a>
+              Based on member postcodes from roughly 3200 unique users on our
+              membership system, which has been running since August 2025. 23.4%
+              of members did not provide postcode data.
+            </p>
+          </div>
+        </div>
+      </section>
     </main>
     <footer>
-        <div class="footer-content">
-            <img src="../../img/logo.png" alt="Cam Skate Site Logo" class="footer-logo">
-            <nav class="footer-nav">
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/sessions/">Sessions</a></li>
-                    <li><a href="/coaching/">Coaching</a></li>
-                    <li><a href="/hire/">Hire</a></li>
-                    <li><a href="/events/">Events</a></li>
-                    <li><a href="/visit/">Visit</a></li>
-                    <li><a href="/get_involved/">Get Involved</a></li>
-                    <li><a href="/about/">About</a></li>
-                    <li><a href="/donate/">Donate</a></li>
-                </ul>
-            </nav>
-            <div class="social-links">
-                <a href="https://www.instagram.com/the_warehouse_skatepark/"><img src="../../img/icon_instagram.svg" alt="Instagram" class="social-icon"></a>
-                <a href="https://www.facebook.com/profile.php?id=61573116536393"><img src="../../img/icon_facebook.svg" alt="Facebook" class="social-icon"></a>
-            </div>
+      <div class="footer-content">
+        <img
+          src="../../img/logo.png"
+          alt="Cam Skate Site Logo"
+          class="footer-logo"
+        />
+        <nav class="footer-nav">
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/sessions/">Sessions</a></li>
+            <li><a href="/coaching/">Coaching</a></li>
+            <li><a href="/hire/">Hire</a></li>
+            <li><a href="/events/">Events</a></li>
+            <li><a href="/visit/">Visit</a></li>
+            <li><a href="/get_involved/">Get Involved</a></li>
+            <li><a href="/about/">About</a></li>
+            <li><a href="/donate/">Donate</a></li>
+          </ul>
+        </nav>
+        <div class="social-links">
+          <a href="https://www.instagram.com/the_warehouse_skatepark/"
+            ><img
+              src="../../img/icon_instagram.svg"
+              alt="Instagram"
+              class="social-icon"
+          /></a>
+          <a href="https://www.facebook.com/profile.php?id=61573116536393"
+            ><img
+              src="../../img/icon_facebook.svg"
+              alt="Facebook"
+              class="social-icon"
+          /></a>
         </div>
+      </div>
     </footer>
     <script src="../../script.js"></script>
     <script>
-        // Animate number counting up
-        function animateNumber(element, target, duration = 2000) {
-            const start = 10000;
-            if (target <= start) {
-                element.textContent = target.toLocaleString();
-                return;
-            }
-            const increment = (target - start) / (duration / 16); // 60fps
-            let current = start;
-
-            const timer = setInterval(() => {
-                current += increment;
-                if (current >= target) {
-                    current = target;
-                    clearInterval(timer);
-                }
-                element.textContent = Math.floor(current).toLocaleString();
-            }, 16);
+      // Animate number counting up
+      function animateNumber(element, target, duration = 2000) {
+        const start = 10000;
+        if (target <= start) {
+          element.textContent = target.toLocaleString();
+          return;
         }
+        const increment = (target - start) / (duration / 16); // 60fps
+        let current = start;
 
-        // Fetch age breakdown data and create chart
-        async function loadAgeBreakdownChart() {
-            try {
-                const response = await fetch('https://membership.cam-skate.co.uk/api/stats');
-                const data = await response.json();
+        const timer = setInterval(() => {
+          current += increment;
+          if (current >= target) {
+            current = target;
+            clearInterval(timer);
+          }
+          element.textContent = Math.floor(current).toLocaleString();
+        }, 16);
+      }
 
-                // Animate total visits
-                if (data.total_visits) {
-                    const totalVisitsElement = document.getElementById('totalVisits');
-                    animateNumber(totalVisitsElement, data.total_visits + 4107);
-                }
+      // Fetch age breakdown data and create chart
+      async function loadAgeBreakdownChart() {
+        try {
+          const response = await fetch(
+            "https://membership.cam-skate.co.uk/api/stats",
+          );
+          const data = await response.json();
 
-                // Create gender by single year chart
-                const genderBySingleYear = data.gender_by_single_year;
-                // Filter out ages 0, 1, 2
-                const singleYearLabels = Object.keys(genderBySingleYear).filter(age => parseInt(age) > 2);
-                const singleYearMaleData = singleYearLabels.map(age => genderBySingleYear[age].Male || 0);
-                const singleYearFemaleData = singleYearLabels.map(age => genderBySingleYear[age].Female || 0);
-                const singleYearUnknownData = singleYearLabels.map(age => genderBySingleYear[age].Unknown || 0);
+          // Animate total visits
+          if (data.total_visits) {
+            const totalVisitsElement = document.getElementById("totalVisits");
+            animateNumber(totalVisitsElement, data.total_visits + 4107);
+          }
 
-                const ctx = document.getElementById('ageBreakdownChart').getContext('2d');
+          // Create gender by single year chart
+          const genderBySingleYear = data.gender_by_single_year;
+          // Filter out ages 0, 1, 2
+          const singleYearLabels = Object.keys(genderBySingleYear).filter(
+            (age) => parseInt(age) > 2,
+          );
+          const singleYearMaleData = singleYearLabels.map(
+            (age) => genderBySingleYear[age].Male || 0,
+          );
+          const singleYearFemaleData = singleYearLabels.map(
+            (age) => genderBySingleYear[age].Female || 0,
+          );
+          const singleYearUnknownData = singleYearLabels.map(
+            (age) => genderBySingleYear[age].Unknown || 0,
+          );
 
-                // Hide placeholder and show canvas
-                document.getElementById('genderChartPlaceholder').style.display = 'none';
-                document.getElementById('ageBreakdownChart').style.display = 'block';
+          const ctx = document
+            .getElementById("ageBreakdownChart")
+            .getContext("2d");
 
-                new Chart(ctx, {
-                    type: 'bar',
-                    data: {
-                        labels: singleYearLabels,
-                        datasets: [
-                            {
-                                label: 'Male',
-                                data: singleYearMaleData,
-                                backgroundColor: '#007bff',
-                                borderColor: '#0056b3',
-                                borderWidth: 0,
-                                barPercentage: 1.0,
-                                categoryPercentage: 1.0
-                            },
-                            {
-                                label: 'Female',
-                                data: singleYearFemaleData,
-                                backgroundColor: '#ff69b4',
-                                borderColor: '#ff1493',
-                                borderWidth: 0,
-                                barPercentage: 1.0,
-                                categoryPercentage: 1.0
-                            },
-                            {
-                                label: 'Other/Unknown',
-                                data: singleYearUnknownData,
-                                backgroundColor: '#9b59b6',
-                                borderColor: '#8e44ad',
-                                borderWidth: 0,
-                                barPercentage: 1.0,
-                                categoryPercentage: 1.0
-                            }
-                        ]
-                    },
-                    options: {
-                        responsive: true,
-                        maintainAspectRatio: true,
-                        aspectRatio: window.innerWidth <= 768 ? 1.5 : 2.5,
-                        plugins: {
-                            legend: {
-                                display: true,
-                                position: 'top'
-                            },
-                            title: {
-                                display: false
-                            }
-                        },
-                        scales: {
-                            y: {
-                                beginAtZero: true,
-                                stacked: true,
-                                title: {
-                                    display: true,
-                                    text: 'Number of people'
-                                }
-                            },
-                            x: {
-                                stacked: true,
-                                title: {
-                                    display: true,
-                                    text: 'Age'
-                                }
-                            }
-                        }
-                    }
-                });
+          // Hide placeholder and show canvas
+          document.getElementById("genderChartPlaceholder").style.display =
+            "none";
+          document.getElementById("ageBreakdownChart").style.display = "block";
 
-                // Create treemap with coarser age brackets
-                const genderBySingleYearForTreemap = data.gender_by_single_year;
+          new Chart(ctx, {
+            type: "bar",
+            data: {
+              labels: singleYearLabels,
+              datasets: [
+                {
+                  label: "Male",
+                  data: singleYearMaleData,
+                  backgroundColor: "#007bff",
+                  borderColor: "#0056b3",
+                  borderWidth: 0,
+                  barPercentage: 1.0,
+                  categoryPercentage: 1.0,
+                },
+                {
+                  label: "Female",
+                  data: singleYearFemaleData,
+                  backgroundColor: "#ff69b4",
+                  borderColor: "#ff1493",
+                  borderWidth: 0,
+                  barPercentage: 1.0,
+                  categoryPercentage: 1.0,
+                },
+                {
+                  label: "Other/Unknown",
+                  data: singleYearUnknownData,
+                  backgroundColor: "#9b59b6",
+                  borderColor: "#8e44ad",
+                  borderWidth: 0,
+                  barPercentage: 1.0,
+                  categoryPercentage: 1.0,
+                },
+              ],
+            },
+            options: {
+              responsive: true,
+              maintainAspectRatio: true,
+              aspectRatio: window.innerWidth <= 768 ? 1.5 : 2.5,
+              plugins: {
+                legend: {
+                  display: true,
+                  position: "top",
+                },
+                title: {
+                  display: false,
+                },
+              },
+              scales: {
+                y: {
+                  beginAtZero: true,
+                  stacked: true,
+                  title: {
+                    display: true,
+                    text: "Number of people",
+                  },
+                },
+                x: {
+                  stacked: true,
+                  title: {
+                    display: true,
+                    text: "Age",
+                  },
+                },
+              },
+            },
+          });
 
-                // Define age brackets
-                const ageBrackets = {
-                    'Young Children (3-6)': { min: 3, max: 6 },
-                    'Children (7-11)': { min: 7, max: 11 },
-                    'Secondary School (12-17)': { min: 12, max: 17 },
-                    'Young Adults (18-25)': { min: 18, max: 25 },
-                    'Adults (26-35)': { min: 26, max: 35 },
-                    'Older Adults (35+)': { min: 36, max: 999 }
-                };
+          // Create treemap with coarser age brackets
+          const genderBySingleYearForTreemap = data.gender_by_single_year;
 
-                // Aggregate data into brackets
-                const bracketData = {};
-                Object.keys(ageBrackets).forEach(bracket => {
-                    bracketData[bracket] = 0;
-                });
+          // Define age brackets
+          const ageBrackets = {
+            "Young Children (3-6)": { min: 3, max: 6 },
+            "Children (7-11)": { min: 7, max: 11 },
+            "Secondary School (12-17)": { min: 12, max: 17 },
+            "Young Adults (18-25)": { min: 18, max: 25 },
+            "Adults (26-35)": { min: 26, max: 35 },
+            "Older Adults (35+)": { min: 36, max: 999 },
+          };
 
-                Object.keys(genderBySingleYearForTreemap).forEach(age => {
-                    const ageNum = parseInt(age);
-                    if (ageNum <= 2) return; // Skip 0-2 year olds
+          // Aggregate data into brackets
+          const bracketData = {};
+          Object.keys(ageBrackets).forEach((bracket) => {
+            bracketData[bracket] = 0;
+          });
 
-                    const total = (genderBySingleYearForTreemap[age].Male || 0) +
-                                  (genderBySingleYearForTreemap[age].Female || 0) +
-                                  (genderBySingleYearForTreemap[age].Unknown || 0);
+          Object.keys(genderBySingleYearForTreemap).forEach((age) => {
+            const ageNum = parseInt(age);
+            if (ageNum <= 2) return; // Skip 0-2 year olds
 
-                    for (const [bracket, range] of Object.entries(ageBrackets)) {
-                        if (ageNum >= range.min && ageNum <= range.max) {
-                            bracketData[bracket] += total;
-                            break;
-                        }
-                    }
-                });
+            const total =
+              (genderBySingleYearForTreemap[age].Male || 0) +
+              (genderBySingleYearForTreemap[age].Female || 0) +
+              (genderBySingleYearForTreemap[age].Unknown || 0);
 
-                // Convert to treemap format
-                const treemapData = Object.keys(bracketData).map(bracket => ({
-                    label: bracket,
-                    value: bracketData[bracket]
-                }));
-
-                const ctxTreemap = document.getElementById('ageTreemapChart').getContext('2d');
-
-                // Hide placeholder and show canvas
-                document.getElementById('treemapPlaceholder').style.display = 'none';
-                document.getElementById('ageTreemapChart').style.display = 'block';
-
-                new Chart(ctxTreemap, {
-                    type: 'treemap',
-                    data: {
-                        datasets: [{
-                            tree: treemapData,
-                            key: 'value',
-                            groups: ['label'],
-                            backgroundColor: (ctx) => {
-                                const colors = ['#ff8c00', '#007bff', '#ff69b4', '#9b59b6', '#28a745', '#17a2b8'];
-                                return colors[ctx.dataIndex % colors.length];
-                            },
-                            borderColor: 'white',
-                            borderWidth: 2,
-                            spacing: 1,
-                            labels: {
-                                display: true,
-                                formatter: (ctx) => {
-                                    const label = ctx.raw._data.label;
-                                    const match = label.match(/^(.*?)\s*\((.*?)\)$/);
-                                    if (match) {
-                                        // Special handling for "Young Children" to wrap
-                                        if (match[1] === 'Young Children') {
-                                            return ['', 'Young', 'Children', '(' + match[2] + ')', '', ctx.raw.v.toLocaleString() + ' people'];
-                                        }
-                                        // Other labels on single line
-                                        return ['', match[1], '(' + match[2] + ')', '', ctx.raw.v.toLocaleString() + ' people'];
-                                    }
-                                    return ['', ctx.raw._data.label, '', ctx.raw.v.toLocaleString() + ' people'];
-                                },
-                                color: 'white',
-                                font: {
-                                    size: 14,
-                                    weight: 'bold'
-                                },
-                                align: 'center',
-                                position: 'top'
-                            }
-                        }]
-                    },
-                    options: {
-                        responsive: true,
-                        maintainAspectRatio: true,
-                        aspectRatio: 1.5,
-                        plugins: {
-                            legend: {
-                                display: false
-                            },
-                            tooltip: {
-                                callbacks: {
-                                    title: (items) => items[0].raw._data.label,
-                                    label: (item) => item.raw.v.toLocaleString() + ' people'
-                                }
-                            }
-                        }
-                    }
-                });
-            } catch (error) {
-                console.error('Error loading age breakdown chart:', error);
-                document.getElementById('ageBreakdownChart').insertAdjacentHTML('beforebegin',
-                    '<p style="color: red;">Error loading chart data</p>');
+            for (const [bracket, range] of Object.entries(ageBrackets)) {
+              if (ageNum >= range.min && ageNum <= range.max) {
+                bracketData[bracket] += total;
+                break;
+              }
             }
+          });
+
+          // Convert to treemap format
+          const treemapData = Object.keys(bracketData).map((bracket) => ({
+            label: bracket,
+            value: bracketData[bracket],
+          }));
+
+          const ctxTreemap = document
+            .getElementById("ageTreemapChart")
+            .getContext("2d");
+
+          // Hide placeholder and show canvas
+          document.getElementById("treemapPlaceholder").style.display = "none";
+          document.getElementById("ageTreemapChart").style.display = "block";
+
+          new Chart(ctxTreemap, {
+            type: "treemap",
+            data: {
+              datasets: [
+                {
+                  tree: treemapData,
+                  key: "value",
+                  groups: ["label"],
+                  backgroundColor: (ctx) => {
+                    const colors = [
+                      "#ff8c00",
+                      "#007bff",
+                      "#ff69b4",
+                      "#9b59b6",
+                      "#28a745",
+                      "#17a2b8",
+                    ];
+                    return colors[ctx.dataIndex % colors.length];
+                  },
+                  borderColor: "white",
+                  borderWidth: 2,
+                  spacing: 1,
+                  labels: {
+                    display: true,
+                    formatter: (ctx) => {
+                      const label = ctx.raw._data.label;
+                      const match = label.match(/^(.*?)\s*\((.*?)\)$/);
+                      if (match) {
+                        // Special handling for "Young Children" to wrap
+                        if (match[1] === "Young Children") {
+                          return [
+                            "",
+                            "Young",
+                            "Children",
+                            "(" + match[2] + ")",
+                            "",
+                            ctx.raw.v.toLocaleString() + " people",
+                          ];
+                        }
+                        // Other labels on single line
+                        return [
+                          "",
+                          match[1],
+                          "(" + match[2] + ")",
+                          "",
+                          ctx.raw.v.toLocaleString() + " people",
+                        ];
+                      }
+                      return [
+                        "",
+                        ctx.raw._data.label,
+                        "",
+                        ctx.raw.v.toLocaleString() + " people",
+                      ];
+                    },
+                    color: "white",
+                    font: {
+                      size: 14,
+                      weight: "bold",
+                    },
+                    align: "center",
+                    position: "top",
+                  },
+                },
+              ],
+            },
+            options: {
+              responsive: true,
+              maintainAspectRatio: true,
+              aspectRatio: 1.5,
+              plugins: {
+                legend: {
+                  display: false,
+                },
+                tooltip: {
+                  callbacks: {
+                    title: (items) => items[0].raw._data.label,
+                    label: (item) => item.raw.v.toLocaleString() + " people",
+                  },
+                },
+              },
+            },
+          });
+        } catch (error) {
+          console.error("Error loading age breakdown chart:", error);
+          document
+            .getElementById("ageBreakdownChart")
+            .insertAdjacentHTML(
+              "beforebegin",
+              '<p style="color: red;">Error loading chart data</p>',
+            );
         }
+      }
 
-        // Load chart when page is ready
-        document.addEventListener('DOMContentLoaded', loadAgeBreakdownChart);
+      // Load chart when page is ready
+      document.addEventListener("DOMContentLoaded", loadAgeBreakdownChart);
 
-        // Progressive image loading for polaroids
-        document.addEventListener('DOMContentLoaded', function() {
-            const polaroidImages = document.querySelectorAll('.polaroid img[data-src]');
+      // Progressive image loading for polaroids
+      document.addEventListener("DOMContentLoaded", function () {
+        const polaroidImages = document.querySelectorAll(
+          ".polaroid img[data-src]",
+        );
 
-            const loadImage = (img) => {
-                const highRes = new Image();
-                highRes.onload = function() {
-                    img.src = img.dataset.src;
-                    img.classList.remove('loading');
-                    img.classList.add('loaded');
-                };
-                highRes.src = img.dataset.src;
-            };
+        const loadImage = (img) => {
+          const highRes = new Image();
+          highRes.onload = function () {
+            img.src = img.dataset.src;
+            img.classList.remove("loading");
+            img.classList.add("loaded");
+          };
+          highRes.src = img.dataset.src;
+        };
 
-            // Use IntersectionObserver to load when visible
-            if ('IntersectionObserver' in window) {
-                const observer = new IntersectionObserver((entries) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            loadImage(entry.target);
-                            observer.unobserve(entry.target);
-                        }
-                    });
-                }, { rootMargin: '100px' });
+        // Use IntersectionObserver to load when visible
+        if ("IntersectionObserver" in window) {
+          const observer = new IntersectionObserver(
+            (entries) => {
+              entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                  loadImage(entry.target);
+                  observer.unobserve(entry.target);
+                }
+              });
+            },
+            { rootMargin: "100px" },
+          );
 
-                polaroidImages.forEach(img => observer.observe(img));
-            } else {
-                // Fallback: load all images
-                polaroidImages.forEach(loadImage);
-            }
-        });
+          polaroidImages.forEach((img) => observer.observe(img));
+        } else {
+          // Fallback: load all images
+          polaroidImages.forEach(loadImage);
+        }
+      });
     </script>
-</body>
+  </body>
 </html>

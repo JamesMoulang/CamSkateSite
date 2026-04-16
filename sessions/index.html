@@ -1,271 +1,559 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sessions - The Warehouse Skatepark</title>
-    <meta name="description" content="Open sessions, beginner sessions, Girl Skate Night, Queer Skate Night, over 30s sessions, and more at The Warehouse.">
+    <meta
+      name="description"
+      content="Open sessions, beginner sessions, Girl Skate Night, Queer Skate Night, over 30s sessions, and more at The Warehouse."
+    />
 
     <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.cam-skate.co.uk/sessions/">
-    <meta property="og:title" content="Sessions - The Warehouse Skatepark">
-    <meta property="og:description" content="Open sessions, beginner sessions, Girl Skate Night, Queer Skate Night, over 30s sessions, and more at The Warehouse.">
-    <meta property="og:image" content="https://www.cam-skate.co.uk/img/advanced.jpg">
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.cam-skate.co.uk/sessions/" />
+    <meta property="og:title" content="Sessions - The Warehouse Skatepark" />
+    <meta
+      property="og:description"
+      content="Open sessions, beginner sessions, Girl Skate Night, Queer Skate Night, over 30s sessions, and more at The Warehouse."
+    />
+    <meta
+      property="og:image"
+      content="https://www.cam-skate.co.uk/img/advanced.jpg"
+    />
 
     <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://www.cam-skate.co.uk/sessions/">
-    <meta property="twitter:title" content="Sessions - The Warehouse Skatepark">
-    <meta property="twitter:description" content="Open sessions, beginner sessions, Girl Skate Night, Queer Skate Night, over 30s sessions, and more at The Warehouse.">
-    <meta property="twitter:image" content="https://www.cam-skate.co.uk/img/advanced.jpg">
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta
+      property="twitter:url"
+      content="https://www.cam-skate.co.uk/sessions/"
+    />
+    <meta
+      property="twitter:title"
+      content="Sessions - The Warehouse Skatepark"
+    />
+    <meta
+      property="twitter:description"
+      content="Open sessions, beginner sessions, Girl Skate Night, Queer Skate Night, over 30s sessions, and more at The Warehouse."
+    />
+    <meta
+      property="twitter:image"
+      content="https://www.cam-skate.co.uk/img/advanced.jpg"
+    />
 
-    <link rel="stylesheet" href="../style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
     <header class="navbar-black-text">
-        <a href="/"><img src="../img/logo_black.png" alt="Cam Skate Site Logo" class="logo"></a>
-        <nav>
-            <ul>
-                <li class="current-page"><a href="/sessions/">Sessions</a></li>
-                <li><a href="/coaching/">Coaching</a></li>
-                <li><a href="/hire/">Hire</a></li>
-                <li><a href="/events/">Events</a></li>
-                <li><a href="/visit/">Visit</a></li>
-                <li><a href="/get_involved/">Get Involved</a></li>
-                <li><a href="/about/">About</a></li>
-                <li><a href="/donate/">Donate</a></li>
-            </ul>
-        </nav>
-        <div class="hamburger-menu hamburger-menu-black">
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-        </div>
+      <a href="/"
+        ><img
+          src="../img/logo_black.png"
+          alt="Cam Skate Site Logo"
+          class="logo"
+      /></a>
+      <nav>
+        <ul>
+          <li class="current-page"><a href="/sessions/">Sessions</a></li>
+          <li><a href="/coaching/">Coaching</a></li>
+          <li><a href="/hire/">Hire</a></li>
+          <li><a href="/events/">Events</a></li>
+          <li><a href="/visit/">Visit</a></li>
+          <li><a href="/get_involved/">Get Involved</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/donate/">Donate</a></li>
+        </ul>
+      </nav>
+      <div class="hamburger-menu hamburger-menu-black">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
     </header>
     <div class="nav-overlay">
-        <a href="#" class="close-btn">&times;</a>
-        <div class="nav-overlay-content">
-            <a href="/">Home</a>
-            <a href="/sessions/">Sessions</a>
-            <a href="/coaching/">Coaching</a>
-            <a href="/hire/">Hire</a>
-            <a href="/events/">Events</a>
-            <a href="/visit/">Visit</a>
-            <a href="/get_involved/">Get Involved</a>
-            <a href="/about/">About</a>
-            <a href="/donate/">Donate</a>
-        </div>
+      <a href="#" class="close-btn">&times;</a>
+      <div class="nav-overlay-content">
+        <a href="/">Home</a>
+        <a href="/sessions/">Sessions</a>
+        <a href="/coaching/">Coaching</a>
+        <a href="/hire/">Hire</a>
+        <a href="/events/">Events</a>
+        <a href="/visit/">Visit</a>
+        <a href="/get_involved/">Get Involved</a>
+        <a href="/about/">About</a>
+        <a href="/donate/">Donate</a>
+      </div>
     </div>
     <main>
-        <section class="info-section title">
-            <div class="info-section-content">
-                <h2>Today's sessions</h2>
-                <div id="today-carousel-container" class="carousel-container">
-                    <button class="carousel-btn prev">&lt;</button>
-                    <div class="carousel" id="schedule_carousel">
-                        <div class="carousel-item" style="background-color: rgba(0,0,0,0.7);"></div>
-                        <div class="carousel-item" style="background-color: rgba(0,0,0,0.7);"></div>
-                        <div class="carousel-item" style="background-color: rgba(0,0,0,0.7);"></div>
-                        <div class="carousel-item" style="background-color: rgba(0,0,0,0.7);"></div>
-                        <div class="carousel-item" style="background-color: rgba(0,0,0,0.7);"></div>
-                    </div>
-                    <button class="carousel-btn next">&gt;</button>
-                </div>
+      <section class="info-section title">
+        <div class="info-section-content">
+          <h2>Today's sessions</h2>
+          <div id="today-carousel-container" class="carousel-container">
+            <button class="carousel-btn prev">&lt;</button>
+            <div class="carousel" id="schedule_carousel">
+              <div
+                class="carousel-item"
+                style="background-color: rgba(0, 0, 0, 0.7)"
+              ></div>
+              <div
+                class="carousel-item"
+                style="background-color: rgba(0, 0, 0, 0.7)"
+              ></div>
+              <div
+                class="carousel-item"
+                style="background-color: rgba(0, 0, 0, 0.7)"
+              ></div>
+              <div
+                class="carousel-item"
+                style="background-color: rgba(0, 0, 0, 0.7)"
+              ></div>
+              <div
+                class="carousel-item"
+                style="background-color: rgba(0, 0, 0, 0.7)"
+              ></div>
             </div>
-        </section>
-        <section id="week" class="info-section">
-            <div class="info-section-content">
-                <h2>This week's schedule</h2>
-                <div id="week-schedule-container" class="schedule-capsules-container">
-                    <button class="schedule-capsule-btn prev">&lt;</button>
-                    <div id="week_schedule" class="schedule-capsules">
-                        <div class="day-capsule placeholder"><h3></h3><div class="session-item"></div><div class="session-item"></div></div>
-                        <div class="day-capsule placeholder"><h3></h3><div class="session-item"></div><div class="session-item"></div></div>
-                        <div class="day-capsule placeholder"><h3></h3><div class="session-item"></div><div class="session-item"></div></div>
-                        <div class="day-capsule placeholder"><h3></h3><div class="session-item"></div><div class="session-item"></div></div>
-                        <div class="day-capsule placeholder"><h3></h3><div class="session-item"></div><div class="session-item"></div></div>
-                        <div class="day-capsule placeholder"><h3></h3><div class="session-item"></div><div class="session-item"></div></div>
-                        <div class="day-capsule placeholder"><h3></h3><div class="session-item"></div><div class="session-item"></div></div>
-                    </div>
-                    <button class="schedule-capsule-btn next">&gt;</button>
-                </div>
+            <button class="carousel-btn next">&gt;</button>
+          </div>
+        </div>
+      </section>
+      <section id="week" class="info-section">
+        <div class="info-section-content">
+          <h2>This week's schedule</h2>
+          <div id="week-schedule-container" class="schedule-capsules-container">
+            <button class="schedule-capsule-btn prev">&lt;</button>
+            <div id="week_schedule" class="schedule-capsules">
+              <div class="day-capsule placeholder">
+                <h3></h3>
+                <div class="session-item"></div>
+                <div class="session-item"></div>
+              </div>
+              <div class="day-capsule placeholder">
+                <h3></h3>
+                <div class="session-item"></div>
+                <div class="session-item"></div>
+              </div>
+              <div class="day-capsule placeholder">
+                <h3></h3>
+                <div class="session-item"></div>
+                <div class="session-item"></div>
+              </div>
+              <div class="day-capsule placeholder">
+                <h3></h3>
+                <div class="session-item"></div>
+                <div class="session-item"></div>
+              </div>
+              <div class="day-capsule placeholder">
+                <h3></h3>
+                <div class="session-item"></div>
+                <div class="session-item"></div>
+              </div>
+              <div class="day-capsule placeholder">
+                <h3></h3>
+                <div class="session-item"></div>
+                <div class="session-item"></div>
+              </div>
+              <div class="day-capsule placeholder">
+                <h3></h3>
+                <div class="session-item"></div>
+                <div class="session-item"></div>
+              </div>
             </div>
-        </section>
-        <section class="info-section">
-            <div class="info-section-content">
-                <h2>Types of sessions</h2>
-                <div class="session-type-grid">
-                    <div id="open_sessions" class="grid-item" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('../img/advanced.jpg');">
-                        <div class="grid-item-title">Open sessions</div>
-                        <div class="sport-capsules-container">
-                            <span class="sport-capsule boards">🛹 Skateboards</span><span class="sport-capsule rollers">🛼 Rollerskates/blades</span>
-                        </div>
-                        <p class="grid-item-subtitle">Open sessions are our most frequent session at The Warehouse - open to all skateboarders/surfskaters/longboarders, rollerskaters and rollerbladers.</p>
-                    </div>
-                    <div id="beginner_sessions" class="grid-item" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('../img/beginners.jpg');">
-                        <div class="grid-item-title">Beginner sessions</div>
-                        <div class="sport-capsules-container">
-                            <span class="sport-capsule boards">🛹 Skateboards</span><span class="sport-capsule rollers">🛼 Rollerskates/blades</span>
-                        </div>
-                        <p class="grid-item-subtitle">New to skating? Beginner sessions are a supportive, quieter session that are designed to give beginners the space they need to build confidence and skills.</p>
-                    </div>
-                    <div id="junior_jam" class="grid-item" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('../img/kids_and_coaching.jpg');">
-                        <div class="grid-item-title">Junior Jam - Under 10s</div>
-                        <div class="sport-capsules-container">
-                            <span class="sport-capsule scooters">🛴 Scooters</span><span class="sport-capsule boards">🛹 Skateboards</span><span class="sport-capsule rollers">🛼 Rollerskates/blades</span>
-                        </div>
-                        <p class="grid-item-subtitle">Our Saturday Junior Jam is a fun, friendly session where kids (and their parents) can learn, practise and play together in a safe, relaxed space.</p>
-                    </div>
-                    <div id="scooter_session" class="grid-item" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.4)), url('../img/scooter 1.jpg');">
-                        <div class="grid-item-title">Scooter session - Over 8s</div>
-                        <div class="sport-capsules-container">
-                            <span class="sport-capsule scooters">🛴 Scooters</span>
-                        </div>
-                        <p class="grid-item-subtitle">Our weekly Scooter Session is open to all scooter riders aged 8 years and older.</p>
-                    </div>
-
-                </div>
-
-                <h2>Monthly sessions</h2>
-
-                <div class="session-type-grid">
-                    <div id="girl_skate_night" class="grid-item" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('../img/girl_skate_night.jpg');">
-                        <div class="grid-item-title">Girl Skate Night</div>
-                        <div class="sport-capsules-container">
-                            <span class="sport-capsule free">💖 Free!</span><span class="sport-capsule boards">🛹 Skateboards</span><span class="sport-capsule rollers">🛼 Rollerskates/blades</span>
-                        </div>
-                        <p class="grid-item-subtitle">Girl Skate Night is a monthly skate night run for and by women, girls, and non-binary people. It's free entry and has a nice welcoming community.</p>
-                    </div>
-                    <div id="queer_skate_night" class="grid-item" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('../img/q&b 3.jpeg');">
-                        <div class="grid-item-title">Queer Skate Night</div>
-                        <div class="sport-capsules-container">
-                            <span class="sport-capsule free">💖 Free!</span><span class="sport-capsule boards">🛹 Skateboards</span><span class="sport-capsule rollers">🛼 Rollerskates/blades</span>
-                        </div>
-                        <p class="grid-item-subtitle">Queer Skate Night is a monthly skate night run for and by the LGBTQ+ community.</p>
-                    </div>
-                    <div id="quads_and_blades" class="grid-item" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('../img/q&b 1.jpeg');">
-                        <div class="grid-item-title">Quads & Blades</div>
-                        <div class="sport-capsules-container">
-                            <span class="sport-capsule rollers">🛼 Rollerskates/blades</span>
-                        </div>
-                        <p class="grid-item-subtitle">Quads & Blades night is a monthly night run for and by rollerskaters and rollerbladers.</p>
-                    </div>
-                    <div id="pipe_and_slippers" class="grid-item" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('../img/pipe_and_slippers.jpg');">
-                        <div class="grid-item-title">Pipe & Slippers - Over 30s</div>
-                        <div class="sport-capsules-container">
-                            <span class="sport-capsule boards">🛹 Skateboards</span><span class="sport-capsule rollers">🛼 Rollerskates/blades</span>
-                        </div>
-                        <p class="grid-item-subtitle">The monthly 'Pipe and Slippers' night is our dedicated session for skaters aged 30 years and older. There's a beginner session at the start for those looking to build more confidence!</p>
-                    </div>
-                </div>
-
-                <h2>Coached sessions</h2>
-
-                <div class="session-type-grid">
-                    <div id="after_work_club" class="grid-item" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('../img/reception group.png');">
-                        <div class="grid-item-title">After Work Club</div>
-                        <div class="sport-capsules-container">
-                            <span class="sport-capsule boards">🛹 Skateboards</span>
-                        </div>
-                        <p class="grid-item-subtitle">Our skateboarding club for adults. Set your own goals and identify the route to achieving them with your coach. There’s also a weekly journal for each student which allows them to progress towards their targets.</p>
-                        <a href="https://membership.cam-skate.co.uk/coaching/after_work_club">View dates and sign up here</a>
-                    </div>
-                    <div id="after_school_club" class="grid-item" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('../img/after_school.jpeg');">
-                        <div class="grid-item-title">After School Club</div>
-                        <div class="sport-capsules-container">
-                            <span class="sport-capsule boards">🛹 Skateboards</span>
-                        </div>
-                        <p class="grid-item-subtitle">A dedicated 2 hour skateboard lesson, with exclusive access to the skatepark, delivered by 2 experienced Skateboard GB accredited coaches, Pete and Ali.</p>
-                        <a href="https://membership.cam-skate.co.uk/coaching/after_school_club">View dates and sign up here</a>
-                    </div>
-                    <div id="holiday_skate_camps" class="grid-item" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('../img/coaching.jpg');">
-                        <div class="grid-item-title">Holiday Skate Camps</div>
-                        <div class="sport-capsules-container">
-                            <span class="sport-capsule boards">🛹 Skateboards</span>
-                        </div>
-                        <p class="grid-item-subtitle">With 3 days of coaching and 3 experienced, Skateboard GB accredited coaches, our Holiday Skate Camps are a perfect way for children to discover their own way to skate with no limitations!</p>
-                        <a href="https://membership.cam-skate.co.uk/coaching/holiday_skate_camp">View dates and sign up here</a>
-                    </div>
-                    <div id="private_lessons" class="grid-item" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('../img/coaching.jpg');">
-                        <div class="grid-item-title">Private Lessons</div>
-                        <div class="sport-capsules-container">
-                            <span class="sport-capsule boards">🛹 Skateboards</span>
-                        </div>
-                        <p class="grid-item-subtitle">We'll be offering private skateboarding lessons at The Warehouse in the New Year, with a team of Skateboard GB accredited coaches!</p>
-                        <a href="mailto:warehouse@cam-skate.co.uk">Email us to register your interest</a>
-                    </div>
-                </div>
+            <button class="schedule-capsule-btn next">&gt;</button>
+          </div>
+        </div>
+      </section>
+      <section class="info-section">
+        <div class="info-section-content">
+          <h2>Types of sessions</h2>
+          <div class="session-type-grid">
+            <div
+              id="open_sessions"
+              class="grid-item"
+              style="
+                background-image:
+                  linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
+                  url(&quot;../img/advanced.jpg&quot;);
+              "
+            >
+              <div class="grid-item-title">Open sessions</div>
+              <div class="sport-capsules-container">
+                <span class="sport-capsule boards">🛹 Skateboards</span
+                ><span class="sport-capsule rollers"
+                  >🛼 Rollerskates/blades</span
+                >
+              </div>
+              <p class="grid-item-subtitle">
+                Open sessions are our most frequent session at The Warehouse -
+                open to all skateboarders/surfskaters/longboarders,
+                rollerskaters and rollerbladers.
+              </p>
             </div>
-        </section>
-        <section id="pricing" class="info-section">
-            <div class="info-section-content">
-                <h2>Prices & Memberships</h2>
-                <p>Regular sessions (open, beginner, junior, scooter, quads & blades, over 30s) cost <b>just £5!</b> Pay when you arrive and skate until the end of the session. No slots or wristbands or pre-booking. Just pay and skate.</p>
-                <p>Monthly memberships cost <b>just £30</b> for unlimited entry to regular sessions for 28 days. You can purchase a monthly membership at reception in the park.</p>
-                <p>We also have a <a href="https://membership.cam-skate.co.uk/supporter">Supporter membership</a> which offers unlimited entry to regular sessions until July 2026. The price is currently <b id="supporter_price"></b>.</p>
-                <p>After School and After Work Club (coached sessions) cost £20 per session if booked as a whole term, or £25 for one-off walk ins.</p>
+            <div
+              id="beginner_sessions"
+              class="grid-item"
+              style="
+                background-image:
+                  linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
+                  url(&quot;../img/beginners.jpg&quot;);
+              "
+            >
+              <div class="grid-item-title">Beginner sessions</div>
+              <div class="sport-capsules-container">
+                <span class="sport-capsule boards">🛹 Skateboards</span
+                ><span class="sport-capsule rollers"
+                  >🛼 Rollerskates/blades</span
+                >
+              </div>
+              <p class="grid-item-subtitle">
+                New to skating? Beginner sessions are a supportive, quieter
+                session that are designed to give beginners the space they need
+                to build confidence and skills.
+              </p>
             </div>
-        </section>
+            <div
+              id="junior_jam"
+              class="grid-item"
+              style="
+                background-image:
+                  linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
+                  url(&quot;../img/kids_and_coaching.jpg&quot;);
+              "
+            >
+              <div class="grid-item-title">Junior Jam - Under 10s</div>
+              <div class="sport-capsules-container">
+                <span class="sport-capsule scooters">🛴 Scooters</span
+                ><span class="sport-capsule boards">🛹 Skateboards</span
+                ><span class="sport-capsule rollers"
+                  >🛼 Rollerskates/blades</span
+                >
+              </div>
+              <p class="grid-item-subtitle">
+                Our Saturday Junior Jam is a fun, friendly session where kids
+                (and their parents) can learn, practise and play together in a
+                safe, relaxed space.
+              </p>
+            </div>
+            <div
+              id="scooter_session"
+              class="grid-item"
+              style="
+                background-image:
+                  linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)),
+                  url(&quot;../img/scooter 1.jpg&quot;);
+              "
+            >
+              <div class="grid-item-title">Scooter session - Over 8s</div>
+              <div class="sport-capsules-container">
+                <span class="sport-capsule scooters">🛴 Scooters</span>
+              </div>
+              <p class="grid-item-subtitle">
+                Our weekly Scooter Session is open to all scooter riders aged 8
+                years and older.
+              </p>
+            </div>
+          </div>
+
+          <h2>Monthly sessions</h2>
+
+          <div class="session-type-grid">
+            <div
+              id="girl_skate_night"
+              class="grid-item"
+              style="
+                background-image:
+                  linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
+                  url(&quot;../img/girl_skate_night.jpg&quot;);
+              "
+            >
+              <div class="grid-item-title">Girl Skate Night</div>
+              <div class="sport-capsules-container">
+                <span class="sport-capsule free">💖 Free!</span
+                ><span class="sport-capsule boards">🛹 Skateboards</span
+                ><span class="sport-capsule rollers"
+                  >🛼 Rollerskates/blades</span
+                >
+              </div>
+              <p class="grid-item-subtitle">
+                Girl Skate Night is a monthly skate night run for and by women,
+                girls, and non-binary people. It's free entry and has a nice
+                welcoming community.
+              </p>
+            </div>
+            <div
+              id="queer_skate_night"
+              class="grid-item"
+              style="
+                background-image:
+                  linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
+                  url(&quot;../img/q&b 3.jpeg&quot;);
+              "
+            >
+              <div class="grid-item-title">Queer Skate Night</div>
+              <div class="sport-capsules-container">
+                <span class="sport-capsule free">💖 Free!</span
+                ><span class="sport-capsule boards">🛹 Skateboards</span
+                ><span class="sport-capsule rollers"
+                  >🛼 Rollerskates/blades</span
+                >
+              </div>
+              <p class="grid-item-subtitle">
+                Queer Skate Night is a monthly skate night run for and by the
+                LGBTQ+ community.
+              </p>
+            </div>
+            <div
+              id="quads_and_blades"
+              class="grid-item"
+              style="
+                background-image:
+                  linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
+                  url(&quot;../img/q&b 1.jpeg&quot;);
+              "
+            >
+              <div class="grid-item-title">Quads & Blades</div>
+              <div class="sport-capsules-container">
+                <span class="sport-capsule rollers"
+                  >🛼 Rollerskates/blades</span
+                >
+              </div>
+              <p class="grid-item-subtitle">
+                Quads & Blades night is a monthly night run for and by
+                rollerskaters and rollerbladers.
+              </p>
+            </div>
+            <div
+              id="pipe_and_slippers"
+              class="grid-item"
+              style="
+                background-image:
+                  linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
+                  url(&quot;../img/pipe_and_slippers.jpg&quot;);
+              "
+            >
+              <div class="grid-item-title">Pipe & Slippers - Over 30s</div>
+              <div class="sport-capsules-container">
+                <span class="sport-capsule boards">🛹 Skateboards</span
+                ><span class="sport-capsule rollers"
+                  >🛼 Rollerskates/blades</span
+                >
+              </div>
+              <p class="grid-item-subtitle">
+                The monthly 'Pipe and Slippers' night is our dedicated session
+                for skaters aged 30 years and older. There's a beginner session
+                at the start for those looking to build more confidence!
+              </p>
+            </div>
+          </div>
+
+          <h2>Coached sessions</h2>
+
+          <div class="session-type-grid">
+            <div
+              id="after_work_club"
+              class="grid-item"
+              style="
+                background-image:
+                  linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
+                  url(&quot;../img/reception group.png&quot;);
+              "
+            >
+              <div class="grid-item-title">After Work Club</div>
+              <div class="sport-capsules-container">
+                <span class="sport-capsule boards">🛹 Skateboards</span>
+              </div>
+              <p class="grid-item-subtitle">
+                Our skateboarding club for adults. Set your own goals and
+                identify the route to achieving them with your coach. There’s
+                also a weekly journal for each student which allows them to
+                progress towards their targets.
+              </p>
+              <a
+                href="https://membership.cam-skate.co.uk/coaching/after_work_club"
+                >View dates and sign up here</a
+              >
+            </div>
+            <div
+              id="after_school_club"
+              class="grid-item"
+              style="
+                background-image:
+                  linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
+                  url(&quot;../img/after_school.jpeg&quot;);
+              "
+            >
+              <div class="grid-item-title">After School Club</div>
+              <div class="sport-capsules-container">
+                <span class="sport-capsule boards">🛹 Skateboards</span>
+              </div>
+              <p class="grid-item-subtitle">
+                A dedicated 2 hour skateboard lesson, with exclusive access to
+                the skatepark, delivered by 2 experienced Skateboard GB
+                accredited coaches, Pete and Ali.
+              </p>
+              <a
+                href="https://membership.cam-skate.co.uk/coaching/after_school_club"
+                >View dates and sign up here</a
+              >
+            </div>
+            <div
+              id="holiday_skate_camps"
+              class="grid-item"
+              style="
+                background-image:
+                  linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
+                  url(&quot;../img/coaching.jpg&quot;);
+              "
+            >
+              <div class="grid-item-title">Holiday Skate Camps</div>
+              <div class="sport-capsules-container">
+                <span class="sport-capsule boards">🛹 Skateboards</span>
+              </div>
+              <p class="grid-item-subtitle">
+                With 3 days of coaching and 3 experienced, Skateboard GB
+                accredited coaches, our Holiday Skate Camps are a perfect way
+                for children to discover their own way to skate with no
+                limitations!
+              </p>
+              <a
+                href="https://membership.cam-skate.co.uk/coaching/holiday_skate_camp"
+                >View dates and sign up here</a
+              >
+            </div>
+            <div
+              id="private_lessons"
+              class="grid-item"
+              style="
+                background-image:
+                  linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
+                  url(&quot;../img/coaching.jpg&quot;);
+              "
+            >
+              <div class="grid-item-title">Private Lessons</div>
+              <div class="sport-capsules-container">
+                <span class="sport-capsule boards">🛹 Skateboards</span>
+              </div>
+              <p class="grid-item-subtitle">
+                We'll be offering private skateboarding lessons at The Warehouse
+                in the New Year, with a team of Skateboard GB accredited
+                coaches!
+              </p>
+              <a href="mailto:warehouse@cam-skate.co.uk"
+                >Email us to register your interest</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="pricing" class="info-section">
+        <div class="info-section-content">
+          <h2>Prices & Memberships</h2>
+          <p>
+            Regular sessions (open, beginner, junior, scooter, quads & blades,
+            over 30s) cost <b>just £5!</b> Pay when you arrive and skate until
+            the end of the session. No slots or wristbands or pre-booking. Just
+            pay and skate.
+          </p>
+          <p>
+            Monthly memberships cost <b>just £30</b> for unlimited entry to
+            regular sessions for 28 days. You can purchase a monthly membership
+            at reception in the park.
+          </p>
+          <p>
+            We also have a
+            <a href="https://membership.cam-skate.co.uk/supporter"
+              >Supporter membership</a
+            >
+            which offers unlimited entry to regular sessions until July 2026.
+            The price is currently <b id="supporter_price"></b>.
+          </p>
+          <p>
+            After School and After Work Club (coached sessions) cost £20 per
+            session if booked as a whole term, or £25 for one-off walk ins.
+          </p>
+        </div>
+      </section>
     </main>
     <footer>
-        <div class="footer-content">
-            <img src="../img/logo.png" alt="Cam Skate Site Logo" class="footer-logo">
-            <nav class="footer-nav">
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/sessions/">Sessions</a></li>
-                    <li><a href="/coaching/">Coaching</a></li>
-                    <li><a href="/hire/">Hire</a></li>
-                    <li><a href="/events/">Events</a></li>
-                    <li><a href="/visit/">Visit</a></li>
-                    <li><a href="/get_involved/">Get Involved</a></li>
-                    <li><a href="/about/">About</a></li>
-                    <li><a href="/donate/">Donate</a></li>
-                </ul>
-            </nav>
-            <div class="social-links">
-                <a href="https://www.instagram.com/the_warehouse_skatepark/"><img src="../img/icon_instagram.svg" alt="Instagram" class="social-icon"></a>
-                <a href="https://www.facebook.com/profile.php?id=61573116536393"><img src="../img/icon_facebook.svg" alt="Facebook" class="social-icon"></a>
-            </div>
+      <div class="footer-content">
+        <img
+          src="../img/logo.png"
+          alt="Cam Skate Site Logo"
+          class="footer-logo"
+        />
+        <nav class="footer-nav">
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/sessions/">Sessions</a></li>
+            <li><a href="/coaching/">Coaching</a></li>
+            <li><a href="/hire/">Hire</a></li>
+            <li><a href="/events/">Events</a></li>
+            <li><a href="/visit/">Visit</a></li>
+            <li><a href="/get_involved/">Get Involved</a></li>
+            <li><a href="/about/">About</a></li>
+            <li><a href="/donate/">Donate</a></li>
+          </ul>
+        </nav>
+        <div class="social-links">
+          <a href="https://www.instagram.com/the_warehouse_skatepark/"
+            ><img
+              src="../img/icon_instagram.svg"
+              alt="Instagram"
+              class="social-icon"
+          /></a>
+          <a href="https://www.facebook.com/profile.php?id=61573116536393"
+            ><img
+              src="../img/icon_facebook.svg"
+              alt="Facebook"
+              class="social-icon"
+          /></a>
         </div>
+      </div>
     </footer>
     <script>
-        const today = new Date();
-        const target = new Date(2026, 6, 1); // Months are 0-indexed (6 = July)
+      const today = new Date();
+      const target = new Date(2026, 6, 1); // Months are 0-indexed (6 = July)
 
-        const yearsDiff = target.getFullYear() - today.getFullYear();
-        const monthsDiff = target.getMonth() - today.getMonth();
+      const yearsDiff = target.getFullYear() - today.getFullYear();
+      const monthsDiff = target.getMonth() - today.getMonth();
 
-        let months = yearsDiff * 12 + monthsDiff;
-        if (months < 1) months = 1; // Matches Ruby's minimum-cost logic
+      let months = yearsDiff * 12 + monthsDiff;
+      if (months < 1) months = 1; // Matches Ruby's minimum-cost logic
 
-        let price = months * 25;
-        if (price < 25) price = 25;
+      let price = months * 25;
+      if (price < 25) price = 25;
 
-        const element = document.getElementById('supporter_price');
-        element.innerText = `£${price}`;
+      const element = document.getElementById("supporter_price");
+      element.innerText = `£${price}`;
     </script>
     <script src="../script.js"></script>
     <script>
-        window.carousel_load_today = true;
-        window.carousel_asset_root = '../';
+      window.carousel_load_today = true;
+      window.carousel_asset_root = "../";
     </script>
     <script src="../carousel_loader.js"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const dayNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-            const today = new Date().getDay();
-            const placeholderCapsules = document.querySelectorAll('#week_schedule .placeholder h3');
-            
-            placeholderCapsules.forEach((h3, index) => {
-                const dayIndex = (today + index) % 7;
-                h3.innerHTML = dayNames[dayIndex];
-            });
-            enableCarouselButtons('today-carousel-container');
-            enableCarouselButtons('week-schedule-container');
+      document.addEventListener("DOMContentLoaded", () => {
+        const dayNames = [
+          "Sunday",
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+        ];
+        const today = new Date().getDay();
+        const placeholderCapsules = document.querySelectorAll(
+          "#week_schedule .placeholder h3",
+        );
+
+        placeholderCapsules.forEach((h3, index) => {
+          const dayIndex = (today + index) % 7;
+          h3.innerHTML = dayNames[dayIndex];
         });
+        enableCarouselButtons("today-carousel-container");
+        enableCarouselButtons("week-schedule-container");
+      });
     </script>
     <script src="../week_loader.js"></script>
-</body>
+  </body>
 </html>
