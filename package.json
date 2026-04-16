@@ -7,7 +7,13 @@
     "doc": "docs"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky",
+    "format": "prettier . --write",
+    "format:check": "prettier . --check"
+  },
+  "lint-staged": {
+    "*": "prettier --write --ignore-unknown"
   },
   "repository": {
     "type": "git",
@@ -21,5 +27,9 @@
   "homepage": "https://github.com/JamesMoulang/CamSkateSite#readme",
   "dependencies": {
     "prettier": "3.8.3"
+  },
+  "devDependencies": {
+    "husky": "^9.1.7",
+    "lint-staged": "^15.2.10"
   }
 }
