@@ -59,4 +59,4 @@ General enquiries: <hello@cam-skate.co.uk>
 
 ## Licence
 
-CamSkateSite is [MIT licensed](https://github.com/JamesMoulang/CamSkateSite/blob/main/LICENSE).
+The source code in this repository is [MIT licensed](LICENSE). Brand assets — the Cam Skate and The Warehouse Skatepark names, logos, photographs, and other media under `/img/` and `/docs/` — are not covered by the MIT grant and remain © Skateboard Cambridge CIC, all rights reserved. See the [LICENSE](LICENSE) file for details.
