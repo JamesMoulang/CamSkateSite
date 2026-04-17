@@ -51,13 +51,10 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function getColorForEvent(title) {
-    const lower_title = title.toLowerCase();
-    for (const keyword in SESSION_CONFIG) {
-      if (lower_title.includes(keyword)) {
-        return SESSION_CONFIG[keyword].color;
-      }
-    }
-    return SESSION_CONFIG["default"].color;
+    return (
+      SESSION_CONFIG[title.toLowerCase()]?.color ||
+      SESSION_CONFIG["default"].color
+    );
   }
 
   async function fetchAndPopulateCarousel() {

@@ -39,13 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
   );
 
   function getDisciplinesForEvent(title) {
-    const lower_title = title.toLowerCase();
-    for (const keyword in SESSION_CONFIG) {
-      if (lower_title.includes(keyword)) {
-        return SESSION_CONFIG[keyword].disciplines;
-      }
-    }
-    return null;
+    return SESSION_CONFIG[title.toLowerCase()]?.disciplines || null;
   }
 
   function generateDisciplineHTML(title) {
@@ -65,18 +59,11 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function getImageForEvent(title) {
-    const lower_title = title.toLowerCase();
-    for (const keyword in SESSION_CONFIG) {
-      if (lower_title.includes(keyword)) {
-        const imageOrArray = SESSION_CONFIG[keyword].images;
-        if (Array.isArray(imageOrArray)) {
-          const randomIndex = Math.floor(Math.random() * imageOrArray.length);
-          return imageOrArray[randomIndex];
-        }
-        return imageOrArray;
-      }
-    }
-    return DEFAULT_IMAGE;
+    const images = SESSION_CONFIG[title.toLowerCase()]?.images || [
+      DEFAULT_IMAGE,
+    ];
+    const randomIndex = Math.floor(Math.random() * images.length);
+    return images[randomIndex];
   }
 
   function formatEventTime(startStr, endStr) {
@@ -122,21 +109,13 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function generateLinkHTML(title) {
-    const lower_title = title.toLowerCase();
-    let linksHTML = "";
-    let matchingLinks = SESSION_CONFIG["default"].links; // Start with default links
-
-    for (const keyword in SESSION_CONFIG) {
-      if (keyword !== "default" && lower_title.includes(keyword)) {
-        matchingLinks = [].concat(SESSION_CONFIG[keyword].links);
-        break;
-      }
-    }
-
-    for (const link of matchingLinks) {
-      linksHTML += `<a href="${assetRoot + link.href}" class="carousel-item-link">${link.text}</a>`;
-    }
-    return linksHTML;
+    const links = SESSION_CONFIG[title.toLowerCase()]?.links || [];
+    return (links.length > 0 ? links : SESSION_CONFIG["default"].links)
+      .map(
+        (link) =>
+          `<a href="${assetRoot + link.href}" class="carousel-item-link">${link.text}</a>`,
+      )
+      .join("");
   }
 
   async function fetchAndPopulateCarousel() {
