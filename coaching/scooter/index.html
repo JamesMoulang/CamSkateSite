@@ -95,9 +95,21 @@
         </div>
       </section>
 
-      <section id="scooter_club" class="info-section children-session">
+      <section
+        id="scooter_club"
+        class="info-section children-session"
+        data-course-key="after_school_scooter_club"
+      >
         <div class="info-section-content">
-          <h2>After School Scooter Club</h2>
+          <h2>
+            After School Scooter Club
+            <span
+              class="section-badge"
+              data-course-show-when="has-term"
+              style="display: none"
+              >Book now</span
+            >
+          </h2>
           <div class="two-column-layout">
             <div style="text-align: left" class="left-column">
               <span class="sport-capsule scooter">🛴 Scooters</span>
@@ -118,16 +130,33 @@
               </p>
 
               <p>
-                Classes are £25 for a drop-in session, or £20 per session if
-                booked as a whole term.
+                Classes are
+                <span data-course-field="drop-in-price">£25</span> for a drop-in
+                session, or
+                <span data-course-field="term-price-per-session">£20</span>
+                per session if booked as a whole term.
               </p>
 
-              <p>
-                The next 8-week term begins 22nd January 2026 -
+              <p data-course-show-when="has-term">
+                The next
+                <span data-course-field="term-length">8</span>-week term begins
+                <span data-course-field="term-start-date"
+                  >22nd January 2026</span
+                >
+                -
                 <a
                   href="https://membership.cam-skate.co.uk/coaching/after_school_scooter_club"
                   >click here for more information and booking.</a
                 >
+              </p>
+              <p data-course-show-when="no-term" style="display: none">
+                No upcoming terms are currently scheduled.
+                <a
+                  href="https://membership.cam-skate.co.uk/coaching/after_school_scooter_club"
+                  >Check the booking page</a
+                >
+                for the latest info, or
+                <a href="mailto:hello@cam-skate.co.uk">email us</a>.
               </p>
             </div>
             <div class="right-column">
@@ -235,5 +264,6 @@
       </div>
     </footer>
     <script src="../../script.js"></script>
+    <script src="../../coaching_loader.js"></script>
   </body>
 </html>

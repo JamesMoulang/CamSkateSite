@@ -109,33 +109,61 @@
                 <p>One-on-one coaching for all ages and abilities.</p>
               </div>
             </a>
-            <a href="#after-school-club" class="discipline-card">
-              <img src="../../img/coaching.jpeg" alt="After School Club" />
+            <a
+              href="#after-school-club"
+              class="discipline-card"
+              data-course-key="after_school_club"
+            >
+              <div class="discipline-card-image-container">
+                <img src="../../img/coaching.jpeg" alt="After School Club" />
+                <span
+                  class="discipline-card-badge"
+                  data-course-show-when="has-term"
+                  style="display: none"
+                  >Book now</span
+                >
+              </div>
               <div class="discipline-card-content">
                 <h3>After School Club</h3>
                 <p>Weekly group lessons for ages 7-16.</p>
               </div>
             </a>
-            <a href="#holiday-camps" class="discipline-card">
+            <a
+              href="#holiday-camps"
+              class="discipline-card"
+              data-course-key="holiday_skate_camp"
+            >
               <div class="discipline-card-image-container">
                 <img
                   src="../../img/holiday_camp.jpeg"
                   alt="Holiday Skate Camps"
                 />
-                <span class="discipline-card-badge">Book now</span>
+                <span
+                  class="discipline-card-badge"
+                  data-course-show-when="has-term"
+                  >Book now</span
+                >
               </div>
               <div class="discipline-card-content">
                 <h3>Holiday Camps</h3>
                 <p>3-day intensive camps during school holidays.</p>
               </div>
             </a>
-            <a href="#after-work-club" class="discipline-card">
+            <a
+              href="#after-work-club"
+              class="discipline-card"
+              data-course-key="after_work_club"
+            >
               <div class="discipline-card-image-container">
                 <img
                   src="../../img/reception group.png"
                   alt="After Work Club"
                 />
-                <span class="discipline-card-badge">Book now</span>
+                <span
+                  class="discipline-card-badge"
+                  data-course-show-when="has-term"
+                  >Book now</span
+                >
               </div>
               <div class="discipline-card-content">
                 <h3>After Work Club</h3>
@@ -185,9 +213,21 @@
         </div>
       </section>
 
-      <section id="after-school-club" class="info-section children-session">
+      <section
+        id="after-school-club"
+        class="info-section children-session"
+        data-course-key="after_school_club"
+      >
         <div class="info-section-content">
-          <h2>After School Club</h2>
+          <h2>
+            After School Club
+            <span
+              class="section-badge"
+              data-course-show-when="has-term"
+              style="display: none"
+              >Book now</span
+            >
+          </h2>
           <div class="two-column-layout">
             <div style="text-align: left" class="left-column">
               <span class="sport-capsule skateboard">🛹 Skateboards</span>
@@ -203,16 +243,33 @@
               <p>For skateboarders aged 7-16. All abilities welcome!</p>
 
               <p>
-                Classes are £25 for a drop-in session, or £20 per session if
-                booked as a whole term.
+                Classes are
+                <span data-course-field="drop-in-price">£25</span> for a drop-in
+                session, or
+                <span data-course-field="term-price-per-session">£20</span>
+                per session if booked as a whole term.
               </p>
 
-              <p>
-                The next 9-week term begins 12th January 2026 -
+              <p data-course-show-when="has-term">
+                The next
+                <span data-course-field="term-length">9</span>-week term begins
+                <span data-course-field="term-start-date"
+                  >12th January 2026</span
+                >
+                -
                 <a
                   href="https://membership.cam-skate.co.uk/coaching/after_school_club"
                   >click here for more information and booking.</a
                 >
+              </p>
+              <p data-course-show-when="no-term" style="display: none">
+                No upcoming terms are currently scheduled.
+                <a
+                  href="https://membership.cam-skate.co.uk/coaching/after_school_club"
+                  >Check the booking page</a
+                >
+                for the latest info, or
+                <a href="mailto:hello@cam-skate.co.uk">email us</a>.
               </p>
             </div>
             <div class="right-column">
@@ -225,10 +282,17 @@
         </div>
       </section>
 
-      <section id="holiday-camps" class="info-section children-session">
+      <section
+        id="holiday-camps"
+        class="info-section children-session"
+        data-course-key="holiday_skate_camp"
+      >
         <div class="info-section-content">
           <h2>
-            Holiday Skate Camps <span class="section-badge">Book now</span>
+            Holiday Skate Camps
+            <span class="section-badge" data-course-show-when="has-term"
+              >Book now</span
+            >
           </h2>
           <div class="two-column-layout">
             <div style="text-align: left" class="left-column">
@@ -248,15 +312,23 @@
               </p>
 
               <p>
-                Prices are £65 for a single day, or £180 for the full 3-day
-                camp.
+                Prices are
+                <span data-course-field="drop-in-price">£65</span> for a single
+                day, or
+                <span data-course-field="term-price-total">£180</span> for the
+                full <span data-course-field="term-length">3</span>-day camp.
               </p>
 
-              <p>
-                <b>Spring Skate Camps:</b><br />
-                Week 1: March 31 - April 2<br />
-                Week 2: April 7 - April 9<br />
+              <p data-course-show-when="has-term">
+                <b>Upcoming Skate Camps:</b><br />
+                <span data-course-field="camp-list"
+                  >Week 1: 31st March &#8211; 2nd April<br />Week 2: 7th April
+                  &#8211; 9th April</span
+                ><br />
                 9am to 3pm
+              </p>
+              <p data-course-show-when="no-term" style="display: none">
+                No camps are currently scheduled — check back soon!
               </p>
 
               <p>
@@ -276,9 +348,18 @@
         </div>
       </section>
 
-      <section id="after-work-club" class="info-section adults-session">
+      <section
+        id="after-work-club"
+        class="info-section adults-session"
+        data-course-key="after_work_club"
+      >
         <div class="info-section-content">
-          <h2>After Work Club <span class="section-badge">Book now</span></h2>
+          <h2>
+            After Work Club
+            <span class="section-badge" data-course-show-when="has-term"
+              >Book now</span
+            >
+          </h2>
           <div class="two-column-layout">
             <div style="text-align: left" class="left-column">
               <span class="sport-capsule skateboard">🛹 Skateboards</span>
@@ -296,16 +377,32 @@
               </p>
 
               <p>
-                Classes are £25 for a drop-in session, or £80 for the whole 4
-                week term.
+                Classes are
+                <span data-course-field="drop-in-price">£25</span> for a drop-in
+                session, or
+                <span data-course-field="term-price-total">£80</span> for the
+                whole <span data-course-field="term-length">4</span> week term.
               </p>
 
-              <p>
-                The next term runs 14th April - 5th May 2026 -
+              <p data-course-show-when="has-term">
+                The next term runs
+                <span data-course-field="term-date-range"
+                  >14th April &#8211; 5th May 2026</span
+                >
+                -
                 <a
                   href="https://membership.cam-skate.co.uk/coaching/after_work_club"
                   >click here for more information and booking.</a
                 >
+              </p>
+              <p data-course-show-when="no-term" style="display: none">
+                No upcoming terms are currently scheduled.
+                <a
+                  href="https://membership.cam-skate.co.uk/coaching/after_work_club"
+                  >Check the booking page</a
+                >
+                for the latest info, or
+                <a href="mailto:hello@cam-skate.co.uk">email us</a>.
               </p>
             </div>
             <div class="right-column">
@@ -434,5 +531,6 @@
       </div>
     </footer>
     <script src="../../script.js"></script>
+    <script src="../../coaching_loader.js"></script>
   </body>
 </html>

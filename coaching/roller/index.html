@@ -99,10 +99,17 @@
         </div>
       </section>
 
-      <section id="roller_workshops" class="info-section all-ages-session">
+      <section
+        id="roller_workshops"
+        class="info-section all-ages-session"
+        data-course-key="roller_skate_workshops"
+      >
         <div class="info-section-content">
           <h2>
-            Roller Skate Workshops <span class="section-badge">Book now</span>
+            Roller Skate Workshops
+            <span class="section-badge" data-course-show-when="has-term"
+              >Book now</span
+            >
           </h2>
           <div class="two-column-layout">
             <div style="text-align: left" class="left-column">
@@ -122,13 +129,23 @@
                 public Quads & Blades session.
               </p>
 
-              <p>
-                The next workshop is on Friday 20th February, 6pm to 7:30pm.
-                Bookings are live and places are limited, so
+              <p data-course-show-when="has-term">
+                The next workshop is on
+                <span data-course-field="first-workshop-date-long"
+                  >Friday 20th February 2026</span
+                >,
+                <span data-course-field="first-workshop-time-range"
+                  >6pm to 7:30pm</span
+                >. Bookings are live and places are limited, so
                 <a
                   href="https://membership.cam-skate.co.uk/coaching/roller_skate_workshops"
                   >sign up here!</a
                 >
+              </p>
+              <p data-course-show-when="no-term" style="display: none">
+                No workshops are currently scheduled — check back soon, or
+                <a href="mailto:hello@cam-skate.co.uk">email us</a> to register
+                your interest.
               </p>
             </div>
             <div class="right-column">
@@ -231,5 +248,6 @@
       </div>
     </footer>
     <script src="../../script.js"></script>
+    <script src="../../coaching_loader.js"></script>
   </body>
 </html>
