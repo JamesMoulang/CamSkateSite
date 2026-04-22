@@ -609,6 +609,14 @@ nav a:hover {
   color: #007bff;
 }
 
+/* Calendar subscription links below schedule heading */
+.calendar-subscribe-links {
+  font-size: 0.9rem;
+  margin-top: 0;
+  margin-bottom: 16px;
+  color: #555;
+}
+
 /* Event date styling */
 .event-date {
   font-size: 1.3rem;
