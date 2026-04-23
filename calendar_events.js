@@ -55,17 +55,15 @@ const calendarEvents = (function calendarEvents() {
         return events.reduce((agg, event) => {
           const eventFromConfig = applyStrategies(event, sessionConfig);
 
-          return eventFromConfig
-            ? [
-                ...agg,
-                {
-                  summary: eventFromConfig.title,
-                  start: event.start,
-                  end: event.end,
-                  ...eventFromConfig,
-                },
-              ]
-            : agg;
+          return [
+            ...agg,
+            {
+              summary: eventFromConfig?.title || event.summary, // Use title from config if found, otherwise fallback to calendar summary
+              start: event.start,
+              end: event.end,
+              ...(eventFromConfig || { title: event.summary }), // Fallback to calendar summary if no match in config
+            },
+          ];
         }, []);
       })
       .catch((error) => {
