@@ -9,7 +9,7 @@ today.setDate(today.getDate() - 1);
 const timeMin = today.toISOString(); // Get only upcoming events
 
 calendarEvents
-  .getCalendarEvents({ maxResults, timeMin, orderBy, timeMin })
+  .getCalendarEvents({ maxResults, timeMin, orderBy, singleEvents: true })
   .then((events) => {
     // const opening_hours = {
     //   'Mon Jan 06': [ early_evening ],
