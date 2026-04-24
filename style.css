@@ -6,22 +6,36 @@ html {
   padding: 0;
   font-family: "Poppins", sans-serif;
   height: 100%;
+  scrollbar-gutter: stable;
 }
 
 .hero {
-  background-image: url("img/party.jpg");
+  position: relative;
   height: 80vh;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
   color: white;
   text-align: center;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("img/party.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: blur(3px);
+  transform: scale(1.05);
+  z-index: 0;
 }
 
 .hero-logo-container {
+  position: relative;
+  z-index: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -67,12 +81,24 @@ html {
   padding: 12px 24px;
   text-decoration: none;
   margin: 10px;
+  min-width: 160px;
+  text-align: center;
+  box-sizing: border-box;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.quick-link-btn:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+  border-color: white;
 }
 
 header {
   position: absolute;
   top: 0;
   width: 100%;
+  z-index: 10;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -82,14 +108,16 @@ header {
 
 .logo {
   height: 50px;
+  display: block;
 }
 
 .navbar-black-text nav a {
   color: black;
+  transition: color 0.2s ease;
 }
 
 .navbar-black-text nav a:hover {
-  text-decoration: underline solid black 3px;
+  color: #007bff;
 }
 
 .hamburger-menu.hamburger-menu-black .line {
@@ -115,11 +143,11 @@ nav a {
   color: white;
   text-decoration: none;
   font-size: 1.2rem;
-  transition: text-decoration 0.3s ease;
+  transition: color 0.2s ease;
 }
 
 nav a:hover {
-  text-decoration: underline solid white 3px;
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .info-section {
@@ -607,6 +635,14 @@ nav a:hover {
 /* General link color for info sections */
 .info-section a {
   color: #007bff;
+}
+
+/* Calendar subscription links below schedule heading */
+.calendar-subscribe-links {
+  font-size: 0.9rem;
+  margin-top: 0;
+  margin-bottom: 16px;
+  color: #555;
 }
 
 /* Event date styling */
