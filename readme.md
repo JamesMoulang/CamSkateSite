@@ -24,6 +24,46 @@ Then open <http://localhost:8000>.
 
 Note: the Google Calendar API key is restricted to `cam-skate.co.uk`, so the calendar widgets (opening hours, weekly schedule, session carousel) will not load data when running on `localhost`. The rest of the site works normally. If you need the calendar to load locally, ask a maintainer to add `localhost` to the allowed referrers.
 
+## Testing
+
+This project uses [Jest](https://jestjs.io/) for unit testing. To run the tests, first ensure all dev dependencies are installed:
+
+```bash
+npm install
+```
+
+Then run:
+
+```bash
+npm test
+```
+
+### Test file conventions
+
+Test files should sit alongside the file they are testing and use the `.test.js` extension. For example:
+
+```
+├── calendar_events.js
+├── calendar_events.test.js
+```
+
+### Exporting functions for testing
+
+Jest runs in a Node.js environment, but some files in this project are written for the browser, where `module.exports` doesn't exist. To export functions from these files without breaking them in the browser, use the following guard:
+
+```javascript
+if (typeof exports === "object") {
+  module.exports = {
+    calendarEvents,
+    applyStrategies,
+    directAccessStrategy,
+    alternativeTitleStrategy,
+  };
+}
+```
+
+This ensures the exports are only applied when the file is loaded in a Node.js/Jest context, and are safely ignored in the browser.
+
 ## Deployment
 
 The site is hosted on Netlify and rebuilds automatically on every push to `main`. To deploy a change: open a pull request, get it reviewed, merge to `main`, and Netlify takes care of the rest.
