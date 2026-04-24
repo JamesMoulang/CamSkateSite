@@ -103,12 +103,7 @@ const SESSION_CONFIG = {
     color: "#4CAF50",
     disciplines: ["🛹 Skateboard", "🛼 Roller"],
     images: ["img/beginners.jpg"],
-  },
-  "beginners evening": {
-    links: [{ href: "/sessions#beginner_sessions", text: "More info" }],
-    color: "#4CAF50",
-    disciplines: ["🛹 Skateboard", "🛼 Roller"],
-    images: ["img/beginners.jpg"],
+    altTitles: ["beginners evening"],
   },
   closed: {
     links: [{ href: "/sessions#beginner_sessions", text: "" }],
@@ -140,17 +135,12 @@ const SESSION_CONFIG = {
     disciplines: ["🛹 Skateboard", "🛼 Roller"],
     images: ["img/pipe_and_slippers.jpg"],
   },
-  "quads & blades": {
-    links: [{ href: "/sessions#quads_and_blades", text: "More info" }],
-    color: "#9C27B0",
-    disciplines: ["🛼 Roller"],
-    images: ["img/q&b 1.jpeg", "img/q&b 2.jpeg", "img/q&b 3.jpeg"],
-  },
   "quads and blades": {
     links: [{ href: "/sessions#quads_and_blades", text: "More info" }],
     color: "#9C27B0",
     disciplines: ["🛼 Roller"],
     images: ["img/q&b 1.jpeg", "img/q&b 2.jpeg", "img/q&b 3.jpeg"],
+    altTitles: ["quads & blades"],
   },
   "open session": {
     links: [
@@ -164,53 +154,13 @@ const SESSION_CONFIG = {
       "img/open session 1.jpg",
       "img/open session 2.jpg",
     ],
-  },
-  "☕ open session": {
-    links: [
-      { href: "/sessions", text: "View all open sessions this week" },
-      { href: "/visit", text: "How to visit" },
-    ],
-    color: "#2196F3",
-    disciplines: ["🛹 Skateboard", "🛼 Roller"],
-    images: ["img/advanced.jpg"],
+    altTitles: ["☕ open session"],
   },
   "after school club": {
     links: [{ href: "/coaching", text: "Book coaching" }],
     color: "#FFC107",
     disciplines: ["🛹 Skateboard"],
     images: ["img/after_school.jpeg"],
-  },
-  "after work club": {
-    links: [{ href: "/coaching", text: "Book coaching" }],
-    color: "#FFC107",
-    disciplines: ["🛹 Skateboard"],
-    images: ["img/reception group.png"],
-  },
-  "scooters only": {
-    links: [{ href: "/sessions#scooter_session", text: "More info" }],
-    color: "#607D8B",
-    disciplines: ["🛴 Scooter"],
-    images: [
-      "img/scooter 1.jpg",
-      "img/scooter 2.jpg",
-      "img/scooter 3.jpg",
-      "img/scooter 4.jpg",
-      "img/scooter 5.jpg",
-      "img/scooter 6.jpg",
-    ],
-  },
-  "scooter session": {
-    links: [{ href: "/sessions#scooter_session", text: "More info" }],
-    color: "#607D8B",
-    disciplines: ["🛴 Scooter"],
-    images: [
-      "img/scooter 1.jpg",
-      "img/scooter 2.jpg",
-      "img/scooter 3.jpg",
-      "img/scooter 4.jpg",
-      "img/scooter 5.jpg",
-      "img/scooter 6.jpg",
-    ],
   },
   "after school scooter club": {
     links: [{ href: "/coaching/scooter/", text: "More info" }],
@@ -225,17 +175,32 @@ const SESSION_CONFIG = {
       "img/scooter 6.jpg",
     ],
   },
-  "☕ under 10s": {
-    links: [],
-    color: "#FF9800",
-    disciplines: ["all wheels welcome"],
-    images: ["img/junior jam 2.png"],
+  "after work club": {
+    links: [{ href: "/coaching", text: "Book coaching" }],
+    color: "#FFC107",
+    disciplines: ["🛹 Skateboard"],
+    images: ["img/reception group.png"],
+  },
+  "scooter session": {
+    links: [{ href: "/sessions#scooter_session", text: "More info" }],
+    color: "#607D8B",
+    disciplines: ["🛴 Scooter"],
+    images: [
+      "img/scooter 1.jpg",
+      "img/scooter 2.jpg",
+      "img/scooter 3.jpg",
+      "img/scooter 4.jpg",
+      "img/scooter 5.jpg",
+      "img/scooter 6.jpg",
+    ],
+    altTitles: ["scooters only"],
   },
   "under 10s": {
     links: [],
     color: "#FF9800",
     disciplines: ["all wheels welcome"],
     images: ["img/junior jam 2.png"],
+    altTitles: ["☕ under 10s"],
   },
   "surf skate session": {
     links: [],

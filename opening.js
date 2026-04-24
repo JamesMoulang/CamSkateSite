@@ -8,20 +8,9 @@ var today = new Date();
 today.setDate(today.getDate() - 1);
 const timeMin = today.toISOString(); // Get only upcoming events
 
-const url = `https://www.googleapis.com/calendar/v3/calendars/${calendar_id}/events?key=${api_key}&maxResults=${maxResults}&orderBy=${orderBy}&singleEvents=true&timeMin=${encodeURIComponent(timeMin)}`;
-
-// Fetch
-
-fetch(url)
-  .then((response) => {
-    if (!response.ok) {
-      throw new Error("Network response was not ok");
-    }
-    return response.json();
-  })
-  .then((data) => {
-    console.log("Events:", data.items);
-
+calendarEvents
+  .getCalendarEvents({ maxResults, timeMin, orderBy, timeMin })
+  .then((events) => {
     // const opening_hours = {
     //   'Mon Jan 06': [ early_evening ],
     // };
@@ -68,7 +57,7 @@ fetch(url)
 
     const today = new Date();
 
-    data.items.map((item) => {
+    events.map((item) => {
       // Use local time from the dateTime string directly (Google Calendar returns local time)
       const start_date = new Date(item.start.dateTime);
       const end_date = new Date(item.end.dateTime);

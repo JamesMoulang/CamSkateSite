@@ -77,12 +77,22 @@ document.addEventListener("DOMContentLoaded", () => {
     aWeekFromNow.setDate(today.getDate() + 7);
     const timeMaxToday = aWeekFromNow.toISOString();
 
-    let url = `https://www.googleapis.com/calendar/v3/calendars/${CALENDAR_ID}/events?key=${API_KEY}&timeMin=${timeMinToday}&timeMax=${timeMaxToday}&maxResults=100&singleEvents=true&orderBy=startTime`;
-
     try {
-      const response = await fetch(url);
-      const data = await response.json();
-      const events = data.items || [];
+      const events = await calendarEvents
+        .getCalendarEvents({
+          timeMin: timeMinToday,
+          timeMax: timeMaxToday,
+          maxResults: 100,
+          singleEvents: true,
+          orderBy: "startTime",
+        })
+        .catch((error) => {
+          console.error("Error fetching calendar events:", error);
+          if (week_schedule) {
+            week_schedule.innerHTML =
+              '<p style="color: red;">Error loading week schedule.</p>';
+          }
+        });
 
       const dates = {};
 

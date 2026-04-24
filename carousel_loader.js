@@ -160,22 +160,26 @@ document.addEventListener("DOMContentLoaded", () => {
     // NOTE: Without timeMax, you'll get up to 100 events starting from today. If you see events
     // loading up to a specific date like Jan 14th, it's likely because you have ~100 events
     // between now and that date, hitting the maxResults limit.
-    let url = `https://www.googleapis.com/calendar/v3/calendars/${CALENDAR_ID}/events?key=${API_KEY}&timeMin=${timeMinToday}${window.carousel_load_today || window.carousel_load_week ? `&timeMax=${timeMaxToday}` : ""}&maxResults=100&singleEvents=true&orderBy=startTime`;
 
-    let events = [];
-    try {
-      const response = await fetch(url);
-      const data = await response.json();
-      events = data.items || [];
-
-      if (!response.ok && !location.hostname.includes("cam-skate.co.uk")) {
-        events = SAMPLE_EVENTS;
-      }
-    } catch (error) {
-      console.error("Error fetching calendar events:", error);
-      carousel.innerHTML =
-        '<p style="color: red;">Error loading upcoming events.</p>';
-    }
+    const events = await calendarEvents
+      .getCalendarEvents(
+        {
+          timeMin: timeMinToday,
+          timeMax:
+            window.carousel_load_today || window.carousel_load_week
+              ? timeMaxToday
+              : undefined,
+          maxResults: 100,
+          singleEvents: true,
+          orderBy: "startTime",
+        },
+        SAMPLE_EVENTS, // Fallback events if API call fails
+      )
+      .catch((error) => {
+        console.error("Error fetching calendar events:", error);
+        carousel.innerHTML =
+          '<p style="color: red;">Error loading upcoming events.</p>';
+      });
 
     let eventsToDisplay;
 
