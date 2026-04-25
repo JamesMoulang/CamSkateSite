@@ -99,6 +99,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 const SESSION_CONFIG = {
   "beginners session": {
+    title: "Beginners session",
     links: [{ href: "/sessions#beginner_sessions", text: "More info" }],
     color: "#4CAF50",
     disciplines: ["🛹 Skateboard", "🛼 Roller"],
@@ -106,36 +107,42 @@ const SESSION_CONFIG = {
     altTitles: ["beginners evening"],
   },
   closed: {
+    title: "Closed",
     links: [{ href: "/sessions#beginner_sessions", text: "" }],
     color: "#9E9E9E",
     disciplines: [],
     images: ["img/advanced.jpg"],
   },
   "girl skate night": {
+    title: "Girl skate night",
     links: [{ href: "/sessions#girl_skate_night", text: "More info" }],
     color: "#E91E63",
     disciplines: ["🛹 Skateboard", "🛼 Roller"],
     images: ["img/girl_skate_night.jpg"],
   },
   "queer skate night": {
+    title: "Queer skate night",
     links: [{ href: "/sessions#queer_skate_night", text: "More info" }],
     color: "#673AB7",
     disciplines: ["🛹 Skateboard", "🛼 Roller"],
     images: ["img/q&b 3.jpeg"],
   },
   "30+ (beginners)": {
+    title: "30+ (beginners)",
     links: [{ href: "/sessions#pipe_and_slippers", text: "More info" }],
     color: "#795548",
     disciplines: ["🛹 Skateboard", "🛼 Roller"],
     images: ["img/pipe_and_slippers.jpg"],
   },
   "30+ (all abilities)": {
+    title: "30+ (all abilities)",
     links: [{ href: "/sessions#pipe_and_slippers", text: "More info" }],
     color: "#795548",
     disciplines: ["🛹 Skateboard", "🛼 Roller"],
     images: ["img/pipe_and_slippers.jpg"],
   },
   "quads and blades": {
+    title: "Quads & Blades",
     links: [{ href: "/sessions#quads_and_blades", text: "More info" }],
     color: "#9C27B0",
     disciplines: ["🛼 Roller"],
@@ -143,6 +150,7 @@ const SESSION_CONFIG = {
     altTitles: ["quads & blades"],
   },
   "open session": {
+    title: "Open session",
     links: [
       { href: "/sessions", text: "View this week's open sessions" },
       { href: "/visit", text: "How to visit" },
@@ -157,12 +165,14 @@ const SESSION_CONFIG = {
     altTitles: ["☕ open session"],
   },
   "after school club": {
+    title: "After school club",
     links: [{ href: "/coaching", text: "Book coaching" }],
     color: "#FFC107",
     disciplines: ["🛹 Skateboard"],
     images: ["img/after_school.jpeg"],
   },
   "after school scooter club": {
+    title: "After school scooter club",
     links: [{ href: "/coaching/scooter/", text: "More info" }],
     color: "#607D8B",
     disciplines: ["🛴 Scooter"],
@@ -176,12 +186,14 @@ const SESSION_CONFIG = {
     ],
   },
   "after work club": {
+    title: "After work club",
     links: [{ href: "/coaching", text: "Book coaching" }],
     color: "#FFC107",
     disciplines: ["🛹 Skateboard"],
     images: ["img/reception group.png"],
   },
   "scooter session": {
+    title: "Scooter session",
     links: [{ href: "/sessions#scooter_session", text: "More info" }],
     color: "#607D8B",
     disciplines: ["🛴 Scooter"],
@@ -196,6 +208,7 @@ const SESSION_CONFIG = {
     altTitles: ["scooters only"],
   },
   "under 10s": {
+    title: "Under 10s",
     links: [],
     color: "#FF9800",
     disciplines: ["all wheels welcome"],
@@ -203,18 +216,21 @@ const SESSION_CONFIG = {
     altTitles: ["☕ under 10s"],
   },
   "surf skate session": {
+    title: "Surf skate session",
     links: [],
     color: "#009688",
     disciplines: [],
     images: ["img/surf_skate.jpg"],
   },
   "christmas party": {
+    title: "Christmas party",
     links: [],
     color: "#9E9E9E",
     disciplines: [],
     images: ["img/xmas jam poster minimal.jpg"],
   },
   default: {
+    title: "Unknown session",
     links: [{ href: "/sessions", text: "More info" }],
     color: "#9E9E9E",
     disciplines: [],
