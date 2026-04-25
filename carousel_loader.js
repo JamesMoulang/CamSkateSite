@@ -1,9 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // --- Configuration ---
-  const CALENDAR_ID =
-    "648a32abb0a80624c5f98e8e4bfd057578a6aed5110ba2addc6f9496fa9cabb4@group.calendar.google.com";
-  const API_KEY = "AIzaSyAbxzGY7irnlqDnG9NwmLuzwVb2Q3tkr3I";
-
   let UNIQUE_EVENTS_ONLY = true; // Set to false to show all upcoming events
   if (window.carousel_load_today) {
     UNIQUE_EVENTS_ONLY = false;
@@ -119,18 +114,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   async function fetchAndPopulateCarousel() {
-    if (
-      API_KEY === "YOUR_GOOGLE_API_KEY" ||
-      CALENDAR_ID === "YOUR_CALENDAR_ID"
-    ) {
-      console.error(
-        "Please replace 'YOUR_GOOGLE_API_KEY' and 'YOUR_CALENDAR_ID' in carousel_loader.js",
-      );
-      carousel.innerHTML =
-        '<p style="color: red;">Please configure the Google Calendar API Key and Calendar ID.</p>';
-      return;
-    }
-
     // Create a Date object for today at midnight (00:00:00)
     const today = new Date();
     today.setHours(0, 0, 0, 0);
