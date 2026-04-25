@@ -104,7 +104,13 @@ const SESSION_CONFIG = {
     color: "#4CAF50",
     disciplines: ["🛹 Skateboard", "🛼 Roller"],
     images: ["img/beginners.jpg"],
-    altTitles: ["beginners evening"],
+  },
+  "beginners evening": {
+    title: "Beginners evening",
+    links: [{ href: "/sessions#beginner_sessions", text: "More info" }],
+    color: "#4CAF50",
+    disciplines: ["🛹 Skateboard", "🛼 Roller"],
+    images: ["img/beginners.jpg"],
   },
   closed: {
     title: "Closed",
