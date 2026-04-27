@@ -211,7 +211,7 @@ const SESSION_CONFIG = {
       "img/scooter 5.jpg",
       "img/scooter 6.jpg",
     ],
-    altTitles: ["scooters only"],
+    altTitles: ["scooters only", "Scooters only (8yrs+)"],
   },
   "under 10s": {
     title: "Under 10s",
