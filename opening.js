@@ -36,12 +36,12 @@ calendarEvents
     );
 
     if (next_opening) {
-      text = `The Warehouse is open today from ${makeTime(new Date(next_opening.start.dateTime))} to ${makeTime(new Date(next_opening.end.dateTime))} for ${next_opening.displayName || next_opening.title}!`;
+      text = `The Warehouse is open today from ${makeTime(new Date(next_opening.start.dateTime))} to ${makeTime(new Date(next_opening.end.dateTime))} for ${next_opening.title || next_opening.title}!`;
     }
 
     if (!next_opening && publicEvents.length > 0) {
       const last_event = publicEvents[publicEvents.length - 1];
-      text = `The Warehouse is shut for the day. It was open from ${makeTime(new Date(last_event.start.dateTime))} to ${makeTime(new Date(last_event.end.dateTime))} for ${last_event.displayName || last_event.title}.`;
+      text = `The Warehouse is shut for the day. It was open from ${makeTime(new Date(last_event.start.dateTime))} to ${makeTime(new Date(last_event.end.dateTime))} for ${last_event.title || last_event.title}.`;
     }
 
     document.getElementById("next_opening").innerText = text;
