@@ -114,6 +114,7 @@ const SESSION_CONFIG = {
     color: "#4CAF50",
     disciplines: ["🛹 Skateboard", "🛼 Roller"],
     images: ["img/beginners.jpg"],
+    altTitles: ["beginner session", "beginners"],
   },
   "beginners evening": {
     title: "Beginners evening",
@@ -122,12 +123,10 @@ const SESSION_CONFIG = {
     disciplines: ["🛹 Skateboard", "🛼 Roller"],
     images: ["img/beginners.jpg"],
     altTitles: [
-      "beginner session",
       "beginners evening",
       "beginner evening",
       "saturday beginners evening",
       "saturday beginner evening",
-      "beginners",
     ],
     supports: ["openings_display"],
   },
@@ -156,7 +155,6 @@ const SESSION_CONFIG = {
   },
   "30+ (beginners)": {
     title: "30+ (beginners)",
-    displayName: "Pipe & Slippers (30+ Beginners)",
     links: [{ href: "/sessions#pipe_and_slippers", text: "More info" }],
     color: "#795548",
     disciplines: ["🛹 Skateboard", "🛼 Roller"],
