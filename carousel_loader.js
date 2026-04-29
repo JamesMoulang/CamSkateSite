@@ -1,9 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // --- Configuration ---
-  const CALENDAR_ID =
-    "648a32abb0a80624c5f98e8e4bfd057578a6aed5110ba2addc6f9496fa9cabb4@group.calendar.google.com";
-  const API_KEY = "AIzaSyAbxzGY7irnlqDnG9NwmLuzwVb2Q3tkr3I";
-
   let UNIQUE_EVENTS_ONLY = true; // Set to false to show all upcoming events
   if (window.carousel_load_today) {
     UNIQUE_EVENTS_ONLY = false;
@@ -38,12 +33,12 @@ document.addEventListener("DOMContentLoaded", () => {
     makeSampleEvent(key, 9 + index, 10 + index),
   );
 
-  function getDisciplinesForEvent(title) {
-    return SESSION_CONFIG[title.toLowerCase()]?.disciplines || null;
+  function getDisciplinesForEvent(event) {
+    return event.disciplines?.length ? event.disciplines : null;
   }
 
-  function generateDisciplineHTML(title) {
-    const disciplines = getDisciplinesForEvent(title);
+  function generateDisciplineHTML(event) {
+    const disciplines = getDisciplinesForEvent(event);
     if (!disciplines) return "";
 
     if (disciplines[0] === "all wheels welcome") {
@@ -58,10 +53,8 @@ document.addEventListener("DOMContentLoaded", () => {
     return html;
   }
 
-  function getImageForEvent(title) {
-    const images = SESSION_CONFIG[title.toLowerCase()]?.images || [
-      DEFAULT_IMAGE,
-    ];
+  function getImageForEvent(event) {
+    const images = event.images?.length ? event.images : [DEFAULT_IMAGE];
     const randomIndex = Math.floor(Math.random() * images.length);
     return images[randomIndex];
   }
@@ -108,9 +101,9 @@ document.addEventListener("DOMContentLoaded", () => {
     return `${day} ${date}${suffix(date)} ${month}, ${startTime}-${endTime}`;
   }
 
-  function generateLinkHTML(title) {
-    const links = SESSION_CONFIG[title.toLowerCase()]?.links || [];
-    return (links.length > 0 ? links : SESSION_CONFIG["default"].links)
+  function generateLinkHTML(event) {
+    const links = event.links || [];
+    return links
       .map(
         (link) =>
           `<a href="${assetRoot + link.href}" class="carousel-item-link">${link.text}</a>`,
@@ -119,18 +112,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   async function fetchAndPopulateCarousel() {
-    if (
-      API_KEY === "YOUR_GOOGLE_API_KEY" ||
-      CALENDAR_ID === "YOUR_CALENDAR_ID"
-    ) {
-      console.error(
-        "Please replace 'YOUR_GOOGLE_API_KEY' and 'YOUR_CALENDAR_ID' in carousel_loader.js",
-      );
-      carousel.innerHTML =
-        '<p style="color: red;">Please configure the Google Calendar API Key and Calendar ID.</p>';
-      return;
-    }
-
     // Create a Date object for today at midnight (00:00:00)
     const today = new Date();
     today.setHours(0, 0, 0, 0);
@@ -213,9 +194,9 @@ document.addEventListener("DOMContentLoaded", () => {
       // Generate carousel items with all dates for each event type
       for (const title in eventsToDisplay) {
         const eventGroup = eventsToDisplay[title];
-        const image = getImageForEvent(title);
-        const links = generateLinkHTML(title);
-        const disciplines = generateDisciplineHTML(title);
+        const image = getImageForEvent(eventGroup[0]);
+        const links = generateLinkHTML(eventGroup[0]);
+        const disciplines = generateDisciplineHTML(eventGroup[0]);
 
         // Generate all time strings for this event type
         let timesHTML = "";
@@ -242,10 +223,10 @@ document.addEventListener("DOMContentLoaded", () => {
       // Original behavior - one carousel item per event
       for (const event of eventsToDisplay) {
         const title = event.summary;
-        const image = getImageForEvent(title);
+        const image = getImageForEvent(event);
         const time = formatEventTime(event.start.dateTime, event.end.dateTime);
-        const links = generateLinkHTML(title);
-        const disciplines = generateDisciplineHTML(title);
+        const links = generateLinkHTML(event);
+        const disciplines = generateDisciplineHTML(event);
 
         carouselHTML += `
                         <div class="carousel-item" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('${assetRoot + image}');">
