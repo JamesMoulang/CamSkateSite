@@ -45,13 +45,6 @@ document.addEventListener("DOMContentLoaded", () => {
     return `${startTime}-${endTime}`;
   }
 
-  function getColorForEvent(title) {
-    return (
-      SESSION_CONFIG[title.toLowerCase()]?.color ||
-      SESSION_CONFIG["default"].color
-    );
-  }
-
   async function fetchAndPopulateCarousel() {
     const today = new Date();
     today.setHours(0, 0, 0, 0);
@@ -107,7 +100,7 @@ document.addEventListener("DOMContentLoaded", () => {
         dates[formattedDay].push({
           time: formatEventTime(event.start.dateTime, event.end.dateTime),
           title: event.summary,
-          color: getColorForEvent(event.summary),
+          color: event.color,
         });
       }
 

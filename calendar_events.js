@@ -52,17 +52,20 @@ const calendarEvents = (function calendarEvents() {
       })
       .then((data) => data.items || [])
       .then((events) => {
+        const defaultConfig = sessionConfig["default"] || {};
         return events.reduce((agg, event) => {
           const eventFromConfig = applyStrategies(event, sessionConfig);
 
           return [
             ...agg,
             {
-              summary: eventFromConfig?.title || event.summary, // Use title from config if found, otherwise fallback to calendar summary
+              ...defaultConfig,
+              ...(eventFromConfig || {}),
+              summary: eventFromConfig?.title || event.summary,
+              title: eventFromConfig?.title || event.summary,
               visibility: event.visibility,
               start: event.start,
               end: event.end,
-              ...(eventFromConfig || { title: event.summary }), // Fallback to calendar summary if no match in config
             },
           ];
         }, []);
