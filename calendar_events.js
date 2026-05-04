@@ -75,3 +75,12 @@ const calendarEvents = (function calendarEvents() {
 
   return { getCalendarEvents };
 })();
+
+if (typeof exports === "object") {
+  module.exports = {
+    calendarEvents,
+    applyStrategies,
+    directAccessStrategy,
+    alternativeTitleStrategy,
+  };
+}

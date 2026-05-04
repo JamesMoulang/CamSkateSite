@@ -7,7 +7,7 @@
     "doc": "docs"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "prepare": "husky",
     "format": "prettier . --write",
     "format:check": "prettier . --check"
@@ -26,9 +26,11 @@
   },
   "homepage": "https://github.com/JamesMoulang/CamSkateSite#readme",
   "dependencies": {
+    "jest": "^30.3.0",
     "prettier": "3.8.3"
   },
   "devDependencies": {
+    "@babel/preset-env": "^7.29.2",
     "husky": "^9.1.7",
     "lint-staged": "^15.2.10"
   }
