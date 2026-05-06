@@ -38,6 +38,7 @@ The site is hosted on Netlify and rebuilds automatically on every push to `main`
 /events/           events page
 /about/            about + sub-sections (story, impact, campaigns)
 /get_involved/     volunteering / community
+/partners/         our partners and sponsors
 /donate/           donations
 /hire/             venue hire
 /vouchers/         free entry vouchers for local orgs

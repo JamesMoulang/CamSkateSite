@@ -1,0 +1,37 @@
+.partners-content {
+  text-align: left;
+}
+
+.partners-intro {
+  margin-top: 50px;
+}
+
+.partners-logo-center {
+  text-align: center;
+}
+
+.partner-logo {
+  max-width: 200px;
+  height: auto;
+  margin-bottom: 0;
+}
+
+.partners-railpen-layout {
+  margin-top: 20px;
+}
+
+.partners-left-column {
+  text-align: left;
+}
+
+.partner-description {
+  margin-top: 6px;
+}
+
+.partners-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 40px 50px;
+  align-items: start;
+  margin-top: 50px;
+}
