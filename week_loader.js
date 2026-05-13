@@ -1,9 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // --- Configuration ---
-  const CALENDAR_ID =
-    "648a32abb0a80624c5f98e8e4bfd057578a6aed5110ba2addc6f9496fa9cabb4@group.calendar.google.com";
-  const API_KEY = "AIzaSyAbxzGY7irnlqDnG9NwmLuzwVb2Q3tkr3I";
-
   const carousel = document.querySelector(".carousel");
   const week_schedule = document.getElementById("week_schedule");
   console.log(week_schedule);
@@ -50,25 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
     return `${startTime}-${endTime}`;
   }
 
-  function getColorForEvent(title) {
-    return (
-      SESSION_CONFIG[title.toLowerCase()]?.color ||
-      SESSION_CONFIG["default"].color
-    );
-  }
-
   async function fetchAndPopulateCarousel() {
-    if (
-      API_KEY === "YOUR_GOOGLE_API_KEY" ||
-      CALENDAR_ID === "YOUR_CALENDAR_ID"
-    ) {
-      console.error(
-        "Please replace 'YOUR_GOOGLE_API_KEY' and 'YOUR_CALENDAR_ID' in carousel_loader.js",
-      );
-      // Handle error display in the UI
-      return;
-    }
-
     const today = new Date();
     today.setHours(0, 0, 0, 0);
     const timeMinToday = today.toISOString();
@@ -123,7 +100,7 @@ document.addEventListener("DOMContentLoaded", () => {
         dates[formattedDay].push({
           time: formatEventTime(event.start.dateTime, event.end.dateTime),
           title: event.summary,
-          color: getColorForEvent(event.summary),
+          color: event.color,
         });
       }
 
