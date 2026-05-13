@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scooter Sessions - Cam Skate</title>
+    <meta
+      name="description"
+      content="Scooter sessions at The Warehouse Skatepark in Cambridge: After School Club, Under 10s Open Session, and Open Scooter Session for ages 8+. Claim a free taster session."
+    />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.cam-skate.co.uk/scooters/" />
+    <meta property="og:title" content="Scooter Sessions - Cam Skate" />
+    <meta
+      property="og:description"
+      content="Scooter sessions at The Warehouse Skatepark in Cambridge. Claim a free taster session."
+    />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta
+      property="twitter:url"
+      content="https://www.cam-skate.co.uk/scooters/"
+    />
+    <meta property="twitter:title" content="Scooter Sessions - Cam Skate" />
+    <meta
+      property="twitter:description"
+      content="Scooter sessions at The Warehouse Skatepark in Cambridge. Claim a free taster session."
+    />
+
+    <link rel="stylesheet" href="../style.css" />
+    <style>
+      .scooter-session-img {
+        width: 100%;
+        aspect-ratio: 3 / 2;
+        object-fit: cover;
+        object-position: center;
+      }
+      main .two-column-layout .left-column {
+        flex: 1.3;
+      }
+      main .two-column-layout .right-column {
+        flex: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="navbar-black-text">
+      <a href="/"
+        ><img
+          src="../img/logo_black.png"
+          alt="Cam Skate Site Logo"
+          class="logo"
+      /></a>
+      <nav>
+        <ul>
+          <li><a href="/sessions/">Sessions</a></li>
+          <li><a href="/coaching/">Coaching</a></li>
+          <li><a href="/hire/">Hire</a></li>
+          <li><a href="/events/">Events</a></li>
+          <li><a href="/visit/">Visit</a></li>
+          <li><a href="/get_involved/">Volunteer</a></li>
+          <li><a href="/partners/">Our Partners</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/donate/">Donate</a></li>
+        </ul>
+      </nav>
+      <div class="hamburger-menu hamburger-menu-black">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+    </header>
+    <div class="nav-overlay">
+      <a href="#" class="close-btn">&times;</a>
+      <div class="nav-overlay-content">
+        <a href="/">Home</a>
+        <a href="/sessions/">Sessions</a>
+        <a href="/coaching/">Coaching</a>
+        <a href="/hire/">Hire</a>
+        <a href="/events/">Events</a>
+        <a href="/visit/">Visit</a>
+        <a href="/get_involved/">Volunteer</a>
+        <a href="/partners/">Our Partners</a>
+        <a href="/about/">About</a>
+        <a href="/donate/">Donate</a>
+      </div>
+    </div>
+    <main>
+      <div
+        id="school-debug"
+        style="
+          background: #fff3cd;
+          color: #333;
+          padding: 8px 16px;
+          font-family: monospace;
+          font-size: 14px;
+          text-align: center;
+          border-bottom: 1px solid #ffe69c;
+        "
+      >
+        school param: <span id="school-debug-value">(none)</span>
+      </div>
+
+      <section class="info-section title">
+        <div class="info-section-content">
+          <h2>Scooter Sessions at The Warehouse</h2>
+          <p>
+            Three weekly scooter sessions at Cambridge's only indoor skatepark
+            &mdash; coached after-school sessions, a friendly under-10s slot,
+            and an open session for 8+ riders. New to the park?
+            <a
+              class="claim-free-link"
+              href="https://membership.cam-skate.co.uk/skaters/new/scooter"
+              >Claim a free taster session</a
+            >.
+          </p>
+        </div>
+      </section>
+
+      <section class="info-section">
+        <div class="info-section-content">
+          <h2>After School Club</h2>
+          <p class="event-date">
+            Thursdays 4&ndash;6pm &mdash; with
+            <a href="https://www.futurescooters.org/">Future Scooters</a>
+          </p>
+          <div class="two-column-layout">
+            <div style="text-align: left" class="left-column">
+              <p>
+                High-energy coaching sessions for young people of all abilities,
+                focusing on fun, safety, and progression. Run in partnership
+                with
+                <a href="https://www.futurescooters.org/">Future Scooters</a>.
+              </p>
+
+              <p><b>Price:</b> &pound;20 pre-booked, &pound;25 on the door</p>
+
+              <p>
+                <a
+                  class="claim-free-link quick-link-btn"
+                  href="https://membership.cam-skate.co.uk/skaters/new/scooter"
+                  style="
+                    display: inline-block;
+                    background-color: #007bff;
+                    color: white;
+                    text-decoration: none;
+                  "
+                  >Claim a FREE taster session</a
+                >
+              </p>
+            </div>
+            <div class="right-column">
+              <img
+                class="scooter-session-img"
+                src="../img/after_school_scooters.jpg"
+                alt="After School Club scooter coaching at The Warehouse"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="info-section">
+        <div class="info-section-content">
+          <h2>Under 10s Open Session</h2>
+          <p class="event-date">Saturdays 10am&ndash;12pm</p>
+          <div class="two-column-layout">
+            <div style="text-align: left" class="left-column">
+              <p>
+                A friendly session for kids (and their parents!) to scoot or
+                skate in a safe, relaxed space.
+              </p>
+
+              <p><b>Price:</b> &pound;5</p>
+
+              <p>
+                <a
+                  class="claim-free-link quick-link-btn"
+                  href="https://membership.cam-skate.co.uk/skaters/new/scooter"
+                  style="
+                    display: inline-block;
+                    background-color: #007bff;
+                    color: white;
+                    text-decoration: none;
+                  "
+                  >Claim a FREE taster session</a
+                >
+              </p>
+            </div>
+            <div class="right-column">
+              <img
+                class="scooter-session-img"
+                src="../img/junior jam 2.png"
+                alt="Junior Jam under 10s open session at The Warehouse"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="info-section">
+        <div class="info-section-content">
+          <h2>Open Scooter Session (8+)</h2>
+          <p class="event-date">Saturdays 12pm&ndash;2pm</p>
+          <div class="two-column-layout">
+            <div style="text-align: left" class="left-column">
+              <p>
+                Our dedicated Scooter Session, open to all scooter riders aged 8
+                years and older.
+              </p>
+
+              <p><b>Price:</b> &pound;5</p>
+
+              <p>
+                <a
+                  class="claim-free-link quick-link-btn"
+                  href="https://membership.cam-skate.co.uk/skaters/new/scooter"
+                  style="
+                    display: inline-block;
+                    background-color: #007bff;
+                    color: white;
+                    text-decoration: none;
+                  "
+                  >Claim a FREE taster session</a
+                >
+              </p>
+            </div>
+            <div class="right-column">
+              <img
+                class="scooter-session-img"
+                src="../img/scooter 1.jpg"
+                alt="Open Scooter Session at The Warehouse"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-content">
+        <img
+          src="../img/logo.png"
+          alt="Cam Skate Site Logo"
+          class="footer-logo"
+        />
+        <nav class="footer-nav">
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/sessions/">Sessions</a></li>
+            <li><a href="/coaching/">Coaching</a></li>
+            <li><a href="/hire/">Hire</a></li>
+            <li><a href="/events/">Events</a></li>
+            <li><a href="/visit/">Visit</a></li>
+            <li><a href="/get_involved/">Volunteer</a></li>
+            <li><a href="/partners/">Our Partners</a></li>
+            <li><a href="/about/">About</a></li>
+            <li><a href="/donate/">Donate</a></li>
+          </ul>
+        </nav>
+        <div class="social-links">
+          <a href="https://www.instagram.com/the_warehouse_skatepark/"
+            ><img
+              src="../img/icon_instagram.svg"
+              alt="Instagram"
+              class="social-icon"
+          /></a>
+          <a href="https://www.facebook.com/profile.php?id=61573116536393"
+            ><img
+              src="../img/icon_facebook.svg"
+              alt="Facebook"
+              class="social-icon"
+          /></a>
+        </div>
+      </div>
+    </footer>
+    <script src="../script.js"></script>
+    <script>
+      (function () {
+        const params = new URLSearchParams(window.location.search);
+        const school = params.get("school");
+
+        const debugValue = document.getElementById("school-debug-value");
+        if (debugValue) {
+          debugValue.textContent = school && school.trim() ? school : "(none)";
+        }
+
+        if (school && school.trim()) {
+          document.querySelectorAll("a.claim-free-link").forEach((link) => {
+            const url = new URL(link.href, window.location.href);
+            url.searchParams.set("school", school);
+            link.href = url.toString();
+          });
+        }
+      })();
+    </script>
+  </body>
+</html>
