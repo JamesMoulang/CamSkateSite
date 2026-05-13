@@ -89,21 +89,6 @@
       </div>
     </div>
     <main>
-      <div
-        id="school-debug"
-        style="
-          background: #fff3cd;
-          color: #333;
-          padding: 8px 16px;
-          font-family: monospace;
-          font-size: 14px;
-          text-align: center;
-          border-bottom: 1px solid #ffe69c;
-        "
-      >
-        school param: <span id="school-debug-value">(none)</span>
-      </div>
-
       <section class="info-section title">
         <div class="info-section-content">
           <h2>Scooter Sessions at The Warehouse</h2>
@@ -281,19 +266,12 @@
       (function () {
         const params = new URLSearchParams(window.location.search);
         const school = params.get("school");
-
-        const debugValue = document.getElementById("school-debug-value");
-        if (debugValue) {
-          debugValue.textContent = school && school.trim() ? school : "(none)";
-        }
-
-        if (school && school.trim()) {
-          document.querySelectorAll("a.claim-free-link").forEach((link) => {
-            const url = new URL(link.href, window.location.href);
-            url.searchParams.set("school", school);
-            link.href = url.toString();
-          });
-        }
+        if (!school || !school.trim()) return;
+        document.querySelectorAll("a.claim-free-link").forEach((link) => {
+          const url = new URL(link.href, window.location.href);
+          url.searchParams.set("school", school);
+          link.href = url.toString();
+        });
       })();
     </script>
   </body>
