@@ -762,6 +762,9 @@ nav a:hover {
   .two-column-layout {
     flex-direction: column;
   }
+  .campaign-cta-grid {
+    grid-template-columns: 1fr !important;
+  }
 }
 
 .logo-marquee-container {
