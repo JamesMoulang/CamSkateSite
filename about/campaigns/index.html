@@ -42,6 +42,83 @@
     />
 
     <link rel="stylesheet" href="../../style.css" />
+
+    <style>
+      /* Donkey Common campaign progress timeline */
+      .dc-timeline {
+        position: relative;
+        text-align: left;
+        margin-top: 30px;
+        padding-left: 34px;
+      }
+      .dc-timeline::before {
+        content: "";
+        position: absolute;
+        left: 9px;
+        top: 8px;
+        bottom: 8px;
+        width: 2px;
+        background: #e0e0e0;
+      }
+      .dc-tl-month {
+        position: relative;
+        font-weight: bold;
+        color: #ff6600;
+        font-size: 1.05rem;
+        margin: 26px 0 14px;
+      }
+      .dc-tl-month:first-child {
+        margin-top: 0;
+      }
+      .dc-tl-month::before {
+        content: "";
+        position: absolute;
+        left: -32px;
+        top: 1px;
+        width: 16px;
+        height: 16px;
+        background: #ff6600;
+        border-radius: 4px;
+        transform: rotate(45deg);
+      }
+      .dc-tl-point {
+        position: relative;
+        margin: 0 0 14px;
+        line-height: 1.5;
+        color: #333;
+      }
+      .dc-tl-point::before {
+        content: "";
+        position: absolute;
+        left: -33px;
+        top: 2px;
+        width: 18px;
+        height: 18px;
+        border: 2px solid #adb5bd;
+        background: #fff;
+        border-radius: 50%;
+        box-sizing: border-box;
+      }
+      .dc-tl-point.done {
+        color: #1e7e34;
+      }
+      .dc-tl-point.done::before {
+        border-color: #1e7e34;
+        background: #1e7e34;
+      }
+      .dc-tl-point.done::after {
+        content: "\2713";
+        position: absolute;
+        left: -33px;
+        top: 2px;
+        width: 18px;
+        height: 18px;
+        line-height: 18px;
+        text-align: center;
+        font-size: 11px;
+        color: #fff;
+      }
+    </style>
   </head>
   <body>
     <header class="navbar-black-text">
@@ -224,6 +301,7 @@
                   <a href="#alternatives">Other options considered</a>
                 </li>
                 <li><a href="#how-to-help">How to make this happen</a></li>
+                <li><a href="#timeline">Project timeline</a></li>
               </ol>
             </div>
             <div class="right-column">
@@ -702,49 +780,33 @@
 
           <div class="two-column-layout" style="margin-top: 30px">
             <div style="text-align: left" class="left-column">
-              <p><b>What we need:</b></p>
+              <p><b>What we have:</b></p>
               <ul style="line-height: 2">
                 <li>
-                  Council support to progress the project and apply for planning
-                  permission if necessary
+                  Council support for and funding committed to the project
                 </li>
-                <li>Community input on which design direction to pursue</li>
                 <li>
-                  Input on the tender process so feedback from the skating
-                  community of Cambridge makes up a significant part of the
-                  quality score, allowing the skating community to have a say on
-                  the final design and construction proposal
+                  An outline design, created with the community &mdash;
+                  skatepark companies will pitch designs that match the
+                  principles of this plan as part of the tender process
                 </li>
+                <li>
+                  The knowledge and experience to run the tender process
+                  ourselves, which will be more time-efficient and retain more
+                  control for the eventual users of the skatepark
+                </li>
+              </ul>
+
+              <p style="margin-top: 30px"><b>What we need:</b></p>
+              <ul style="line-height: 2">
                 <li>Funding from grants, crowdfunding, and local businesses</li>
+                <li>
+                  Continued support from the council to manage the construction
+                  phase of the project
+                </li>
               </ul>
 
               <p style="margin-top: 30px">
-                Funding is being gathered from several sources:
-              </p>
-              <ul style="line-height: 2; margin-top: 10px">
-                <li>
-                  Cambridge City Council has committed £25,000 + VAT towards a
-                  new skating area on the site.
-                </li>
-                <li id="ref1">
-                  The local skate community has already raised over £2,500
-                  through crowdfunding and grant applications.<a
-                    href="#note1"
-                    style="text-decoration: none"
-                    ><sup>1</sup></a
-                  >
-                </li>
-                <li>
-                  An application to the Thalia WB Community Fund for £50,000 is
-                  in progress.
-                </li>
-                <li>
-                  A planned crowdfunder backed by a £10,000 match from the Sport
-                  England Movement Fund could contribute up to £20,000 if
-                  successful.
-                </li>
-              </ul>
-              <p style="margin-top: 20px">
                 The plaza concept is designed to flex with the funding raised
                 &mdash; a meaningful build can be delivered for around £100,000,
                 with the full £125,000 design unlocking the largest skating area
@@ -872,7 +934,7 @@
                 ></span>
                 Committed by Cambridge City Council &mdash; £25,000 + VAT
               </li>
-              <li>
+              <li id="ref1">
                 <span
                   style="
                     display: inline-block;
@@ -884,7 +946,11 @@
                     border-radius: 2px;
                   "
                 ></span>
-                Already raised by the community &mdash; £2,500
+                Already raised by the community &mdash; £2,500<a
+                  href="#note1"
+                  style="text-decoration: none"
+                  ><sup>1</sup></a
+                >
               </li>
               <li>
                 <span
@@ -982,6 +1048,18 @@
               >Equal Opportunities Policy</a
             >.
           </p>
+        </div>
+      </section>
+
+      <section id="timeline" class="info-section">
+        <div class="info-section-content">
+          <h2>Project timeline</h2>
+          <p style="text-align: left; margin-top: 30px">
+            Our planned route to a refurbished skatepark. We'll tick off each
+            milestone as it happens &mdash; this is our best estimate, and the
+            plan may shift as funding and council decisions land.
+          </p>
+          <div id="dc-timeline" class="dc-timeline"></div>
         </div>
       </section>
 
@@ -1150,5 +1228,89 @@
       </div>
     </footer>
     <script src="../../script.js"></script>
+    <script>
+      // Donkey Common project timeline.
+      // To tick a milestone off as complete, change its `done: false` to
+      // `done: true`. Add/remove months and points freely — the timeline
+      // re-renders from this list. Reality may differ from the plan; edit as
+      // milestones land.
+      document.addEventListener("DOMContentLoaded", function () {
+        const TIMELINE = [
+          {
+            month: "July 2026",
+            points: [
+              {
+                text: "Sport England approve match-funding and our crowdfunding campaign begins.",
+                done: false,
+              },
+            ],
+          },
+          {
+            month: "August 2026",
+            points: [
+              {
+                text: "Crowdfunding campaign completes, securing £10,000 plus £10,000 of match funding for the project.",
+                done: false,
+              },
+              {
+                text: "With other funding in place, Cam Skate submits the final application to the Thalia fund.",
+                done: false,
+              },
+              {
+                text: "Cam Skate reaches out to 3 trusted skatepark companies to invite to tender for the build.",
+                done: false,
+              },
+            ],
+          },
+          {
+            month: "September 2026",
+            points: [
+              {
+                text: "Thalia award secures a further £50,000, bringing the total raised to £97,500 including community funds (£50,000 + £20,000 + £25,000 + £2,500), with Cam Skate putting up the rest.",
+                done: false,
+              },
+              {
+                text: "With funding in place, the tender opens — giving companies 4 weeks to respond.",
+                done: false,
+              },
+            ],
+          },
+          {
+            month: "October 2026",
+            points: [
+              { text: "All tender responses received.", done: false },
+              { text: "Review submissions (1 week).", done: false },
+              {
+                text: "Tender evaluation and any clarification questions (1 week).",
+                done: false,
+              },
+              {
+                text: "Confirm contract award, prepare the contract for signing, and agree a start date (2 weeks).",
+                done: false,
+              },
+            ],
+          },
+          {
+            month: "November 2026",
+            points: [{ text: "Earliest likely build date.", done: false }],
+          },
+        ];
+
+        const root = document.getElementById("dc-timeline");
+        if (!root) return;
+        TIMELINE.forEach(function (month) {
+          const heading = document.createElement("div");
+          heading.className = "dc-tl-month";
+          heading.textContent = month.month;
+          root.appendChild(heading);
+          (month.points || []).forEach(function (point) {
+            const item = document.createElement("div");
+            item.className = "dc-tl-point" + (point.done ? " done" : "");
+            item.textContent = point.text;
+            root.appendChild(item);
+          });
+        });
+      });
+    </script>
   </body>
 </html>
