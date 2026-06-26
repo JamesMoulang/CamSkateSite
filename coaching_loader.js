@@ -205,10 +205,21 @@ document.addEventListener("DOMContentLoaded", () => {
       .then((data) => {
         document
           .querySelectorAll(`[data-course-key="${key}"]`)
-          .forEach((root) => populateCourse(root, data));
+          .forEach((root) => {
+            populateCourse(root, data);
+            root.classList.add("course-resolved");
+          });
       })
       .catch((err) => {
         console.error("coaching_loader:", err);
+        // Fetch failed: reveal the static has-term fallback copy rather than
+        // leaving the term-conditional content hidden.
+        document
+          .querySelectorAll(`[data-course-key="${key}"]`)
+          .forEach((root) => {
+            applyVisibility(root, true);
+            root.classList.add("course-resolved");
+          });
       });
   });
 });

@@ -1253,6 +1253,13 @@ blockquote.quote {
   position: relative;
 }
 
+/* Hide term-conditional content until coaching_loader.js resolves each course
+   (success or failure). Prevents the "Book now" badge and has-term copy from
+   flashing on page load before the API call decides what to show. */
+[data-course-key]:not(.course-resolved) [data-course-show-when] {
+  display: none;
+}
+
 .section-badge {
   display: inline-block;
   background-color: #4caf50;
