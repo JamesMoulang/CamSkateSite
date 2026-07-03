@@ -120,6 +120,7 @@ calendarEvents
       "queer skate night",
       "30+ (beginners)",
       "30+ (all abilities)",
+      "over 30s",
       "under 21s",
       "full moon (open session)",
       "roller disco (family)",
