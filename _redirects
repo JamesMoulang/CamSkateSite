@@ -1,0 +1,4 @@
+# Netlify redirects
+# Short link for the Donkey Common campaign
+/dc     /about/campaigns/   301
+/dc/*   /about/campaigns/   301
