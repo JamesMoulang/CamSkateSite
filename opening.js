@@ -84,7 +84,7 @@ calendarEvents
           end: end_hours,
           start_time: `${start_date.getHours()}:${start_date.getMinutes().toString().padStart(2, "0")}`,
           end_time: `${end_date.getHours()}:${end_date.getMinutes().toString().padStart(2, "0")}`,
-          title: item.summary,
+          title: item.summary.trim(),
         });
       }
     });
