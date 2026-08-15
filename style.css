@@ -814,11 +814,11 @@ nav a:hover {
   }
 }
 
-/* Raffle prize grid (3 columns, stacking down to 1) */
+/* Raffle prize grid (4 columns, stacking down to 1) */
 .raffle-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
   margin-top: 30px;
   text-align: left;
 }
@@ -828,7 +828,7 @@ nav a:hover {
   flex-direction: column;
   background-color: #fff;
   border: 1px solid #e9ecef;
-  border-radius: 12px;
+  border-radius: 10px;
   overflow: hidden;
 }
 
@@ -841,29 +841,35 @@ nav a:hover {
 }
 
 .raffle-card-text {
-  padding: 16px 18px;
+  padding: 12px 14px;
 }
 
 .raffle-card-text h4 {
-  margin: 0 0 6px 0;
-  font-size: 1.1rem;
+  margin: 0 0 4px 0;
+  font-size: 0.98rem;
   font-weight: bold;
 }
 
 .raffle-card-text p {
   margin: 0;
-  font-size: 0.95rem;
-  line-height: 1.45;
+  font-size: 0.85rem;
+  line-height: 1.4;
   color: #555;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1024px) {
+  .raffle-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 760px) {
   .raffle-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 480px) {
   .raffle-grid {
     grid-template-columns: 1fr;
   }
