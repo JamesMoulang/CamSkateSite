@@ -814,6 +814,61 @@ nav a:hover {
   }
 }
 
+/* Raffle prize grid (3 columns, stacking down to 1) */
+.raffle-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 30px;
+  text-align: left;
+}
+
+.raffle-card {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border: 1px solid #e9ecef;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.raffle-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  background-color: #e9ecef;
+}
+
+.raffle-card-text {
+  padding: 16px 18px;
+}
+
+.raffle-card-text h4 {
+  margin: 0 0 6px 0;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.raffle-card-text p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.45;
+  color: #555;
+}
+
+@media screen and (max-width: 900px) {
+  .raffle-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .raffle-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 .color1 {
   background-color: #afcff9;
 } /* pastel blue */
