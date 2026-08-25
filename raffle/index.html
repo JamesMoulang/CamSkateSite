@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Plaza Raffle Prizes - Cam Skate</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+    />
     <style>
       * {
         box-sizing: border-box;
@@ -11,83 +15,120 @@
       body {
         margin: 0;
         background: #e9ecef;
-        font-family: "Helvetica Neue", Arial, sans-serif;
+        font-family: "Poppins", sans-serif;
         color: #1a1a1a;
       }
       .poster {
-        max-width: 1080px;
+        max-width: 920px;
         margin: 0 auto;
-        background: #fff;
+        padding: 22px;
       }
       .poster-header {
         background: linear-gradient(135deg, #ff8c00 0%, #ff6600 100%);
         color: #fff;
         text-align: center;
-        padding: 44px 30px 36px;
+        padding: 40px 30px 34px;
+        border-radius: 15px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       }
       .poster-header .kicker {
         margin: 0 0 10px;
-        font-size: 1rem;
+        font-size: 0.95rem;
         letter-spacing: 3px;
         text-transform: uppercase;
         opacity: 0.92;
       }
       .poster-header h1 {
         margin: 0;
-        font-size: 3.2rem;
-        line-height: 1.02;
+        font-size: 3rem;
+        line-height: 1.05;
       }
       .poster-header .sub {
         margin: 16px 0 0;
-        font-size: 1.25rem;
+        font-size: 1.2rem;
         line-height: 1.4;
       }
-      .grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 18px;
-        padding: 26px;
+      .intro {
+        text-align: left;
+        font-size: 1.05rem;
+        line-height: 1.5;
+        color: #333;
+        margin: 24px 4px;
       }
-      .item {
-        text-align: center;
+      .prize {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        background: #fff;
+        border: 1px solid #e9ecef;
+        border-radius: 14px;
+        padding: 18px;
+        margin-bottom: 18px;
       }
-      .item img {
-        display: block;
-        width: 100%;
-        aspect-ratio: 1 / 1;
+      .prize-img {
+        flex: 0 0 300px;
+        width: 300px;
+        aspect-ratio: 4 / 3;
         object-fit: cover;
-        border-radius: 12px;
+        border-radius: 10px;
         background: #e9ecef;
+        display: block;
       }
-      .item .name {
-        margin: 9px 0 0;
-        font-weight: bold;
-        font-size: 0.98rem;
-        line-height: 1.2;
+      .prize-text {
+        text-align: left;
+      }
+      .prize-text h3 {
+        margin: 0 0 8px;
+        font-size: 1.4rem;
+      }
+      .prize-text p {
+        margin: 0;
+        font-size: 1.05rem;
+        line-height: 1.5;
+        color: #333;
+      }
+      .prize-text a {
+        color: #007bff;
+        text-decoration: none;
+      }
+      .prize-note {
+        font-size: 0.85rem !important;
+        color: #888 !important;
+        font-style: italic;
+        margin-top: 6px !important;
       }
       .poster-footer {
         background: #111;
         color: #fff;
         text-align: center;
-        padding: 28px 30px 32px;
+        padding: 30px;
+        border-radius: 15px;
       }
       .poster-footer .cta {
         margin: 0;
-        font-size: 1.5rem;
+        font-size: 1.6rem;
         font-weight: bold;
       }
       .poster-footer .url {
         margin: 8px 0 0;
-        font-size: 1.15rem;
+        font-size: 1.2rem;
         font-weight: bold;
         color: #ff8c00;
       }
-      @media (max-width: 560px) {
-        .grid {
-          grid-template-columns: repeat(2, 1fr);
+      @media (max-width: 640px) {
+        .prize {
+          flex-direction: column;
+          text-align: center;
+        }
+        .prize-img {
+          flex-basis: auto;
+          width: 100%;
+        }
+        .prize-text {
+          text-align: center;
         }
         .poster-header h1 {
-          font-size: 2.3rem;
+          font-size: 2.2rem;
         }
       }
     </style>
@@ -103,57 +144,193 @@
         </p>
       </div>
 
-      <div class="grid">
-        <div class="item">
-          <img src="../img/raffle_skatebundle.jpg" alt="Skate bundle" />
-          <p class="name">Skate bundle</p>
+      <p class="intro">
+        Grab a raffle ticket on the day for your chance to win one of these
+        prizes, all kindly donated to help us renovate Donkey Common skatepark:
+      </p>
+
+      <div class="prize">
+        <img
+          class="prize-img"
+          src="../img/raffle_skatebundle.jpg"
+          alt="Skate bundle"
+        />
+        <div class="prize-text">
+          <h3>Skate bundle</h3>
+          <p>A skate bundle including shoes, a board, trucks and more.</p>
+          <p class="prize-note">Not an image of the actual bundle.</p>
         </div>
-        <div class="item">
-          <img src="../img/raffle_massage.jpg" alt="1-hour massage" />
-          <p class="name">1-hour massage</p>
+      </div>
+
+      <div class="prize">
+        <img
+          class="prize-img"
+          src="../img/raffle_massage.jpg"
+          alt="1-hour massage"
+        />
+        <div class="prize-text">
+          <h3>1-hour massage</h3>
+          <p>
+            A one-hour massage with
+            <a href="https://www.glorious-light.com/">Glorious Light Wellness</a
+            >.
+          </p>
         </div>
-        <div class="item">
-          <img src="../img/raffle_sauna.jpg" alt="Private sauna session" />
-          <p class="name">Private sauna session</p>
+      </div>
+
+      <div class="prize">
+        <img
+          class="prize-img"
+          src="../img/raffle_sauna.jpg"
+          alt="Private sauna session"
+        />
+        <div class="prize-text">
+          <h3>Private sauna session</h3>
+          <p>
+            A one-hour private sauna session for up to 8 people with
+            <a href="https://www.healsaunas.co.uk/">Heal Saunas</a>.
+          </p>
         </div>
-        <div class="item">
-          <img src="../img/raffle_breathwork.jpg" alt="Breathwork session" />
-          <p class="name">Breathwork session</p>
+      </div>
+
+      <div class="prize">
+        <img
+          class="prize-img"
+          src="../img/raffle_breathwork.jpg"
+          alt="Breathwork session"
+        />
+        <div class="prize-text">
+          <h3>Breathwork session</h3>
+          <p>
+            A one-hour transformative breathwork session with
+            <a href="https://www.healsaunas.co.uk/">Molly Medley</a>.
+          </p>
         </div>
-        <div class="item">
-          <img src="../img/raffle_parkside.jpg" alt="Parkside Pool sessions" />
-          <p class="name">Parkside Pool sessions</p>
+      </div>
+
+      <div class="prize">
+        <img
+          class="prize-img"
+          src="../img/raffle_parkside.jpg"
+          alt="Parkside Pool sessions"
+        />
+        <div class="prize-text">
+          <h3>Parkside Pool sessions</h3>
+          <p>
+            Two sessions at
+            <a
+              href="https://www.better.org.uk/leisure-centre/cambridge/parksidepools"
+              >Parkside Pool</a
+            >
+            for up to 2 adults and 3 children.
+          </p>
         </div>
-        <div class="item">
-          <img src="../img/raffle_lido.jpg" alt="Cambridge Lido sessions" />
-          <p class="name">Cambridge Lido sessions</p>
+      </div>
+
+      <div class="prize">
+        <img
+          class="prize-img"
+          src="../img/raffle_lido.jpg"
+          alt="Cambridge Lido sessions"
+        />
+        <div class="prize-text">
+          <h3>Cambridge Lido sessions</h3>
+          <p>
+            Two
+            <a
+              href="https://www.better.org.uk/leisure-centre/cambridge/jesusgreenlido"
+              >Cambridge Lido</a
+            >
+            sessions for up to 2 adults and 3 children.
+          </p>
         </div>
-        <div class="item">
-          <img src="../img/raffle_print.jpg" alt="Local artist print" />
-          <p class="name">Local artist print</p>
+      </div>
+
+      <div class="prize">
+        <img
+          class="prize-img"
+          src="../img/raffle_print.jpg"
+          alt="Local artist print"
+        />
+        <div class="prize-text">
+          <h3>Local artist print</h3>
+          <p>
+            A print by local artist
+            <a href="https://www.instagram.com/rick_tomasi_art/">Rick Tomasi</a
+            >, co-founder of
+            <a href="https://www.instagram.com/inkpotgallery/">Inkpot Gallery</a
+            >.
+          </p>
         </div>
-        <div class="item">
-          <img src="../img/raffle_newbalance.jpg" alt="New Balance trainers" />
-          <p class="name">New Balance trainers</p>
+      </div>
+
+      <div class="prize">
+        <img
+          class="prize-img"
+          src="../img/raffle_newbalance.jpg"
+          alt="New Balance trainers"
+        />
+        <div class="prize-text">
+          <h3>New Balance trainers</h3>
+          <p>A pair of New Balance trainers.</p>
         </div>
-        <div class="item">
-          <img src="../img/raffle_pizza.jpg" alt="Pizza for two" />
-          <p class="name">Pizza for two</p>
+      </div>
+
+      <div class="prize">
+        <img
+          class="prize-img"
+          src="../img/raffle_pizza.jpg"
+          alt="Pizza for two"
+        />
+        <div class="prize-text">
+          <h3>Pizza for two</h3>
+          <p>
+            A voucher for pizza for two at
+            <a href="https://www.redbullcambridge.co.uk/index">The Red Bull</a>
+            in Newnham.
+          </p>
         </div>
-        <div class="item">
-          <img
-            src="../img/raffle_lurpiv.jpg"
-            alt="New Balance trainers and Lurpiv trucks"
-          />
-          <p class="name">New Balance &amp; Lurpiv trucks</p>
+      </div>
+
+      <div class="prize">
+        <img
+          class="prize-img"
+          src="../img/raffle_lurpiv.jpg"
+          alt="New Balance trainers and Lurpiv trucks"
+        />
+        <div class="prize-text">
+          <h3>New Balance trainers &amp; Lurpiv trucks</h3>
+          <p>A pair of New Balance trainers and a set of Lurpiv trucks.</p>
         </div>
-        <div class="item">
-          <img src="../img/raffle_steak.jpg" alt="Steak &amp; Honour voucher" />
-          <p class="name">Steak &amp; Honour voucher</p>
+      </div>
+
+      <div class="prize">
+        <img
+          class="prize-img"
+          src="../img/raffle_steak.jpg"
+          alt="Steak &amp; Honour voucher"
+        />
+        <div class="prize-text">
+          <h3>Steak &amp; Honour voucher</h3>
+          <p>
+            A £20 voucher for
+            <a href="https://steakandhonour.co.uk/">Steak &amp; Honour</a>.
+          </p>
         </div>
-        <div class="item">
-          <img src="../img/raffle_tradizioni.jpg" alt="Tradizioni voucher" />
-          <p class="name">Tradizioni voucher</p>
+      </div>
+
+      <div class="prize">
+        <img
+          class="prize-img"
+          src="../img/raffle_tradizioni.jpg"
+          alt="Tradizioni voucher"
+        />
+        <div class="prize-text">
+          <h3>Tradizioni voucher</h3>
+          <p>
+            A £20 voucher for
+            <a href="https://www.tradizionirestaurant.co.uk/">Tradizioni</a>.
+          </p>
         </div>
       </div>
 
