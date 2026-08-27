@@ -137,8 +137,23 @@
         text-align: center;
         margin-top: 24px;
       }
-      .dc-donate .crowdfunder-widget {
+      .dc-donate .dc-donate-btn {
         display: inline-block;
+        background: linear-gradient(135deg, #ff8c00 0%, #ff6600 100%);
+        color: #fff;
+        font-size: 1.3rem;
+        font-weight: bold;
+        text-decoration: none;
+        padding: 16px 40px;
+        border-radius: 12px;
+        box-shadow: 0 6px 16px rgba(255, 102, 0, 0.35);
+        transition:
+          transform 0.15s ease,
+          box-shadow 0.15s ease;
+      }
+      .dc-donate .dc-donate-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(255, 102, 0, 0.45);
       }
       .dc-event {
         margin-top: 24px;
@@ -283,22 +298,13 @@
           </div>
 
           <div class="dc-donate">
-            <div
-              class="crowdfunder-widget"
-              data-project-title="Refurbish Donkey Common Skatepark!"
-              data-project-id="dc-skatepark"
-              data-template-id="4185379753100011"
-              data-theme="default"
-              data-style-height="56px"
-              data-style-width="280px"
+            <a
+              class="dc-donate-btn"
+              href="https://www.crowdfunder.co.uk/p/dc-skatepark"
+              target="_blank"
+              rel="noopener"
+              >Donate on Crowdfunder &rarr;</a
             >
-              <a
-                href="https://www.crowdfunder.co.uk/p/dc-skatepark"
-                rel="noopener"
-                target="_blank"
-                >Refurbish Donkey Common Skatepark!</a
-              >
-            </div>
           </div>
 
           <div class="dc-status">
@@ -1360,11 +1366,6 @@
       </div>
     </footer>
     <script src="../../script.js"></script>
-    <script
-      type="text/javascript"
-      src="https://d36lg3an42tsdn.cloudfront.net/platform/widgetloader.bb80c947.js"
-      async
-    ></script>
     <script>
       // Donkey Common project timeline.
       // To tick a milestone off as complete, change its `done: false` to
@@ -1454,7 +1455,7 @@
       // Crowdfunder has no live public feed, so the "raised" figure is manual:
       // edit DC_RAISED each day to match the total on the Crowdfunder page.
       const DC_GOAL = 10000; // fundraising target (£)
-      const DC_RAISED = 5685; // amount raised so far (£) — UPDATE THIS DAILY
+      const DC_RAISED = 5845; // amount raised so far (£) — UPDATE THIS DAILY
       const DC_DEADLINE = new Date("2026-09-14T23:59:59"); // campaign end
 
       (function () {
