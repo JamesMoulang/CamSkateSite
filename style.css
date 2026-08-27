@@ -342,7 +342,8 @@ nav a:hover {
   background-color: #36454f;
 } /* Charcoal */
 .sport-capsule.seven-to-sixteen,
-.sport-capsule.eight-to-sixteen {
+.sport-capsule.eight-to-sixteen,
+.sport-capsule.seven-to-thirteen {
   background-color: #ff8c00;
 } /* Dark Orange */
 .sport-capsule.all-ages {
@@ -1324,6 +1325,10 @@ blockquote.quote {
   grid-template-columns: repeat(4, 1fr);
 }
 
+.discipline-grid-5 {
+  grid-template-columns: repeat(5, 1fr);
+}
+
 .discipline-card {
   display: flex;
   flex-direction: column;
@@ -1365,6 +1370,12 @@ blockquote.quote {
   color: #666;
 }
 
+@media screen and (max-width: 1300px) {
+  .discipline-grid-5 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 @media screen and (max-width: 1100px) {
   .discipline-grid-4 {
     grid-template-columns: repeat(2, 1fr);
@@ -1377,9 +1388,16 @@ blockquote.quote {
   }
 }
 
+@media screen and (max-width: 900px) {
+  .discipline-grid-5 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media screen and (max-width: 600px) {
   .discipline-grid,
-  .discipline-grid-4 {
+  .discipline-grid-4,
+  .discipline-grid-5 {
     grid-template-columns: 1fr;
   }
 }
