@@ -98,6 +98,13 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 const SESSION_CONFIG = {
+  "absolute beginners": {
+    title: "Absolute Beginners",
+    links: [{ href: "/sessions#beginner_sessions", text: "More info" }],
+    color: "#4CAF50",
+    disciplines: ["🛹 Skateboard"],
+    images: ["img/beginners.jpg"],
+  },
   "beginners session": {
     title: "Beginners session",
     links: [{ href: "/sessions#beginner_sessions", text: "More info" }],
