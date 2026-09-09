@@ -105,6 +105,13 @@ const SESSION_CONFIG = {
     disciplines: ["🛹 Skateboard"],
     images: ["img/beginners.jpg"],
   },
+  "adult beginners": {
+    title: "Adult Beginners",
+    links: [{ href: "/sessions#beginner_sessions", text: "More info" }],
+    color: "#4CAF50",
+    disciplines: ["🛹 Skateboard", "🛼 Roller"],
+    images: ["img/beginners.jpg"],
+  },
   "beginners session": {
     title: "Beginners session",
     links: [{ href: "/sessions#beginner_sessions", text: "More info" }],
