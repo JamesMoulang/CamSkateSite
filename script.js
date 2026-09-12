@@ -248,7 +248,7 @@ const SESSION_CONFIG = {
     color: "#FF5722",
     disciplines: [],
     images: ["img/birthday_bash_2026_lineup.jpg"],
-    altTitles: ["birthday bash"],
+    altTitles: ["birthday bash", "birthday bash x plaza fundraiser"],
     // Pinned events jump to the front of the carousel until this date passes
     pinnedUntil: "2026-09-12T20:00:00+01:00",
   },

@@ -125,6 +125,9 @@ calendarEvents
       "full moon (open session)",
       "roller disco (family)",
       "roller disco (adults)",
+      "birthday bash",
+      "birthday bash!",
+      "birthday bash x plaza fundraiser",
     ];
 
     let title_map = {
