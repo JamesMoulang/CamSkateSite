@@ -1,5 +1,7 @@
+// Calendar titles sometimes carry stray whitespace (e.g. "Girl Skate Night "),
+// so both strategies trim before comparing.
 const directAccessStrategy = (event, sessionConfig) => {
-  const foundEvent = sessionConfig[event.summary.toLowerCase()];
+  const foundEvent = sessionConfig[event.summary.trim().toLowerCase()];
   return foundEvent ? foundEvent : null;
 };
 
@@ -11,7 +13,7 @@ const alternativeTitleStrategy = (event, sessionConfig) => {
     ([key, value]) =>
       value.altTitles &&
       value.altTitles.some(
-        (t) => t.toLowerCase() === event.summary.toLowerCase(),
+        (t) => t.toLowerCase() === event.summary.trim().toLowerCase(),
       ),
   );
 

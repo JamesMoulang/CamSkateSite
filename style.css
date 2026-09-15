@@ -496,6 +496,13 @@ nav a:hover {
   color: white;
 }
 
+.grid-item .grid-item-next {
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  margin-top: 12px;
+}
+
 .carousel-container {
   position: relative;
   display: flex;

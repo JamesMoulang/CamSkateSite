@@ -23,10 +23,11 @@ The site dynamically fetches and displays session schedules from Google Calendar
 
 - **Calendar ID**: `648a32abb0a80624c5f98e8e4bfd057578a6aed5110ba2addc6f9496fa9cabb4@group.calendar.google.com`
 - **API Key**: `AIzaSyAbxzGY7irnlqDnG9NwmLuzwVb2Q3tkr3I` (public read-only key)
-- **Three calendar loaders** serve different purposes:
+- **Four calendar loaders** serve different purposes:
   - `opening.js` - Shows today's opening hours on homepage (updates `#next_opening` element)
   - `carousel_loader.js` - Displays upcoming unique session types as carousel cards (controlled by `UNIQUE_EVENTS_ONLY` flag)
   - `week_loader.js` - Shows full weekly schedule in day-by-day capsules
+  - `monthly_loader.js` - Scans two months ahead and injects a "Next session: ..." line into monthly-session cards on `/sessions` (`CARD_MAPPING` maps `SESSION_CONFIG` titles to card element ids)
 
 ### JavaScript Modules
 

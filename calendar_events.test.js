@@ -34,6 +34,12 @@ describe("Direct Access Strategy", () => {
     expect(result).toBeNull();
   });
 
+  it("ignores leading and trailing whitespace in the event summary", () => {
+    const event = { summary: " Closed " };
+    const result = directAccessStrategy(event, sessionConfig);
+    expect(result).toEqual(sessionConfig["closed"]);
+  });
+
   it("Picks the correct title from sessionConfig", () => {
     const event = { summary: "beginner session" };
     const result = directAccessStrategy(event, sessionConfig);
@@ -76,6 +82,12 @@ describe("Alternative Title Strategy", () => {
 
   it("uses the sessionConfig key (not the altTitle) as the returned title", () => {
     const event = { summary: "Quads & Blades" };
+    const result = alternativeTitleStrategy(event, sessionConfig);
+    expect(result.title).toBe("Quads and Blades");
+  });
+
+  it("ignores leading and trailing whitespace in the event summary", () => {
+    const event = { summary: "Quads & Blades " };
     const result = alternativeTitleStrategy(event, sessionConfig);
     expect(result.title).toBe("Quads and Blades");
   });

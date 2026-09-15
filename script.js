@@ -237,10 +237,11 @@ const SESSION_CONFIG = {
   },
   "surf skate session": {
     title: "Surf skate session",
-    links: [],
+    links: [{ href: "/sessions#surfskate_session", text: "More info" }],
     color: "#009688",
     disciplines: [],
     images: ["img/surf_skate.jpg"],
+    altTitles: ["surf skate", "surfskate session"],
   },
   "birthday bash!": {
     title: "Birthday Bash x Plaza Fundraiser",
