@@ -303,34 +303,24 @@
               href="https://www.crowdfunder.co.uk/p/dc-skatepark"
               target="_blank"
               rel="noopener"
-              >Donate on Crowdfunder &rarr;</a
+              >View the Crowdfunder &rarr;</a
             >
           </div>
 
           <div class="dc-status">
             <div class="dc-card">
-              <p class="label">Time left to donate</p>
-              <div class="dc-countdown" id="dc-countdown">
-                <div class="unit">
-                  <div class="num" data-days>--</div>
-                  <div class="cap">Days</div>
-                </div>
-                <div class="unit">
-                  <div class="num" data-hours>--</div>
-                  <div class="cap">Hrs</div>
-                </div>
-                <div class="unit">
-                  <div class="num" data-mins>--</div>
-                  <div class="cap">Min</div>
-                </div>
-                <div class="unit">
-                  <div class="num" data-secs>--</div>
-                  <div class="cap">Sec</div>
+              <p class="label">Campaign complete!</p>
+              <div class="dc-countdown">
+                <div class="unit" style="min-width: auto">
+                  <div class="num">£21,260</div>
+                  <div class="cap">
+                    Raised including £10,000 Sport England match funding
+                  </div>
                 </div>
               </div>
             </div>
             <div class="dc-card">
-              <p class="label">Raised so far</p>
+              <p class="label">Raised by the community</p>
               <div class="dc-tracker-bar">
                 <div class="dc-tracker-fill" id="dc-tracker-fill"></div>
               </div>
@@ -346,17 +336,13 @@
           </div>
 
           <div class="dc-event">
-            <p class="dc-event-title">
-              Come to the Birthday Bash &amp; Plaza Fundraiser!
-            </p>
-            <p>
-              Join us at The Warehouse on Saturday 12th September, 12pm to 8pm,
-              to celebrate two years at the indoor skatepark and raise money for
-              the plaza. Expect live bands, DJs, a bar, food, games, skating and
-              a Plaza Raffle towards our Donkey Common crowdfunding goal.
-            </p>
+            <p class="dc-event-title">We did it &mdash; thank you!</p>
             <p style="margin-bottom: 0">
-              <a href="/events/">See full event details &rarr;</a>
+              The crowdfunding campaign has completed, raising £11,260 from the
+              community &mdash; smashing our £10,000 goal and unlocking £10,000
+              of Sport England match funding, for £21,260 towards the new plaza.
+              Thank you to everyone who donated, shared the campaign, and came
+              along to our fundraising events!
             </p>
           </div>
         </div>
@@ -977,17 +963,8 @@
                 title="Thalia WB Community Fund application: £50,000"
               ></div>
               <div
-                style="
-                  width: 16%;
-                  background: repeating-linear-gradient(
-                    45deg,
-                    #fd7e14,
-                    #fd7e14 8px,
-                    #ffa052 8px,
-                    #ffa052 16px
-                  );
-                "
-                title="Planned crowdfunder + Sport England match: £20,000"
+                style="width: 17%; background-color: #fd7e14"
+                title="Crowdfunder + Sport England match: £21,260"
               ></div>
               <div
                 style="
@@ -1091,20 +1068,13 @@
                     display: inline-block;
                     width: 14px;
                     height: 14px;
-                    background: repeating-linear-gradient(
-                      45deg,
-                      #fd7e14,
-                      #fd7e14 4px,
-                      #ffa052 4px,
-                      #ffa052 8px
-                    );
+                    background-color: #fd7e14;
                     vertical-align: middle;
                     margin-right: 6px;
                     border-radius: 2px;
                   "
                 ></span>
-                Crowdfunder + Sport England match (planned) &mdash; up to
-                £20,000
+                Crowdfunder + Sport England match &mdash; £21,260
               </li>
             </ul>
             <p
@@ -1379,17 +1349,13 @@
             points: [
               {
                 text: "Sport England approve match-funding and our crowdfunding campaign begins.",
-                done: false,
+                done: true,
               },
             ],
           },
           {
             month: "August 2026",
             points: [
-              {
-                text: "Crowdfunding campaign completes, securing £10,000 plus £10,000 of match funding for the project.",
-                done: false,
-              },
               {
                 text: "With other funding in place, Cam Skate submits the final application to the Thalia fund.",
                 done: false,
@@ -1404,7 +1370,11 @@
             month: "September 2026",
             points: [
               {
-                text: "Thalia award secures a further £50,000, bringing the total raised to £97,500 including community funds (£50,000 + £20,000 + £25,000 + £2,500), with Cam Skate putting up the rest.",
+                text: "Crowdfunding campaign completes, securing £11,260 plus £10,000 of match funding for the project.",
+                done: true,
+              },
+              {
+                text: "Thalia award secures a further £50,000, bringing the total raised to £98,760 including community funds (£50,000 + £21,260 + £25,000 + £2,500), with Cam Skate putting up the rest.",
                 done: false,
               },
               {
@@ -1451,12 +1421,9 @@
       });
     </script>
     <script>
-      // === Donkey Common crowdfunder — update these as the campaign runs ===
-      // Crowdfunder has no live public feed, so the "raised" figure is manual:
-      // edit DC_RAISED each day to match the total on the Crowdfunder page.
+      // === Donkey Common crowdfunder — campaign complete ===
       const DC_GOAL = 10000; // fundraising target (£)
-      const DC_RAISED = 7597; // amount raised so far (£) — UPDATE THIS DAILY
-      const DC_DEADLINE = new Date("2026-09-14T23:59:59"); // campaign end
+      const DC_RAISED = 11260; // raised by the community (excludes £10,000 Sport England match)
 
       (function () {
         // Progress tracker
@@ -1473,36 +1440,6 @@
           togoEl.textContent =
             togo > 0 ? fmt(togo) + " to go" : "Goal reached!";
         }
-
-        // Live countdown
-        const cd = document.getElementById("dc-countdown");
-        if (!cd) return;
-        const d = cd.querySelector("[data-days]");
-        const h = cd.querySelector("[data-hours]");
-        const m = cd.querySelector("[data-mins]");
-        const s = cd.querySelector("[data-secs]");
-        const pad = (n) => String(n).padStart(2, "0");
-        function tick() {
-          let diff = DC_DEADLINE - new Date();
-          if (diff <= 0) {
-            d.textContent = "0";
-            h.textContent = m.textContent = s.textContent = "00";
-            return;
-          }
-          const days = Math.floor(diff / 86400000);
-          diff -= days * 86400000;
-          const hours = Math.floor(diff / 3600000);
-          diff -= hours * 3600000;
-          const mins = Math.floor(diff / 60000);
-          diff -= mins * 60000;
-          const secs = Math.floor(diff / 1000);
-          d.textContent = days;
-          h.textContent = pad(hours);
-          m.textContent = pad(mins);
-          s.textContent = pad(secs);
-        }
-        tick();
-        setInterval(tick, 1000);
       })();
     </script>
   </body>
