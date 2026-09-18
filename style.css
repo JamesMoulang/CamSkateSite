@@ -1609,6 +1609,29 @@ blockquote.quote {
   transform: rotateY(180deg);
 }
 
+a.book-coaching-link {
+  font-size: 0.8rem;
+  color: white;
+}
+
+.session-tags {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 6px;
+  margin-top: 6px;
+}
+.session-tag {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
+  padding: 5px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+.session-tag:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+}
+
 @keyframes voucherFlip {
   0%,
   30% {
