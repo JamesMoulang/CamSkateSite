@@ -101,6 +101,8 @@ document.addEventListener("DOMContentLoaded", () => {
           time: formatEventTime(event.start.dateTime, event.end.dateTime),
           title: event.summary,
           color: event.color,
+          tags: event.tags || [],
+          links: event.links || [],
         });
       }
 
@@ -111,10 +113,27 @@ document.addEventListener("DOMContentLoaded", () => {
                         <h3>${day}</h3>
                 `;
         for (const session of dates[day]) {
+          const isCoached = session.tags?.includes("coached") ?? false;
+          const bookCoaching =
+            isCoached && session.links?.length > 0
+              ? session.links
+                  .map(
+                    (link) =>
+                      `<li><a href="${link.href}" target="_blank">${link.text}</a></li>`,
+                  )
+                  .join("")
+              : "";
+          const tags =
+            session.tags?.length > 0
+              ? `<div class="session-tags">${session.tags.map((tag) => `<span class="session-tag">${tag}</span>`).join("")}</div>`
+              : "";
+
           scheduleHTML += `
-                        <div class="session-item" style="background-color: ${session.color};">
+                        <div class="session-item" style="background: ${session.color};">
                             <div class="session-time">${session.time}</div>
                             <div class="session-title">${session.title}</div>
+                            ${bookCoaching ? `<ul class="book-coaching-links">${bookCoaching}</ul>` : ""}
+                            ${tags}
                         </div>
                     `;
         }
