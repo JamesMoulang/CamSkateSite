@@ -100,10 +100,11 @@ document.addEventListener("DOMContentLoaded", () => {
 const SESSION_CONFIG = {
   "absolute beginners": {
     title: "Absolute Beginners",
-    links: [{ href: "/sessions#beginner_sessions", text: "More info" }],
-    color: "#4CAF50",
+    links: [{ href: "/coaching", text: "Book Coaching" }],
+    color: "#FF9800",
     disciplines: ["🛹 Skateboard"],
     images: ["img/beginners.jpg"],
+    tags: ["coached", "kids", "booking required"],
   },
   "adult beginners": {
     title: "Adult Beginners",
@@ -190,6 +191,7 @@ const SESSION_CONFIG = {
     color: "#FFC107",
     disciplines: ["🛹 Skateboard"],
     images: ["img/after_school.jpeg"],
+    tags: ["coached", "kids", "booking required"],
   },
   "after school scooter club": {
     title: "After school scooter club",
@@ -204,13 +206,20 @@ const SESSION_CONFIG = {
       "img/scooter 5.jpg",
       "img/scooter 6.jpg",
     ],
+    tags: ["coached", "kids", "booking required"],
   },
   "after work club": {
     title: "After work club",
-    links: [{ href: "/coaching", text: "Book coaching" }],
-    color: "#FFC107",
+    links: [
+      {
+        href: "https://membership.cam-skate.co.uk/coaching/after_work_club",
+        text: "Book coaching",
+      },
+    ],
+    color: "#4CAF50",
     disciplines: ["🛹 Skateboard"],
     images: ["img/reception group.png"],
+    tags: ["coached", "adults", "booking required"],
   },
   "scooter session": {
     title: "Scooter session",
