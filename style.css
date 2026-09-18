@@ -1609,7 +1609,17 @@ blockquote.quote {
   transform: rotateY(180deg);
 }
 
-a.book-coaching-link {
+ul.book-coaching-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  list-style: none;
+  margin: 0;
+}
+
+ul.book-coaching-links a {
   font-size: 0.8rem;
   color: white;
 }

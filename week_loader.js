@@ -119,7 +119,7 @@ document.addEventListener("DOMContentLoaded", () => {
               ? session.links
                   .map(
                     (link) =>
-                      `<a href="${link.href}" target="_blank" class="book-coaching-link">${link.text}</a>`,
+                      `<li><a href="${link.href}" target="_blank">${link.text}</a></li>`,
                   )
                   .join("")
               : "";
@@ -132,7 +132,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         <div class="session-item" style="background: ${session.color};">
                             <div class="session-time">${session.time}</div>
                             <div class="session-title">${session.title}</div>
-                            ${bookCoaching}
+                            ${bookCoaching ? `<ul class="book-coaching-links">${bookCoaching}</ul>` : ""}
                             ${tags}
                         </div>
                     `;
