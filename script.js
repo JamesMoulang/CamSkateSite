@@ -112,6 +112,17 @@ const SESSION_CONFIG = {
     color: "#4CAF50",
     disciplines: ["🛹 Skateboard", "🛼 Roller"],
     images: ["img/beginners.jpg"],
+    supports: ["openings_display"],
+  },
+  "under 21s": {},
+  "full moon (open session)": {
+    supports: ["openings_display"],
+  },
+  "roller disco (family)": {
+    supports: ["openings_display"],
+  },
+  "roller disco (adults)": {
+    supports: ["openings_display"],
   },
   "beginners session": {
     title: "Beginners session",
@@ -119,6 +130,8 @@ const SESSION_CONFIG = {
     color: "#4CAF50",
     disciplines: ["🛹 Skateboard", "🛼 Roller"],
     images: ["img/beginners.jpg"],
+    altTitles: ["beginner session", "beginners"],
+    supports: ["openings_display"],
   },
   "beginners evening": {
     title: "Beginners evening",
@@ -126,6 +139,13 @@ const SESSION_CONFIG = {
     color: "#4CAF50",
     disciplines: ["🛹 Skateboard", "🛼 Roller"],
     images: ["img/beginners.jpg"],
+    altTitles: [
+      "beginners evening",
+      "beginner evening",
+      "saturday beginners evening",
+      "saturday beginner evening",
+    ],
+    supports: ["openings_display"],
   },
   closed: {
     title: "Closed",
@@ -140,6 +160,7 @@ const SESSION_CONFIG = {
     color: "#E91E63",
     disciplines: ["🛹 Skateboard", "🛼 Roller"],
     images: ["img/girl_skate_night.jpg"],
+    supports: ["openings_display"],
   },
   "queer skate night": {
     title: "Queer skate night",
@@ -147,6 +168,7 @@ const SESSION_CONFIG = {
     color: "#673AB7",
     disciplines: ["🛹 Skateboard", "🛼 Roller"],
     images: ["img/q&b 3.jpeg"],
+    supports: ["openings_display"],
   },
   "30+ (beginners)": {
     title: "30+ (beginners)",
@@ -154,6 +176,7 @@ const SESSION_CONFIG = {
     color: "#795548",
     disciplines: ["🛹 Skateboard", "🛼 Roller"],
     images: ["img/pipe_and_slippers.jpg"],
+    supports: ["openings_display"],
   },
   "30+ (all abilities)": {
     title: "30+ (all abilities)",
@@ -162,6 +185,7 @@ const SESSION_CONFIG = {
     disciplines: ["🛹 Skateboard", "🛼 Roller"],
     images: ["img/pipe_and_slippers.jpg"],
     altTitles: ["over 30s", "pipe & slippers", "pipe and slippers"],
+    supports: ["openings_display"],
   },
   "quads and blades": {
     title: "Quads & Blades",
@@ -170,6 +194,7 @@ const SESSION_CONFIG = {
     disciplines: ["🛼 Roller"],
     images: ["img/q&b 1.jpeg", "img/q&b 2.jpeg", "img/q&b 3.jpeg"],
     altTitles: ["quads & blades"],
+    supports: ["openings_display"],
   },
   "open session": {
     title: "Open session",
@@ -185,6 +210,7 @@ const SESSION_CONFIG = {
       "img/open session 2.jpg",
     ],
     altTitles: ["☕ open session"],
+    supports: ["openings_display"],
   },
   "after school club": {
     title: "After school club",
@@ -244,6 +270,7 @@ const SESSION_CONFIG = {
     disciplines: ["all wheels welcome"],
     images: ["img/junior jam 2.png"],
     altTitles: ["☕ under 10s"],
+    supports: ["openings_display"],
   },
   "surf skate session": {
     title: "Surf skate session",
@@ -252,6 +279,7 @@ const SESSION_CONFIG = {
     disciplines: [],
     images: ["img/surf_skate.jpg"],
     altTitles: ["surf skate", "surfskate session"],
+    supports: ["openings_display"],
   },
   "birthday bash!": {
     title: "Birthday Bash x Plaza Fundraiser",
