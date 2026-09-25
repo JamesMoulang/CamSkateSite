@@ -160,6 +160,7 @@ const SESSION_CONFIG = {
     color: "#795548",
     disciplines: ["🛹 Skateboard", "🛼 Roller"],
     images: ["img/pipe_and_slippers.jpg"],
+    altTitles: ["over 30s", "pipe & slippers", "pipe and slippers"],
   },
   "quads and blades": {
     title: "Quads & Blades",
