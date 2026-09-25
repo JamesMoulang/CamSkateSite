@@ -112,6 +112,7 @@ const SESSION_CONFIG = {
     color: "#4CAF50",
     disciplines: ["🛹 Skateboard", "🛼 Roller"],
     images: ["img/beginners.jpg"],
+    supports: ["openings_display"],
   },
   "under 21s": {},
   "full moon (open session)": {
@@ -130,6 +131,7 @@ const SESSION_CONFIG = {
     disciplines: ["🛹 Skateboard", "🛼 Roller"],
     images: ["img/beginners.jpg"],
     altTitles: ["beginner session", "beginners"],
+    supports: ["openings_display"],
   },
   "beginners evening": {
     title: "Beginners evening",
@@ -277,6 +279,7 @@ const SESSION_CONFIG = {
     disciplines: [],
     images: ["img/surf_skate.jpg"],
     altTitles: ["surf skate", "surfskate session"],
+    supports: ["openings_display"],
   },
   "birthday bash!": {
     title: "Birthday Bash x Plaza Fundraiser",
