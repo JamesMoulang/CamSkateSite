@@ -11,29 +11,24 @@ html {
 
 .hero {
   position: relative;
-  min-height: 80vh;
+  height: 80vh;
   display: flex;
   justify-content: center;
   align-items: center;
   color: white;
   text-align: center;
   overflow: hidden;
-  padding: 110px 20px 50px;
-  box-sizing: border-box;
 }
 
 .hero::before {
   content: "";
   position: absolute;
   inset: 0;
-  /* Temporary Donkey Common campaign background.
-     To restore the default, swap the line below back to:
-     background-image: url("img/party.jpg"); and filter: blur(3px); */
-  background-image: url("img/dc_hero.jpg");
+  background-image: url("img/party.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  filter: blur(1px);
+  filter: blur(3px);
   transform: scale(1.05);
   z-index: 0;
 }
@@ -97,60 +92,6 @@ html {
 .quick-link-btn:hover {
   background-color: rgba(255, 255, 255, 0.25);
   border-color: white;
-}
-
-/* Homepage hero — Donkey Common campaign takeover */
-.hero-campaign {
-  margin-top: 28px;
-  max-width: 640px;
-  background: rgba(0, 0, 0, 0.5);
-  border: 2px solid #ff6600;
-  border-radius: 16px;
-  padding: 22px 28px;
-}
-.hero-campaign-title {
-  margin: 0;
-  font-size: 1.7rem;
-  font-weight: bold;
-  line-height: 1.2;
-}
-.hero-campaign-sub {
-  margin: 10px 0 0 0;
-  font-size: 1.05rem;
-  line-height: 1.4;
-}
-.hero-campaign-btns {
-  margin-top: 18px;
-  display: flex;
-  gap: 14px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-.hero-campaign-btn {
-  padding: 12px 22px;
-  border-radius: 10px;
-  text-decoration: none;
-  font-weight: bold;
-  box-sizing: border-box;
-  transition:
-    transform 0.15s ease,
-    background-color 0.2s ease;
-}
-.hero-campaign-btn.primary {
-  background-color: #ff6600;
-  color: white;
-}
-.hero-campaign-btn.primary:hover {
-  background-color: #ff7d1a;
-  transform: translateY(-2px);
-}
-.hero-campaign-btn.secondary {
-  background-color: rgba(255, 255, 255, 0.15);
-  border: 2px solid white;
-  color: white;
-}
-.hero-campaign-btn.secondary:hover {
-  background-color: rgba(255, 255, 255, 0.3);
 }
 
 header {
@@ -1060,7 +1001,7 @@ nav a:hover {
 
 @media screen and (max-width: 768px) {
   .hero {
-    min-height: 90vh;
+    height: 90vh;
   }
 
   .hero-images {
@@ -1083,23 +1024,6 @@ nav a:hover {
   }
 
   .quick-links {
-    flex-direction: column;
-  }
-
-  .hero-campaign {
-    margin-top: 22px;
-    padding: 18px 20px;
-  }
-
-  .hero-campaign-title {
-    font-size: 1.3rem;
-  }
-
-  .hero-campaign-sub {
-    font-size: 0.95rem;
-  }
-
-  .hero-campaign-btns {
     flex-direction: column;
   }
 }
