@@ -1580,3 +1580,9 @@ ul.book-coaching-links a {
     transform: rotateY(0deg);
   }
 }
+
+.highlight {
+  background-color: rgba(239, 41, 7, 0.3);
+  padding: 2px 4px;
+  border-radius: 3px;
+}
