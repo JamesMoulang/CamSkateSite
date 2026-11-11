@@ -194,6 +194,37 @@
           </div>
         </div>
       </section>
+      <section id="month" class="info-section">
+        <div class="info-section-content">
+          <h2>This month's schedule</h2>
+          <p>(Click day to see full schedule for that day)</p>
+          <div id="month_calendar" class="month-calendar">
+            <div class="month-calendar-header">
+              <button
+                class="month-calendar-nav prev"
+                type="button"
+                aria-label="Previous month"
+              >
+                &lt;
+              </button>
+              <h3 class="month-calendar-title" aria-live="polite"></h3>
+              <button
+                class="month-calendar-nav next"
+                type="button"
+                aria-label="Next month"
+              >
+                &gt;
+              </button>
+            </div>
+            <div class="month-calendar-weekdays" aria-hidden="true">
+              <span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span
+              ><span>Fri</span><span>Sat</span><span>Sun</span>
+            </div>
+            <div class="month-calendar-grid"></div>
+            <div class="month-calendar-detail" aria-live="polite"></div>
+          </div>
+        </div>
+      </section>
       <section class="info-section">
         <div class="info-section-content">
           <h2>Types of sessions</h2>
@@ -598,5 +629,6 @@
     </script>
     <script src="../week_loader.js"></script>
     <script src="../monthly_loader.js"></script>
+    <script src="../month_calendar.js"></script>
   </body>
 </html>
