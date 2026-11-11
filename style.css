@@ -94,6 +94,94 @@ html {
   border-color: white;
 }
 
+/* Homepage hero — construction notice takeover (Nov 2026).
+   script.js removes .hero--construction and the panel once the
+   panel's data-show-until date passes, restoring the default hero. */
+.hero.hero--construction {
+  height: auto;
+  min-height: 80vh;
+  padding: 110px 20px 50px;
+  box-sizing: border-box;
+}
+
+.hero.hero--construction::before {
+  /* Already blurred and darkened in the file itself */
+  background-image: url("img/construction_hero.jpg");
+  filter: none;
+}
+
+.hero-campaign {
+  margin-top: 28px;
+  max-width: 640px;
+  background: rgba(0, 0, 0, 0.5);
+  border: 2px solid #ff6600;
+  border-radius: 16px;
+  padding: 22px 28px;
+}
+.hero-campaign-title {
+  margin: 0;
+  font-size: 1.7rem;
+  font-weight: bold;
+  line-height: 1.2;
+}
+.hero-campaign-sub {
+  margin: 10px 0 0 0;
+  font-size: 1.05rem;
+  line-height: 1.4;
+}
+.hero-campaign-dates {
+  margin: 14px auto 0;
+  padding: 0;
+  list-style: none;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+.hero-campaign-dates strong {
+  color: #ffb380;
+}
+.hero-campaign-btns {
+  margin-top: 18px;
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.hero-campaign-btn {
+  padding: 12px 22px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  box-sizing: border-box;
+  transition:
+    transform 0.15s ease,
+    background-color 0.2s ease;
+}
+.hero-campaign-btn.primary {
+  background-color: #ff6600;
+  color: white;
+}
+.hero-campaign-btn.primary:hover {
+  background-color: #ff7d1a;
+  transform: translateY(-2px);
+}
+
+@media screen and (max-width: 768px) {
+  .hero.hero--construction {
+    min-height: 90vh;
+  }
+  .hero-campaign {
+    margin-top: 22px;
+    padding: 18px 20px;
+  }
+  .hero-campaign-title {
+    font-size: 1.3rem;
+  }
+  .hero-campaign-sub,
+  .hero-campaign-dates {
+    font-size: 0.95rem;
+  }
+}
+
 header {
   position: absolute;
   top: 0;
@@ -247,6 +335,57 @@ nav a:hover {
 .session-title {
   font-size: 0.8rem; /* Reduced font size */
   font-weight: normal;
+}
+
+/* Construction days in the weekly schedule. Some sessions are already
+   orange (#FF9800), so the day uses a pale amber fill + deep orange border,
+   and closures get a hazard stripe to stand apart from session blocks. */
+.day-capsule.construction-day {
+  background-color: #ffe0b2;
+  box-shadow: inset 0 0 0 3px #e65100;
+}
+
+.day-capsule.construction-day h3 {
+  color: #bf360c;
+}
+
+.construction-notice {
+  padding: 8px 8px 8px 16px;
+  margin-bottom: 8px;
+  border-radius: 5px;
+  color: #3e2723;
+  background:
+    repeating-linear-gradient(-45deg, #e65100 0 6px, #212121 6px 12px) left /
+      8px 100% no-repeat,
+    #fff3e0;
+}
+
+.construction-notice.construction-possible {
+  background:
+    repeating-linear-gradient(-45deg, #e65100 0 6px, #fff3e0 6px 12px) left /
+      8px 100% no-repeat,
+    #fff3e0;
+  outline: 1px dashed #e65100;
+  outline-offset: -1px;
+}
+
+.construction-notice .session-title {
+  font-weight: bold;
+}
+
+.construction-detail {
+  margin-top: 4px;
+  font-size: 0.72rem;
+  line-height: 1.3;
+}
+
+.session-construction-note {
+  margin-top: 6px;
+  padding: 4px 6px;
+  border-radius: 4px;
+  font-size: 0.72rem;
+  line-height: 1.3;
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .sport-capsule {

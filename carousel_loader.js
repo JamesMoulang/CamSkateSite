@@ -164,6 +164,8 @@ document.addEventListener("DOMContentLoaded", () => {
         },
         SAMPLE_EVENTS, // Fallback events if API call fails
       )
+      // Construction closures aren't sessions, so they don't get cards
+      .then((events) => events.filter((event) => !isConstructionEvent(event)))
       .catch((error) => {
         console.error("Error fetching calendar events:", error);
         carousel.innerHTML =
