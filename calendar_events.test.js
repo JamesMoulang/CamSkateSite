@@ -3,6 +3,9 @@ import {
   directAccessStrategy,
   alternativeTitleStrategy,
   mergeAdjacentEvent,
+  isConstructionEvent,
+  eventsOverlap,
+  constructionClashes,
 } from "./calendar_events";
 
 describe("Direct Access Strategy", () => {
@@ -147,5 +150,46 @@ describe("Merge Adjacent Events", () => {
     ];
 
     expect(mergeEvents(events)).toEqual(events);
+  });
+});
+
+describe("Construction clashes", () => {
+  const at = (start, end, extra = {}) => ({
+    start: { dateTime: start },
+    end: { dateTime: end },
+    ...extra,
+  });
+  const streetClosed = at("2026-11-26T07:00:00Z", "2026-11-26T19:00:00Z", {
+    construction: { level: "street" },
+  });
+  const contingency = at("2026-11-26T19:00:00Z", "2026-11-26T22:00:00Z", {
+    construction: { level: "possible" },
+  });
+
+  it("identifies construction events by their config", () => {
+    expect(isConstructionEvent(streetClosed)).toBe(true);
+    expect(
+      isConstructionEvent(at("2026-11-26T19:00:00Z", "2026-11-26T22:00:00Z")),
+    ).toBe(false);
+  });
+
+  it("flags a session running during a closure", () => {
+    const scooterClub = at("2026-11-26T16:15:00Z", "2026-11-26T18:15:00Z");
+    expect(
+      constructionClashes(scooterClub, [streetClosed, contingency]),
+    ).toEqual([streetClosed]);
+  });
+
+  it("does not flag a session that starts exactly when a closure ends", () => {
+    const parkClosed = at("2026-11-18T07:00:00Z", "2026-11-18T17:00:00Z");
+    const beginners = at("2026-11-18T17:00:00Z", "2026-11-18T19:00:00Z");
+    expect(eventsOverlap(beginners, parkClosed)).toBe(false);
+  });
+
+  it("flags only the contingency window for the Thursday evening session", () => {
+    const openSession = at("2026-11-26T19:00:00Z", "2026-11-26T22:00:00Z");
+    expect(
+      constructionClashes(openSession, [streetClosed, contingency]),
+    ).toEqual([contingency]);
   });
 });

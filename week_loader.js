@@ -71,10 +71,13 @@ document.addEventListener("DOMContentLoaded", () => {
           }
         });
 
+      // Group events by day. Construction events are kept apart from
+      // sessions: they're shown as a notice at the top of the day rather than
+      // as overlapping session blocks.
       const dates = {};
 
       for (const event of events) {
-        const dateString = event.start.dateTime;
+        const dateString = event.start.dateTime || event.start.date;
         const date = new Date(dateString);
         let formattedDay = date.toLocaleDateString("en-GB", {
           weekday: "long",
@@ -94,25 +97,44 @@ document.addEventListener("DOMContentLoaded", () => {
         );
 
         if (!dates[formattedDay]) {
-          dates[formattedDay] = [];
+          dates[formattedDay] = { sessions: [], construction: [] };
         }
 
-        dates[formattedDay].push({
-          time: formatEventTime(event.start.dateTime, event.end.dateTime),
-          title: event.summary,
-          color: event.color,
-          tags: event.tags || [],
-          links: event.links || [],
-        });
+        if (isConstructionEvent(event)) {
+          dates[formattedDay].construction.push(event);
+        } else {
+          dates[formattedDay].sessions.push(event);
+        }
       }
 
       let scheduleHTML = ""; // No wrapper div
       for (const day in dates) {
+        const { sessions, construction } = dates[day];
+        const isConstructionDay = construction.length > 0;
+
         scheduleHTML += `
-                    <div class="day-capsule">
+                    <div class="day-capsule${isConstructionDay ? " construction-day" : ""}">
                         <h3>${day}</h3>
                 `;
-        for (const session of dates[day]) {
+
+        for (const closure of construction) {
+          scheduleHTML += `
+                        <div class="construction-notice construction-${closure.construction.level}">
+                            <div class="session-time">🚧 ${formatEventTime(closure.start.dateTime, closure.end.dateTime)}</div>
+                            <div class="session-title">${closure.title}</div>
+                            ${closure.construction.detail ? `<div class="construction-detail">${closure.construction.detail}</div>` : ""}
+                        </div>
+                    `;
+        }
+
+        for (const event of sessions) {
+          const session = {
+            time: formatEventTime(event.start.dateTime, event.end.dateTime),
+            title: event.summary,
+            color: event.color,
+            tags: event.tags || [],
+            links: event.links || [],
+          };
           const isCoached = session.tags?.includes("coached") ?? false;
           const bookCoaching =
             isCoached && session.links?.length > 0
@@ -127,11 +149,18 @@ document.addEventListener("DOMContentLoaded", () => {
             session.tags?.length > 0
               ? `<div class="session-tags">${session.tags.map((tag) => `<span class="session-tag">${tag}</span>`).join("")}</div>`
               : "";
+          const clashes = constructionClashes(event, construction)
+            .map(
+              (c) =>
+                `<div class="session-construction-note">🚧 ${c.construction.note}</div>`,
+            )
+            .join("");
 
           scheduleHTML += `
                         <div class="session-item" style="background: ${session.color};">
                             <div class="session-time">${session.time}</div>
                             <div class="session-title">${session.title}</div>
+                            ${clashes}
                             ${bookCoaching ? `<ul class="book-coaching-links">${bookCoaching}</ul>` : ""}
                             ${tags}
                         </div>

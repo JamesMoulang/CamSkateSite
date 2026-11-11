@@ -20,6 +20,18 @@ navOverlay.querySelectorAll("a:not(.close-btn)").forEach((link) => {
   });
 });
 
+// Time-limited notices: once an element's data-show-until date has passed,
+// remove it, or if it has data-show-until-class, just remove that class.
+// Lets temporary banners take themselves down without a redeploy.
+document.querySelectorAll("[data-show-until]").forEach((el) => {
+  if (new Date() < new Date(el.dataset.showUntil)) return;
+  if (el.dataset.showUntilClass) {
+    el.classList.remove(el.dataset.showUntilClass);
+  } else {
+    el.remove();
+  }
+});
+
 function enableCarouselButtons(containerId) {
   const container = document.getElementById(containerId);
   if (!container) {
@@ -290,6 +302,37 @@ const SESSION_CONFIG = {
     altTitles: ["birthday bash", "birthday bash x plaza fundraiser"],
     // Pinned events jump to the front of the carousel until this date passes
     pinnedUntil: "2026-09-12T20:00:00+01:00",
+  },
+  // Construction events aren't sessions: the weekly schedule shows them as a
+  // notice at the top of the day (title + `construction.detail`, highlighted
+  // orange) and tags any session they overlap with the short
+  // `construction.note`. Carousels skip them entirely.
+  "closed for construction": {
+    title: "Park closed for construction",
+    color: "#E65100",
+    construction: {
+      level: "closed",
+      note: "Park closed for construction",
+    },
+  },
+  "street section closed due to construction": {
+    title: "Street section closed for construction",
+    color: "#E65100",
+    construction: {
+      level: "street",
+      note: "Street section closed",
+      detail: "Mini ramp & beginner area open",
+    },
+  },
+  "potential closure - street section construction contingency time": {
+    title: "Street section may be closed",
+    color: "#E65100",
+    construction: {
+      level: "possible",
+      note: "Street section may be closed",
+      detail:
+        "Contingency time in case construction overruns. Mini ramp & beginner area open",
+    },
   },
   "christmas party": {
     title: "Christmas party",

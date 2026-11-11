@@ -49,6 +49,18 @@ const mergeAdjacentEvent = (mergedEvents, event) => {
   return mergedEvents;
 };
 
+const isConstructionEvent = (event) => Boolean(event.construction);
+
+// True when two events share any time. Touching end/start (e.g. a closure
+// ending at 17:00 and a session starting at 17:00) does not count.
+const eventsOverlap = (a, b) =>
+  new Date(getEventTime(a.start)) < new Date(getEventTime(b.end)) &&
+  new Date(getEventTime(b.start)) < new Date(getEventTime(a.end));
+
+// The construction events from `constructionEvents` that overlap `session`.
+const constructionClashes = (session, constructionEvents) =>
+  constructionEvents.filter((c) => eventsOverlap(session, c));
+
 const calendarEvents = (function calendarEvents() {
   const CALENDAR_ID =
     "648a32abb0a80624c5f98e8e4bfd057578a6aed5110ba2addc6f9496fa9cabb4@group.calendar.google.com";
@@ -104,5 +116,8 @@ if (typeof exports === "object") {
     directAccessStrategy,
     alternativeTitleStrategy,
     mergeAdjacentEvent,
+    isConstructionEvent,
+    eventsOverlap,
+    constructionClashes,
   };
 }

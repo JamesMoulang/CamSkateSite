@@ -43,6 +43,15 @@ calendarEvents
       text = `The Warehouse is shut for the day. It was open from ${makeTime(new Date(last_event.start.dateTime))} to ${makeTime(new Date(last_event.end.dateTime))} for ${last_event.title || last_event.title}.`;
     }
 
+    // Mention any construction work still to come today
+    const construction = events
+      .filter(isConstructionEvent)
+      .filter((event) => new Date(event.end.dateTime) > new Date());
+    for (const event of construction) {
+      const { detail } = event.construction;
+      text += ` 🚧 ${event.title} ${makeTime(new Date(event.start.dateTime))}–${makeTime(new Date(event.end.dateTime))}${detail ? `. ${detail}` : ""}.`;
+    }
+
     document.getElementById("next_opening").innerText = text;
   })
   .catch((error) => {
