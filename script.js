@@ -172,6 +172,7 @@ const SESSION_CONFIG = {
     color: "#E91E63",
     disciplines: ["🛹 Skateboard", "🛼 Roller"],
     images: ["img/girl_skate_night.jpg"],
+    altTitles: ["girls skate night"],
     supports: ["openings_display"],
   },
   "queer skate night": {
